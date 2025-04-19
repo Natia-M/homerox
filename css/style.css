@@ -15,7 +15,7 @@ a {
 .flex {
   display: flex;
   justify-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 img {
@@ -29,21 +29,23 @@ header {
   width: 100%;
   z-index: 999;
   background-color: white;
-  padding: 10px 30px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 5px 30px;
+  box-shadow: 0 2px 10px hsl(321.2deg 74.13% 76.31% / 48%);
+  color: #000000a5;
 }
 header nav {
   margin-right: 100px;
 }
 header img {
   max-width: 100%;
-  width: 180px;
+  width: 160px;
+  object-fit: cover;
 }
 .search-icon {
   max-width: 20px;
 }
 .flag-icon {
-  max-width: 30px;
+  max-width: 20px;
 }
 li {
   margin-left: 50px;
@@ -54,4 +56,60 @@ li {
 }
 .srch {
   gap: 10px;
+}
+.btn {
+  padding: 7px 11px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 15px;
+}
+
+/* დამატება */
+.add-btn {
+  background-color: hsl(321.2deg 74.13% 76.31% / 48%);
+  color: rgba(0, 0, 0, 0.707);
+
+  color: hwb(321 0% 51% / 0.845);
+  margin-right: 10px;
+}
+.add-btn:hover {
+  background-color: hsla(321, 79%, 67%, 0.48);
+  color: hwb(321 0% 51% / 0.877);
+}
+/* შესვლა */
+.profile-btn {
+  background-color: #f6f6f6;
+  color: black;
+  border: 0.5px solid #ddd;
+  display: flex;
+
+  gap: 5px;
+  border-radius: 15px;
+  justify-items: center;
+  align-items: center;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  background-color: hsl(321.2deg 74.13% 76.31% / 48%);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.lang-btn {
+  background-color: #fff;
+  color: black;
+  border: 0.5px solid #ddd;
+  padding: 6px;
+}
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+a:hover {
+  background-color: rgba(255, 240, 240, 0.431);
 }
