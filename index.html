@@ -5,35 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomeRox</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+
+    <script src="src/main.js" defer></script>
   </head>
   <body>
     <header class="flex">
-      <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
-      <div class="flex btn">
-        <img class="icon" src="images/1.png" alt="#" />
-        <div>032200000</div>
-      </div>
+      <a href="index.html"
+        ><img class="logo" src="images/logo.png" alt="logo"
+      /></a>
       <nav class="flex">
-        <ul class="flex">
-          <a href="index.html"><li>მთავარი</li></a>
-          <a href="index.html"><li>კონტაქტი</li></a>
-          <a href="index.html"><li>დახმარება</li></a>
-          <a href="index.html"><li>ხდკ</li></a>
-        </ul>
+        <ul class="flex"></ul>
       </nav>
       <div class="buttons">
-        <button class="add-btn btn">+ ატვირთვა</button>
         <button class="btn profile-btn">
-          <div class="icon">👤</div>
+          <div class="icon">
+            <img src="images/white.png" alt="#" />
+          </div>
           შესვლა
         </button>
         <button class="btn lang-btn">
           <div class="flag">
-            <img class="flag-icon" src="images/flag icon.png" alt="flag" />
+            <img class="flag-icon" src="images/earth.png" alt="flag" />
           </div>
           ქარ
         </button>
+        <button class="add-btn btn">+ ატვირთვა</button>
       </div>
     </header>
+    <section class="box-container">
+      <img class="main-image" src="images/building.jpeg" alt="building" />
+      <div class="search-box">
+        <select>
+          <option>ფართობი (მ²)</option>
+          <option>50</option>
+          <option>100</option>
+          <option>150</option>
+        </select>
+        <select>
+          <option>სტატუსი</option>
+          <option>იყიდება</option>
+          <option>ქირავდება</option>
+        </select>
+        <select>
+          <option>ადგილმდებარეობა</option>
+          <option>თბილისი</option>
+          <option>ბათუმი</option>
+          <option>ქუთაისი</option>
+        </select>
+        <select>
+          <option>ოთახები</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3+</option>
+        </select>
+        <select>
+          <option>აბაზანები</option>
+          <option>1</option>
+          <option>2+</option>
+        </select>
+        <button>ძებნა</button>
+      </div>
+    </section>
+    <section class="slider">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="card"
+              style="background-image: url('images/slider1.png')"
+            >
+              <h3>სათაური 1</h3>
+              <button>ნახვა ›</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="card"
+              style="background-image: url('images/slider2.png')"
+            >
+              <h3>სათაური 2</h3>
+              <button>ნახვა ›</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="card"
+              style="background-image: url('images/slider3.png')"
+            >
+              <h3>სათაური 3</h3>
+              <button>ნახვა ›</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
   </body>
 </html>
