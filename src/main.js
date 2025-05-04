@@ -1,4 +1,4 @@
-//slider//
+//super vip slider//
 er = new Swiper(".mySwiper", {
   loop: true,
   centeredSlides: true,
@@ -27,5 +27,15 @@ er = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
-swiper.mount();
-//Vips slider//
+// vip slider//
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".property-swiper").forEach((swiperEl) => {
+    new Swiper(swiperEl, {
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+  });
+});
