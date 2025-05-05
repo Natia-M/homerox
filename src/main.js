@@ -28,14 +28,45 @@ er = new Swiper(".mySwiper", {
   },
 });
 // vip slider//
+// შიდა ფოტო სლაიდერებისთვის
 window.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".property-swiper").forEach((swiperEl) => {
+    const nextEl = swiperEl.querySelector(".swiper-button-next");
+    const prevEl = swiperEl.querySelector(".swiper-button-prev");
+
     new Swiper(swiperEl, {
       loop: true,
       autoplay: {
         delay: 2500,
         disableOnInteraction: false,
       },
+      navigation: {
+        nextEl,
+        prevEl,
+      },
     });
+  });
+
+  // გარე ბოქსების სლაიდერი
+  new Swiper(".myPropertiesSwiper", {
+    loop: true,
+    spaceBetween: 20,
+    slidesPerView: 1,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+    navigation: {
+      nextEl: ".properties-slider .swiper-button-next",
+      prevEl: ".properties-slider .swiper-button-prev",
+    },
   });
 });

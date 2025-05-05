@@ -6,7 +6,7 @@
 /* general styles */
 body {
   max-width: 100%;
-  background-color: #eff0ff96;
+  background-color: #ffffff96;
 }
 a {
   text-decoration: none;
@@ -294,7 +294,6 @@ li {
 }
 .Project {
   padding-top: 20px;
-  background-color: #ffc0f71d;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
@@ -346,7 +345,8 @@ h3 {
   font-size: 25px;
 }
 /* vip slider */
-.properties {
+
+.myPropertiesSwiper {
   margin: 70px 30px;
   display: flex;
   flex-wrap: nowrap;
@@ -387,19 +387,6 @@ h3 {
   transform: translateY(-50%);
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  z-index: 10;
-  position: absolute;
-}
-
-.swiper-button-prev {
-  left: 10px;
-}
-
-.swiper-button-next {
-  right: 10px;
-}
 /* footer */
 footer {
   background-color: #3a76ff;
