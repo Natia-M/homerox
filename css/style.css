@@ -352,8 +352,11 @@ h3 {
   flex-wrap: nowrap;
   gap: 2rem;
   justify-content: center;
+  padding-top: 30px;
 }
-
+.swiper-wrapper-52f9b41afb817b60 {
+  padding-top: 50px;
+}
 .property-card {
   width: 300px;
   border: 1px solid #ccc;
@@ -377,16 +380,19 @@ h3 {
 }
 
 .swiper-btn-small {
-  color: white;
-  width: 24px;
-  height: 24px;
-  font-size: 16px;
-  background: rgba(0, 0, 0, 0.5);
+  color: rgb(23, 54, 179);
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+  background: rgba(215, 215, 215, 0.89);
   border-radius: 50%;
-  top: 50%;
+  top: 60% !important;
   transform: translateY(-50%);
+  padding: 15px !important;
+  display: none;
 }
-
+#main-nav-wrapper {
+}
 /* footer */
 footer {
   background-color: #3a76ff;

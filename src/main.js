@@ -28,45 +28,36 @@ er = new Swiper(".mySwiper", {
   },
 });
 // vip slider//
-// შიდა ფოტო სლაიდერებისთვის
-window.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".property-swiper").forEach((swiperEl) => {
-    const nextEl = swiperEl.querySelector(".swiper-button-next");
-    const prevEl = swiperEl.querySelector(".swiper-button-prev");
+// მთავარი swiper ბოქსებისთვის
+new Swiper(".myPropertiesSwiper", {
+  loop: true,
+  spaceBetween: 20,
+  slidesPerView: 1,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+  navigation: {
+    nextEl: ".properties-slider .main-nav.swiper-button-next",
+    prevEl: ".properties-slider .main-nav.swiper-button-prev",
+  },
+});
 
-    new Swiper(swiperEl, {
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl,
-        prevEl,
-      },
-    });
-  });
-
-  // გარე ბოქსების სლაიდერი
-  new Swiper(".myPropertiesSwiper", {
+// შიდა swiper-ები სურათებისთვის
+document.querySelectorAll(".property-swiper").forEach((swiperEl) => {
+  new Swiper(swiperEl, {
     loop: true,
-    spaceBetween: 20,
-    slidesPerView: 1,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-    },
     navigation: {
-      nextEl: ".properties-slider .swiper-button-next",
-      prevEl: ".properties-slider .swiper-button-prev",
+      nextEl: swiperEl.querySelector(".swiper-button-next"),
+      prevEl: swiperEl.querySelector(".swiper-button-prev"),
     },
   });
 });
