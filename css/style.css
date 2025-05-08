@@ -416,6 +416,9 @@ h3 {
   align-items: center;
   padding: 0 10px;
 }
+.neww {
+  gap: 15px;
+}
 .properties-slider {
   margin: 0 15px;
 }
