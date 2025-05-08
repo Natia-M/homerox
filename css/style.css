@@ -36,7 +36,7 @@ header nav {
 }
 .logo {
   max-width: 100%;
-  width: 125px;
+  width: 140px;
   object-fit: cover;
   border-radius: 20px;
 }
@@ -49,7 +49,7 @@ header nav {
 .flag-icon {
   max-width: 20px;
 }
-li {
+.main-li {
   margin-left: 50px;
   list-style: none;
 }
@@ -182,6 +182,7 @@ li {
 .search-box button:hover {
   background-color: #0040c1;
 }
+
 /* slider */
 .vips-header {
   display: flex;
@@ -417,8 +418,114 @@ h3 {
 .properties-slider {
   margin: 0 15px;
 }
+.all {
+  color: white;
+  background-color: #2365ff;
+  border: none;
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 30px;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 50px;
+}
+
 /* footer */
-footer {
-  background-color: #3a76ff;
-  height: 100px;
+
+.footer {
+  background: #8998b921;
+  border-top: 1px solid rgba(105, 101, 101, 0.057);
+  padding: 40px 20px;
+  font-family: "BPG Glaho", sans-serif;
+  color: #fff;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.footer-column {
+  flex: 1 1 180px;
+  min-width: 150px;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: rgba(31, 31, 43, 0.767);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-column ul li {
+  font-size: 14px;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a img {
+  width: 28px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(54, 52, 52, 0.483);
+  padding-top: 20px;
+  font-size: 14px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ccc;
+}
+
+.footer-bottom a {
+  color: #7b7b7b;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.footer-language {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-language span {
+  color: #626161;
+  font-size: 14px;
 }
