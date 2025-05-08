@@ -391,7 +391,31 @@ h3 {
   padding: 15px !important;
   display: none;
 }
-#main-nav-wrapper {
+#main-swiper-prev,
+#main-swiper-next {
+  color: rgb(19, 0, 166) !important;
+  top: 0%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px !important;
+  padding: 20px !important;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: unset;
+  margin-top: 50px;
+  align-content: center;
+}
+.main-nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  align-items: center;
+  padding: 0 10px;
+}
+.properties-slider {
+  margin: 0 15px;
 }
 /* footer */
 footer {
