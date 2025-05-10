@@ -50,10 +50,7 @@ header nav {
 .flag-icon {
   max-width: 20px;
 }
-.main-li {
-  margin-left: 50px;
-  list-style: none;
-}
+
 .header-ic {
   gap: 30px;
 }
@@ -122,12 +119,21 @@ li {
   color: #535353;
 }
 .main-ul {
-  padding-top: 75px;
-  padding-bottom: 20px;
+  padding-top: 65px;
+  padding-bottom: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   background-color: #ffffff96;
   text-decoration-color: none;
+}
+.main-li {
+  list-style: none;
+  padding: 10px;
+  border-radius: 20px;
+}
+.main-li:hover {
+  background-color: #4c80f9;
+  color: white;
 }
 .box-container {
   max-width: 1278px;
@@ -187,11 +193,33 @@ li {
 /* slider */
 .vips-header {
   display: flex;
-  margin-top: 50px;
-  margin-left: 20px;
+  margin-left: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+.vipp {
+  margin-top: 80px;
+}
+.mini-but {
+  font-size: smaller;
+  text-decoration: none;
+  color: #000000;
+  margin-right: 40px;
+  background-color: #4e93fa;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+}
+.mini-but:hover {
+  color: white;
+  background-color: #2365ff;
+}
+.number {
+  margin-left: 5px;
+  color: #626161;
 }
 .slider {
-  margin: 30px 30px;
+  margin: 20px 30px;
   padding: unset;
   margin-bottom: 80px;
 }
@@ -532,4 +560,145 @@ h3 {
 .footer-language span {
   color: #626161;
   font-size: 14px;
+}
+.breadcrumb {
+  font-size: 15px;
+  color: #444;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  background-color: #8b9ab26e;
+}
+
+.return {
+  text-decoration: none;
+  color: #000000;
+}
+
+.separator {
+  margin: 0 10px;
+}
+
+.current {
+  color: #757575;
+}
+/* help css */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f2f2f2;
+  padding-top: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.sidebar li.active {
+  background-color: #2365ff;
+  color: white;
+  font-weight: bold;
+}
+
+.content {
+  padding: 20px;
+  flex: 1;
+}
+
+.content-box {
+  display: none;
+}
+
+.content-box.active {
+  display: block;
+}
+/* contacts style */
+.contacts {
+  display: flex;
+  padding-top: 50px;
+}
+.team {
+  object-fit: cover;
+  max-width: 700px;
+  border-radius: 20px;
+  margin: 40px;
+  max-height: 500px;
+}
+.con-header {
+  font-size: 20px;
+  margin-left: 0px;
+}
+.contact-form-container {
+  max-width: 400px;
+  max-height: 500px;
+  margin: 50px;
+  background: #fff;
+  padding: 10px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form-container h2 {
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.contact-form-container p {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2365ff;
+  outline: none;
+}
+
+.send-btn {
+  background: #2365ff;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.send-btn:hover {
+  background: #357acc;
 }
