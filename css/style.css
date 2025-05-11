@@ -70,13 +70,14 @@ li {
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   max-width: 1278px;
-  width: 90%;
+  width: 93%;
   display: flex;
   flex-direction: row;
   gap: 10px;
   z-index: 10;
   justify-content: space-between;
   border-radius: 40px;
+  align-items: center;
 }
 
 .search-box select,
@@ -100,7 +101,9 @@ li {
 .search-box button:hover {
   background-color: #0040c1;
 }
-
+.filter {
+  max-width: 40px;
+}
 /* slider */
 .vips-header {
   display: flex;
