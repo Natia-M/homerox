@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomeRox</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/common.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -15,6 +16,7 @@
       defer
     ></script>
     <script src="src/main.js" defer></script>
+    <script src="src/search.js" defer></script>
   </head>
   <body>
     <header class="flex">
@@ -52,46 +54,54 @@
       </nav>
       <div class="box-container">
         <img class="main-image" src="images/building.jpeg" alt="building" />
-        <div class="search-box">
-          <select>
-            <option>ქონების ტიპი</option>
-            <option>ბინა</option>
-            <option>სახლი</option>
-            <option>კომერციული ფართი</option>
-            <option>სასტუმრო</option>
-            <option>მიწაა</option>
+
+        <form action="search.html" method="GET" class="search-box">
+          <select name="propertyType">
+            <option value="">ქონების ტიპი</option>
+            <option value="ბინა">ბინა</option>
+            <option value="სახლი">სახლი</option>
+            <option value="კომერციული ფართი">კომერციული ფართი</option>
+            <option value="სასტუმრო">სასტუმრო</option>
+            <option value="მიწა">მიწა</option>
           </select>
-          <select>
-            <option>გარიგების ტიპი</option>
-            <option>ქირავდება</option>
-            <option>იყიდება</option>
-            <option>გირავდება</option>
+
+          <select name="dealType">
+            <option value="">გარიგების ტიპი</option>
+            <option value="ქირავდება">ქირავდება</option>
+            <option value="იყიდება">იყიდება</option>
+            <option value="გირავდება">გირავდება</option>
+            <option value="გირავდება">ქირავდება დღიურად</option>
           </select>
-          <select>
-            <option>სტატუსი</option>
-            <option>მშენებარე</option>
-            <option>ახალი აშენებული</option>
-            <option>ძველი აშენებული</option>
+
+          <select name="status">
+            <option value="">სტატუსი</option>
+            <option value="მშენებარე">მშენებარე</option>
+            <option value="ახალი აშენებული">ახალი აშენებული</option>
+            <option value="ძველი აშენებული">ძველი აშენებული</option>
           </select>
-          <select>
-            <option>ქალაქი</option>
-            <option>თბილისი</option>
-            <option>ქუთაისი</option>
-            <option>ბათუმი</option>
-            <option>გორი</option>
+
+          <select name="city">
+            <option value="">ქალაქი</option>
+            <option value="თბილისი">თბილისი</option>
+            <option value="ქუთაისი">ქუთაისი</option>
+            <option value="ბათუმი">ბათუმი</option>
+            <option value="გორი">გორი</option>
           </select>
-          <select>
-            <option>ფასი</option>
-            <option>1</option>
-            <option>2+</option>
+
+          <select name="price">
+            <option value="">ფასი</option>
+            <option value="1">1</option>
+            <option value="2+">2+</option>
           </select>
-          <select>
-            <option>ფართი</option>
-            <option>1</option>
-            <option>2+</option>
+
+          <select name="area">
+            <option value="">ფართი</option>
+            <option value="1">1</option>
+            <option value="2+">2+</option>
           </select>
-          <button>ძებნა</button>
-        </div>
+
+          <button id="main-search-button" type="submit">ძებნა</button>
+        </form>
       </div>
     </section>
     <section>

@@ -61,3 +61,27 @@ document.querySelectorAll(".property-swiper").forEach((swiperEl) => {
     },
   });
 });
+//ფორმის ჯს//
+// ძებნის ფორმის გადაგზავნა search.html-ზე
+document.querySelector("#main-search-button").addEventListener("click", () => {
+  const propertyType = document.querySelector(
+    'select[name="propertyType"]'
+  ).value;
+  const dealType = document.querySelector('select[name="dealType"]').value;
+  const status = document.querySelector('select[name="status"]').value;
+  const city = document.querySelector('select[name="city"]').value;
+  const price = document.querySelector('select[name="price"]').value;
+  const area = document.querySelector('select[name="area"]').value;
+
+  const queryParams = new URLSearchParams({
+    propertyType,
+    dealType,
+    status,
+    city,
+    price,
+    area,
+  });
+
+  // გადააქვს ძებნის გვერდზე არჩეული პარამეტრებით
+  window.location.href = `search.html?${queryParams.toString()}`;
+});

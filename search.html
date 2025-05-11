@@ -1,22 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomeRox</title>
+    <title>ძებნის შედეგები</title>
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="shortcut icon" href="images/mini3.svg" type="img/icon" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-      defer
-    ></script>
-    <script src="src/main.js" defer></script>
+    <link rel="stylesheet" href="css/search.css" />
   </head>
+  <script src="src/main.js" defer></script>
+  <script src="src/search.js" defer></script>
   <body>
     <header class="flex">
       <a href="index.html"
@@ -41,35 +32,72 @@
         <button class="add-btn btn">+ ატვირთვა</button>
       </div>
     </header>
+    <section>
+      <div class="search-page-container">
+        <form class="search-box">
+          <select name="propertyType">
+            <option value="">ქონების ტიპი</option>
+            <option value="ბინა">ბინა</option>
+            <option value="სახლი">სახლი</option>
+            <option value="კომერციული ფართი">კომერციული ფართი</option>
+            <option value="სასტუმრო">სასტუმრო</option>
+            <option value="მიწა">მიწა</option>
+          </select>
+
+          <select name="dealType">
+            <option value="">გარიგების ტიპი</option>
+            <option value="ქირავდება">ქირავდება</option>
+            <option value="იყიდება">იყიდება</option>
+            <option value="გირავდება">გირავდება</option>
+            <option value="გირავდება">ქირავდება დღიურად</option>
+          </select>
+
+          <select name="status">
+            <option value="">სტატუსი</option>
+            <option value="მშენებარე">მშენებარე</option>
+            <option value="ახალი აშენებული">ახალი აშენებული</option>
+            <option value="ძველი აშენებული">ძველი აშენებული</option>
+          </select>
+
+          <select name="city">
+            <option value="">ქალაქი</option>
+            <option value="თბილისი">თბილისი</option>
+            <option value="ქუთაისი">ქუთაისი</option>
+            <option value="ბათუმი">ბათუმი</option>
+            <option value="გორი">გორი</option>
+          </select>
+
+          <select name="price">
+            <option value="">ფასი</option>
+            <option value="1">1</option>
+            <option value="2+">2+</option>
+          </select>
+
+          <select name="area">
+            <option value="">ფართი</option>
+            <option value="1">1</option>
+            <option value="2+">2+</option>
+          </select>
+
+          <button type="submit">ძებნა</button>
+        </form>
+
+        <h2 id="resultsTitle">შედეგები:</h2>
+        <div id="results" class="results-container"></div>
+      </div>
+    </section>
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-column">
           <h4>ნავიგაცია</h4>
           <ul>
-            <li><a href="#">იპოიკა</a></li>
+            <li><a href="#">იპოთეკა</a></li>
             <li><a href="#">საგენტოები</a></li>
             <li><a href="#">პროექტები</a></li>
             <li><a href="help.html">დახმარება</a></li>
             <li><a href="#">ფასების სტატისტიკა</a></li>
-            <li><a href="#">აუქციონი</a></li>
-            <li><a href="#">ფოტომასალები</a></li>
           </ul>
-        </div>
-
-        <div class="footer-column">
-          <h4>დაგვიკავშირდი</h4>
-          <ul>
-            <li>რეკლამა</li>
-            <li>კონტაქტი</li>
-            <li>032 000 000</li>
-            <li><a href="mailto:info@myhome.ge">info@HomeRox.ge</a></li>
-            <li>ანონიმური უკუკავშირი</li>
-          </ul>
-          <div class="social-icons">
-            <a href="#"><img src="images/fb.svg" alt="Facebook" /></a>
-            <a href="#"><img src="images/ig.svg" alt="Instagram" /></a>
-            <a href="#"><img src="images/lk.svg" alt="LinkedIn" /></a>
-          </div>
         </div>
 
         <div class="footer-column">
@@ -107,6 +135,21 @@
             <li>გირავდება კერძო სახლი</li>
             <li>გირავდება ბინა რუსთავში</li>
           </ul>
+        </div>
+        <div class="footer-column">
+          <h4>დაგვიკავშირდი</h4>
+          <ul>
+            <li>რეკლამა</li>
+            <li>კონტაქტი</li>
+            <li>032 000 000</li>
+            <li><a href="mailto:info@myhome.ge">info@HomeRox.ge</a></li>
+            <li>ანონიმური უკუკავშირი</li>
+          </ul>
+          <div class="social-icons">
+            <a href="#"><img src="images/fb.svg" alt="Facebook" /></a>
+            <a href="#"><img src="images/ig.svg" alt="Instagram" /></a>
+            <a href="#"><img src="images/lk.svg" alt="LinkedIn" /></a>
+          </div>
         </div>
       </div>
 
