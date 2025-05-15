@@ -54,6 +54,7 @@
         </ul>
       </nav>
       <div class="box-container">
+        <p class="heading">აქ იპოვე შენი სახლი</p>
         <img class="main-image" src="images/building.jpeg" alt="building" />
         <form action="search.html" method="GET" class="search-box">
           <select name="propertyType">
@@ -88,20 +89,84 @@
             <option value="გორი">გორი</option>
           </select>
 
-          <select name="price">
-            <option value="">ფასი</option>
-            <option value="1">1</option>
-            <option value="2+">2+</option>
-          </select>
-
-          <select name="area">
-            <option value="">ფართი</option>
-            <option value="1">1</option>
-            <option value="2+">2+</option>
-          </select>
+          <div class="custom-price-dropdown">
+            <button type="button" class="price-toggle">
+              ფასი
+              <span class="arrow">&#9662;</span>
+            </button>
+            <div class="price-popup hidden">
+              <label
+                >დან:
+                <input type="number" name="minPrice" placeholder="მინ." />
+              </label>
+              <label
+                >მდე:
+                <input type="number" name="maxPrice" placeholder="მაქს." />
+              </label>
+              <button type="button" class="price-apply">OK</button>
+            </div>
+          </div>
+          <div class="custom-area-dropdown">
+            <button type="button" class="area-toggle">
+              ფართი
+              <span class="arrow">&#9662;</span>
+            </button>
+            <div class="area-popup hidden">
+              <label
+                >დან:
+                <input type="number" name="minArea" placeholder="მინ. მ²" />
+              </label>
+              <label
+                >მდე:
+                <input type="number" name="maxArea" placeholder="მაქს. მ²" />
+              </label>
+              <button type="button" class="area-apply">OK</button>
+            </div>
+          </div>
           <img class="filter" src="images/fil3.svg" alt="#" />
           <button id="main-search-button" type="submit">ძებნა</button>
         </form>
+        <!-- ფორმის ბოლოს -->
+        <div id="filterModal" class="filter-modal hidden">
+          <div class="filter-modal-content">
+            <span class="close-filter">&times;</span>
+            <h3>დამატებითი ფილტრები</h3>
+
+            <div class="filter-group">
+              <h4>მდებარეობა</h4>
+              <label
+                ><input type="checkbox" name="location" value="ახალი" /> ახალი
+                განაშენიანება</label
+              >
+              <label
+                ><input type="checkbox" name="location" value="ძველი" /> ძველი
+                განაშენიანება</label
+              >
+              <label
+                ><input type="checkbox" name="location" value="სასწრაფოდ" />
+                სასწრაფოდ</label
+              >
+              <label
+                ><input type="checkbox" name="location" value="შავი" /> შავი
+                კარკასი</label
+              >
+            </div>
+
+            <div class="filter-group">
+              <h4>ფასი</h4>
+              <input type="number" name="modalMinPrice" placeholder="დან ₾" />
+              <input type="number" name="modalMaxPrice" placeholder="მდე ₾" />
+            </div>
+
+            <div class="filter-group">
+              <h4>ფართი</h4>
+              <input type="number" name="modalMinArea" placeholder="დან მ²" />
+              <input type="number" name="modalMaxArea" placeholder="მდე მ²" />
+            </div>
+
+            <button class="apply-filter" type="submit">ძებნის დაწყება</button>
+          </div>
+        </div>
       </div>
     </section>
     <section>

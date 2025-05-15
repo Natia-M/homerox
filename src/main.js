@@ -85,3 +85,60 @@ document.querySelector("#main-search-button").addEventListener("click", () => {
   // გადააქვს ძებნის გვერდზე არჩეული პარამეტრებით
   window.location.href = `search.html?${queryParams.toString()}`;
 });
+//ფასის ფანჯარა//
+document.addEventListener("DOMContentLoaded", function () {
+  // ფასი
+  const toggleBtn = document.querySelector(".price-toggle");
+  const popup = document.querySelector(".price-popup");
+  const applyBtn = document.querySelector(".price-apply");
+
+  toggleBtn.addEventListener("click", () => {
+    popup.classList.toggle("hidden");
+  });
+
+  applyBtn.addEventListener("click", () => {
+    popup.classList.add("hidden");
+  });
+
+  // ფართი
+  const areaToggle = document.querySelector(".area-toggle");
+  const areaPopup = document.querySelector(".area-popup");
+  const areaApply = document.querySelector(".area-apply");
+
+  areaToggle.addEventListener("click", () => {
+    areaPopup.classList.toggle("hidden");
+  });
+
+  areaApply.addEventListener("click", () => {
+    areaPopup.classList.add("hidden");
+  });
+
+  // გარეთ კლიკით ორივეს დახურვა
+  document.addEventListener("click", (e) => {
+    if (!document.querySelector(".custom-price-dropdown").contains(e.target)) {
+      popup.classList.add("hidden");
+    }
+    if (!document.querySelector(".custom-area-dropdown").contains(e.target)) {
+      areaPopup.classList.add("hidden");
+    }
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const filterIcon = document.querySelector(".filter");
+  const modal = document.getElementById("filterModal");
+  const closeBtn = document.querySelector(".close-filter");
+
+  filterIcon.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+});

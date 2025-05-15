@@ -67,17 +67,40 @@
             <option value="გორი">გორი</option>
           </select>
 
-          <select name="price">
-            <option value="">ფასი</option>
-            <option value="1">1</option>
-            <option value="2+">2+</option>
-          </select>
-
-          <select name="area">
-            <option value="">ფართი</option>
-            <option value="1">1</option>
-            <option value="2+">2+</option>
-          </select>
+          <div class="custom-price-dropdown">
+            <button type="button" class="price-toggle">
+              ფასი
+              <span class="arrow">&#9662;</span>
+            </button>
+            <div class="price-popup hidden">
+              <label
+                >დან:
+                <input type="number" name="minPrice" placeholder="მინ." />
+              </label>
+              <label
+                >მდე:
+                <input type="number" name="maxPrice" placeholder="მაქს." />
+              </label>
+              <button type="button" class="price-apply">OK</button>
+            </div>
+          </div>
+          <div class="custom-area-dropdown">
+            <button type="button" class="area-toggle">
+              ფართი
+              <span class="arrow">&#9662;</span>
+            </button>
+            <div class="area-popup hidden">
+              <label
+                >დან:
+                <input type="number" name="minArea" placeholder="მინ. მ²" />
+              </label>
+              <label
+                >მდე:
+                <input type="number" name="maxArea" placeholder="მაქს. მ²" />
+              </label>
+              <button type="button" class="area-apply">OK</button>
+            </div>
+          </div>
           <img class="filter" src="images/fil3.svg" alt="#" />
           <button type="submit">ძებნა</button>
         </form>
