@@ -61,6 +61,26 @@ document.querySelectorAll(".property-swiper").forEach((swiperEl) => {
     },
   });
 });
+//ვალუტის ცვლა//
+document.querySelectorAll(".currency-btn").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const container = e.target.closest(".property-price");
+    const valueEl = container.firstChild;
+    const price = parseFloat(valueEl.textContent);
+
+    container
+      .querySelectorAll(".currency-btn")
+      .forEach((b) => b.classList.remove("active"));
+    e.target.classList.add("active");
+
+    if (e.target.textContent.trim() === "$") {
+      valueEl.textContent = (price / 2.7).toFixed(2); // მაგ: ₾ → $
+    } else {
+      valueEl.textContent = (price * 2.7).toFixed(2); // $ → ₾
+    }
+  });
+});
+
 //ფორმის ჯს//
 // ძებნის ფორმის გადაგზავნა search.html-ზე
 document.querySelector("#main-search-button").addEventListener("click", () => {
