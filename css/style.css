@@ -259,16 +259,16 @@ li {
 .mini-but {
   font-size: smaller;
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
   margin-right: 40px;
-  background-color: #4e93fa;
+  background-color: #3a76ff;
   border: none;
   border-radius: 20px;
   padding: 10px;
 }
 .mini-but:hover {
   color: white;
-  background-color: #2365ff;
+  background-color: #023abb;
 }
 .number {
   margin-left: 5px;
@@ -430,7 +430,8 @@ h3 {
   margin-left: 10px;
   font-size: 25px;
 }
-/* vip slider */
+
+/* "new" slider */
 
 .myPropertiesSwiper {
   margin: 70px 30px;
@@ -577,12 +578,16 @@ h3 {
 .loc-div {
   display: flex;
 }
+.property-info {
+  padding: 10px;
+}
 .property-price {
   font-size: 18px;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-top: 5px;
 }
 
 .currency-switch {

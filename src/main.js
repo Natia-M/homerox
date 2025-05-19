@@ -88,7 +88,6 @@ document.querySelector("#main-search-button").addEventListener("click", () => {
     'select[name="propertyType"]'
   ).value;
   const dealType = document.querySelector('select[name="dealType"]').value;
-  const status = document.querySelector('select[name="status"]').value;
   const city = document.querySelector('select[name="city"]').value;
   const price = document.querySelector('select[name="price"]').value;
   const area = document.querySelector('select[name="area"]').value;
@@ -96,7 +95,6 @@ document.querySelector("#main-search-button").addEventListener("click", () => {
   const queryParams = new URLSearchParams({
     propertyType,
     dealType,
-    status,
     city,
     price,
     area,
@@ -160,5 +158,24 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.target === modal) {
       modal.classList.add("hidden");
     }
+  });
+});
+//ენის მოდული//
+const toggle = document.getElementById("languageToggle");
+const modal = document.getElementById("languageModal");
+
+toggle.addEventListener("click", () => {
+  modal.classList.toggle("hidden");
+});
+
+document.querySelectorAll(".language-option").forEach((option) => {
+  option.addEventListener("click", () => {
+    document
+      .querySelectorAll(".custom-radio")
+      .forEach((r) => r.classList.remove("active"));
+    option.querySelector(".custom-radio").classList.add("active");
+    const selectedText = option.querySelector(".language-label").textContent;
+    toggle.querySelector("div").textContent = selectedText;
+    modal.classList.add("hidden");
   });
 });
