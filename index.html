@@ -130,6 +130,12 @@
               <button type="button" class="area-apply">OK</button>
             </div>
           </div>
+          <input
+            type="text"
+            name="searchQuery"
+            class="text-search"
+            placeholder="ტელეფონი, ID, სა.კოდ"
+          />
           <img class="filter" src="images/fil3.svg" alt="#" />
           <button id="main-search-button" type="submit">ძებნა</button>
         </form>
@@ -137,38 +143,90 @@
         <div id="filterModal" class="filter-modal hidden">
           <div class="filter-modal-content">
             <span class="close-filter">&times;</span>
-            <h3>დამატებითი ფილტრები</h3>
+            <h3 class="modal-h">დამატებითი ფილტრები</h3>
 
             <div class="filter-group">
-              <h4>მდებარეობა</h4>
-              <label
+              <h4 class="modal-h4">სტატუსი</h4>
+              <label class="modal-label"
                 ><input type="checkbox" name="location" value="ახალი" /> ახალი
                 განაშენიანება</label
               >
-              <label
+              <label class="modal-label"
                 ><input type="checkbox" name="location" value="ძველი" /> ძველი
                 განაშენიანება</label
               >
-              <label
+              <label class="modal-label"
                 ><input type="checkbox" name="location" value="სასწრაფოდ" />
                 სასწრაფოდ</label
               >
-              <label
+              <label class="modal-label"
                 ><input type="checkbox" name="location" value="შავი" /> შავი
                 კარკასი</label
               >
             </div>
-
             <div class="filter-group">
-              <h4>ფასი</h4>
-              <input type="number" name="modalMinPrice" placeholder="დან ₾" />
-              <input type="number" name="modalMaxPrice" placeholder="მდე ₾" />
+              <h4 class="modal-h4">სველი წერტილი</h4>
+              <label class="modal-label"
+                ><input type="checkbox" name="location" value="ახალი" />
+                1</label
+              >
+              <label class="modal-label"
+                ><input type="checkbox" name="location" value="ძველი" />
+                2</label
+              >
+              <label class="modal-label"
+                ><input
+                  type="checkbox"
+                  name="location"
+                  value="სასწრაფოდ"
+                />3</label
+              >
+              <label class="modal-label"
+                ><input type="checkbox" name="location" value="შავი" /> 4</label
+              >
+              <label class="modal-label"
+                ><input type="checkbox" name="location" value="შავი" /> 4
+                +</label
+              >
             </div>
 
             <div class="filter-group">
-              <h4>ფართი</h4>
-              <input type="number" name="modalMinArea" placeholder="დან მ²" />
-              <input type="number" name="modalMaxArea" placeholder="მდე მ²" />
+              <h4 class="modal-h4">სტატუსი</h4>
+              <label class="modal-label"
+                ><input type="checkbox" name="location" value="ახალი" /> ახალი
+                განაშენიანება</label
+              >
+              <label class="modal-label"
+                ><input type="checkbox" name="location" value="ძველი" /> ძველი
+                განაშენიანება</label
+              >
+              <label class="modal-label"
+                ><input type="checkbox" name="location" value="სასწრაფოდ" />
+                სასწრაფოდ</label
+              >
+              <label class="modal-label"
+                ><input type="checkbox" name="location" value="შავი" /> შავი
+                კარკასი</label
+              >
+            </div>
+            <div class="filter-group">
+              <h4 class="modal-h4">სტატუსი</h4>
+              <label class="modal-label"
+                ><input type="checkbox" name="location" value="ახალი" /> ახალი
+                განაშენიანება</label
+              >
+              <label class="modal-label"
+                ><input type="checkbox" name="location" value="ძველი" /> ძველი
+                განაშენიანება</label
+              >
+              <label class="modal-label"
+                ><input type="checkbox" name="location" value="სასწრაფოდ" />
+                სასწრაფოდ</label
+              >
+              <label class="modal-label"
+                ><input type="checkbox" name="location" value="შავი" /> შავი
+                კარკასი</label
+              >
             </div>
 
             <button class="apply-filter" type="submit">ძებნის დაწყება</button>

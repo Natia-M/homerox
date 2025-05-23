@@ -99,7 +99,7 @@ li {
   cursor: pointer;
 }
 
-.search-box button {
+#main-search-button {
   background-color: #3a76ff;
   color: white;
   border: none;
@@ -107,7 +107,7 @@ li {
   transition: background 0.3s ease;
 }
 
-.search-box button:hover {
+#main-search-button:hover {
   background-color: #0040c1;
 }
 .filter {
@@ -122,7 +122,7 @@ li {
 .price-toggle,
 .area-toggle {
   padding: 8px 14px;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 6px;
   cursor: pointer;
@@ -191,9 +191,26 @@ li {
   margin: 5% auto;
   padding: 20px 30px;
   border-radius: 12px;
-  max-width: 700px;
+  max-width: 900px;
   position: relative;
   animation: fadeIn 0.3s ease-in-out;
+}
+.modal-h {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+}
+.modal-h4 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.modal-label {
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #dee6f2;
+  margin-right: 10px;
 }
 .close-filter {
   position: absolute;
@@ -206,6 +223,8 @@ li {
 }
 .filter-group {
   margin-bottom: 20px;
+  border-bottom: 1px solid #8998b9;
+  padding-bottom: 30px;
 }
 .filter-group input[type="number"],
 .filter-group input[type="text"] {
@@ -214,9 +233,7 @@ li {
   margin-right: 4%;
   margin-bottom: 8px;
 }
-.filter-group h4 {
-  margin-bottom: 10px;
-}
+
 .apply-filter {
   background-color: #2365ff;
   color: white;
@@ -246,6 +263,16 @@ li {
 .filter {
   cursor: pointer;
 }
+.text-search {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 30px;
+}
+
 /* slider */
 .vips-header {
   display: flex;
