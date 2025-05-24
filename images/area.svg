@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20" height="20" viewBox="0 0 20 20" xml:space="preserve">
+    <g transform="translate(-450 -680)">
+        <g xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="area-focus-mini">
+		<polygon points="455,697 452,697 452,694 451,694 451,698 455,698   "/>
+		<polygon points="468,694 468,697 465,697 465,698 469,698 469,694   "/>
+		<polygon points="465,683 468,683 468,686 469,686 469,682 465,682   "/>
+		<polygon points="452,686 452,683 455,683 455,682 451,682 451,686   "/>
+		<rect x="453" y="684" width="14" height="12"/>
+	</g>
+	
+    </g>
+</svg>

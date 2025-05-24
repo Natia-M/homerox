@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomeRox</title>
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/onepage.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="shortcut icon" href="images/mini3.svg" type="img/icon" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-      defer
-    ></script>
-    <script src="src/main.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="src/onepage.js" defer></script>
   </head>
   <body>
     <header class="flex">
@@ -55,5 +56,114 @@
         <button class="add-btn btn">+ ატვირთვა</button>
       </div>
     </header>
+    <section class="apartment-listing">
+      <div class="listing-topbar">
+        <div class="breadcrumbs">
+          ბინა > ქირავდება დღიურად > თბილისი > გლდანი > შერმადინის ქ.
+        </div>
+      </div>
+
+      <h1 class="title">ქირავდება დღიურად 2 ოთახიანი ბინა გლდანში</h1>
+
+      <div class="gallery-and-sidebar">
+        <div class="gallery-description">
+          <div class="desc">
+            <p class="address">📍 შერმადინის ქ. 124</p>
+            <div class="meta-info">
+              <span class="views">👁 409</span>
+              <span class="date">24 მაისი 25, 17:47</span>
+              <span class="listing-id">ID - 31517668</span>
+            </div>
+          </div>
+          <div class="image-gallery">
+            <img class="img1" src="images/l1.jpg" alt="საძინებელი" />
+            <img class="img2" src="images/l2.jpg" alt="სააბაზანო 1" />
+            <img class="img3" src="images/l3.jpg" alt="სააბაზანო 2" />
+            <img class="img4" src="images/l4.jpg" alt="სამზარეულო 1" />
+            <img class="img5" src="images/l5.jpg" alt="სამზარეულო 2" />
+          </div>
+        </div>
+        <div class="sidebar">
+          <div class="price-box">
+            <p class="price">50 ₾</p>
+            <div class="currency-switcher">
+              <button title="გადაცვლა ვალუტაში">💱</button>
+            </div>
+            <button class="call-btn">📞 557 93 34 ** ნომრის ნახვა</button>
+          </div>
+
+          <div class="owner-box">
+            <p class="owner-name">👤 გიორგი</p>
+            <p class="owner-link">ყველა განცხადება (6)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="details-section">
+      <div class="property-features">
+        <div class="feature-item">
+          <img src="images/area.svg" alt="ფართი" />
+          <div>
+            <div class="feature-label">საერთო ფართი</div>
+            <div class="feature-value">40 მ²</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <img src="images/door.svg" alt="ოთახი" />
+          <div>
+            <div class="feature-label">ოთახი</div>
+            <div class="feature-value">2</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <img src="images/bed.svg" alt="საძინებელი" />
+          <div>
+            <div class="feature-label">საძინებელი</div>
+            <div class="feature-value">1</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <img src="images/stairs.svg" alt="სართული" />
+          <div>
+            <div class="feature-label">სართული</div>
+            <div class="feature-value">7/17</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <img src="images/shower.svg" alt="სველი წერტილი" />
+          <div>
+            <div class="feature-label">სველი წერტილი</div>
+            <div class="feature-value">1</div>
+          </div>
+        </div>
+      </div>
+      <section class="map-section">
+        <div id="map"></div>
+      </section>
+      <div class="comment-section">
+        <h3>კომენტარი</h3>
+        <div class="comment-box">
+          ჩაწერე აქ, ამ კომენტარს დაინახავენ მხოლოდ მომხმარებლები...
+        </div>
+      </div>
+      <div class="description-section">
+        <h3>
+          აღწერა
+          <img src="icons/flag-ge.svg" alt="ქართული" class="flag" />
+          <img src="icons/flag-uk.svg" alt="ინგლისური" class="flag" />
+          <img src="icons/flag-ru.svg" alt="რუსული" class="flag" />
+        </h3>
+        <p>
+          ქირავდება ბინა დღიურად, ახლად აშენებულ თანამედროვე სტილის, ყველა
+          საჭირო ინვენტარით, ტელევიზორი, ავეჯი, ჭურჭელი და ჰიგიენისთვის საჭირო
+          საშუალებები. wifi, მანქანა, სარეცხი მანქანა და სხვ. აქ თბილად
+          დაისვენებთ, სუფთა გარემოში, თბილ გარემოში, პირსახოცები, რესპეტები, და
+          ა.შ. დამატებით გაწვდობა. განაკვეთი საათით 50 ლარი, საათამდე დღიურად 80
+          ლარი, 24 საათით 100 ლარი.
+        </p>
+        <button class="map-button">ნახე რუკაზე</button>
+      </div>
+    </section>
+    <section class="extra-info"></section>
   </body>
 </html>
