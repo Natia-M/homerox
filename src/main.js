@@ -1,32 +1,32 @@
 //super vip slider//
-er = new Swiper(".mySwiper", {
-  loop: true,
-  centeredSlides: true,
-  padding: "5rem",
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
-  speed: 600,
-  spaceBetween: 20,
-  slidesPerView: 1,
-  breakpoints: {
-    768: {
-      slidesPerView: 1,
-    },
-    1024: {
-      slidesPerView: 3,
-    },
-    1400: {
-      slidesPerView: 3,
-    },
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+// er = new Swiper(".mySwiper", {
+//   loop: true,
+//   centeredSlides: true,
+//   padding: "5rem",
+//   autoplay: {
+//     delay: 2000,
+//     disableOnInteraction: false,
+//     pauseOnMouseEnter: true,
+//   },
+//   speed: 600,
+//   spaceBetween: 20,
+//   slidesPerView: 1,
+//   breakpoints: {
+//     768: {
+//       slidesPerView: 1,
+//     },
+//     1024: {
+//       slidesPerView: 4,
+//     },
+//     1400: {
+//       slidesPerView: 4,
+//     },
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });
 // vip slider//
 // მთავარი swiper ბოქსებისთვის
 new Swiper(".myPropertiesSwiper", {
@@ -179,17 +179,3 @@ document.querySelectorAll(".language-option").forEach((option) => {
     modal.classList.add("hidden");
   });
 });
-//რუკა//
-const map = L.map("map").setView([41.7949, 44.8361], 15);
-
-// OpenStreetMap ფენა
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-}).addTo(map);
-
-// მარკერი ბინაზე
-L.marker([41.7949, 44.8361])
-  .addTo(map)
-  .bindPopup("შერმადინის ქ. 124")
-  .openPopup();
