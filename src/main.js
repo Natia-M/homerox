@@ -145,19 +145,29 @@ document.addEventListener("DOMContentLoaded", function () {
   const filterIcon = document.querySelector(".filter");
   const modal = document.getElementById("filterModal");
   const closeBtn = document.querySelector(".close-filter");
+  const selectableItems = document.querySelectorAll(".selectable");
 
-  filterIcon.addEventListener("click", () => {
+  // მოდალის გახსნა
+  filterIcon?.addEventListener("click", () => {
     modal.classList.remove("hidden");
   });
 
-  closeBtn.addEventListener("click", () => {
+  // მოდალის დახურვა
+  closeBtn?.addEventListener("click", () => {
     modal.classList.add("hidden");
   });
 
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.classList.add("hidden");
-    }
+  // მონიშვნა (active კლასის დამატება/ამოღება)
+  selectableItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      item.classList.toggle("active");
+    });
+    document.querySelector(".erase").addEventListener("click", () => {
+      const selectedFilters = document.querySelectorAll(
+        ".modal-label.selectable.selected"
+      );
+      selectedFilters.forEach((el) => el.classList.remove("selected"));
+    });
   });
 });
 //ენის მოდული//

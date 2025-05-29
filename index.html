@@ -139,97 +139,57 @@
           <img class="filter" src="images/fil3.svg" alt="#" />
           <button id="main-search-button" type="submit">ძებნა</button>
         </form>
-        <!-- ფორმის ბოლოს -->
         <div id="filterModal" class="filter-modal hidden">
           <div class="filter-modal-content">
-            <span class="close-filter">&times;</span>
-            <h3 class="modal-h">დამატებითი ფილტრები</h3>
-
+            <div class="fixed-modal">
+              <span class="close-filter">×</span>
+              <h3 class="modal-h">დეტალური ძიება</h3>
+            </div>
             <div class="filter-group">
-              <h4 class="modal-h4">სტატუსი</h4>
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="ახალი" /> ახალი
-                განაშენიანება</label
-              >
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="ძველი" /> ძველი
-                განაშენიანება</label
-              >
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="სასწრაფოდ" />
-                სასწრაფოდ</label
-              >
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="შავი" /> შავი
-                კარკასი</label
-              >
+              <h4 class="modal-h4">მდგომარება</h4>
+              <div class="filter-group-1">
+                <div class="modal-label selectable">ახალი რემონტი</div>
+                <div class="modal-label selectable">ძველი რემონტი</div>
+                <div class="modal-label selectable">მიმდინარე რემონტი</div>
+                <div class="modal-label selectable">შავი კარკასი</div>
+                <div class="modal-label selectable">თეთრი კარკასი</div>
+                <div class="modal-label selectable">მწვანე კარკასი</div>
+              </div>
             </div>
             <div class="filter-group">
               <h4 class="modal-h4">სველი წერტილი</h4>
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="ახალი" />
-                1</label
-              >
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="ძველი" />
-                2</label
-              >
-              <label class="modal-label"
-                ><input
-                  type="checkbox"
-                  name="location"
-                  value="სასწრაფოდ"
-                />3</label
-              >
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="შავი" /> 4</label
-              >
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="შავი" /> 4
-                +</label
-              >
+              <div class="filter-group-1">
+                <div class="modal-label selectable">1</div>
+                <div class="modal-label selectable">2</div>
+                <div class="modal-label selectable">3</div>
+                <div class="modal-label selectable">4</div>
+                <div class="modal-label selectable">4+</div>
+              </div>
+            </div>
+            <div class="filter-group">
+              <h4 class="modal-h4">გაყიდვის პირობები</h4>
+              <div class="filter-group-1">
+                <div class="modal-label selectable"></div>
+                <div class="modal-label selectable"></div>
+                <div class="modal-label selectable"></div>
+                <div class="modal-label selectable"></div>
+              </div>
             </div>
 
             <div class="filter-group">
-              <h4 class="modal-h4">სტატუსი</h4>
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="ახალი" /> ახალი
-                განაშენიანება</label
-              >
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="ძველი" /> ძველი
-                განაშენიანება</label
-              >
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="სასწრაფოდ" />
-                სასწრაფოდ</label
-              >
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="შავი" /> შავი
-                კარკასი</label
-              >
+              <h4 class="modal-h4">სველი წერტილი</h4>
+              <div class="filter-group-1">
+                <div class="modal-label selectable">1</div>
+                <div class="modal-label selectable">2</div>
+                <div class="modal-label selectable">3</div>
+                <div class="modal-label selectable">4</div>
+                <div class="modal-label selectable">4+</div>
+              </div>
             </div>
-            <div class="filter-group">
-              <h4 class="modal-h4">სტატუსი</h4>
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="ახალი" /> ახალი
-                განაშენიანება</label
-              >
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="ძველი" /> ძველი
-                განაშენიანება</label
-              >
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="სასწრაფოდ" />
-                სასწრაფოდ</label
-              >
-              <label class="modal-label"
-                ><input type="checkbox" name="location" value="შავი" /> შავი
-                კარკასი</label
-              >
+            <div class="bottom-buttons">
+              <div class="erase">გასუფთავება</div>
+              <button class="apply-filter" type="submit">ნახე შედეგი</button>
             </div>
-
-            <button class="apply-filter" type="submit">ძებნის დაწყება</button>
           </div>
         </div>
       </div>
