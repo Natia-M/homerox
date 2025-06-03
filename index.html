@@ -71,7 +71,7 @@
         <p class="heading">აქ იპოვე შენი სახლი</p>
         <img class="main-image" src="images/building.jpeg" alt="building" />
         <form action="search.html" method="GET" class="search-box">
-          <select name="propertyType">
+          <select class="select" name="propertyType">
             <option value="">ქონების ტიპი</option>
             <option value="ბინა">ბინა</option>
             <option value="სახლი">სახლი</option>
@@ -80,7 +80,7 @@
             <option value="მიწა">მიწა</option>
           </select>
 
-          <select name="dealType">
+          <select class="select" name="dealType">
             <option value="">გარიგების ტიპი</option>
             <option value="ქირავდება">ქირავდება</option>
             <option value="იყიდება">იყიდება</option>
@@ -88,7 +88,7 @@
             <option value="გირავდება">ქირავდება დღიურად</option>
           </select>
 
-          <select name="city">
+          <select class="select" name="city">
             <option value="">ქალაქი</option>
             <option value="თბილისი">თბილისი</option>
             <option value="ქუთაისი">ქუთაისი</option>
@@ -157,6 +157,17 @@
               </div>
             </div>
             <div class="filter-group">
+              <h4 class="modal-h4">ოთახების რაოდენობა</h4>
+              <div class="filter-group-1">
+                <div class="modal-label selectable">1</div>
+                <div class="modal-label selectable">2</div>
+                <div class="modal-label selectable">3</div>
+                <div class="modal-label selectable">4</div>
+                <div class="modal-label selectable">5</div>
+                <div class="modal-label selectable">5-ზე მეტი</div>
+              </div>
+            </div>
+            <div class="filter-group">
               <h4 class="modal-h4">სველი წერტილი</h4>
               <div class="filter-group-1">
                 <div class="modal-label selectable">1</div>
@@ -164,26 +175,17 @@
                 <div class="modal-label selectable">3</div>
                 <div class="modal-label selectable">4</div>
                 <div class="modal-label selectable">4+</div>
-              </div>
-            </div>
-            <div class="filter-group">
-              <h4 class="modal-h4">გაყიდვის პირობები</h4>
-              <div class="filter-group-1">
-                <div class="modal-label selectable"></div>
-                <div class="modal-label selectable"></div>
-                <div class="modal-label selectable"></div>
-                <div class="modal-label selectable"></div>
               </div>
             </div>
 
             <div class="filter-group">
-              <h4 class="modal-h4">სველი წერტილი</h4>
+              <h4 class="modal-h4">გაყიდვის პირობები</h4>
               <div class="filter-group-1">
-                <div class="modal-label selectable">1</div>
-                <div class="modal-label selectable">2</div>
-                <div class="modal-label selectable">3</div>
-                <div class="modal-label selectable">4</div>
-                <div class="modal-label selectable">4+</div>
+                <div class="modal-label selectable">სიტყვა</div>
+                <div class="modal-label selectable">სიტყვა</div>
+                <div class="modal-label selectable">სიტყვა</div>
+                <div class="modal-label selectable">სიტყვა</div>
+                <div class="modal-label selectable">სიტყვა</div>
               </div>
             </div>
             <div class="bottom-buttons">
@@ -210,88 +212,182 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="card small-card">
-                <img src="images/slider1.jpg" alt="ბინის ფოტო" />
+                <img
+                  class="small-card-img"
+                  src="images/slider3.jpg"
+                  alt="ბინის ფოტო"
+                />
                 <div class="info">
-                  <h3>ქირავდება ბინა</h3>
-                  <p class="price">$500 / თვე</p>
-                  <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
-                  <a href="detail.html" class="view-more">დეტალურად ›</a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card small-card">
-                <img src="images/slider2.webp" alt="ბინის ფოტო" />
-                <div class="info">
-                  <h3>ქირავდება ბინა</h3>
-                  <p class="price">$500 / თვე</p>
-                  <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
-                  <a href="detail.html" class="view-more">დეტალურად ›</a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card small-card">
-                <img src="images/slider3.jpg" alt="ბინის ფოტო" />
-                <div class="info">
-                  <h3>ქირავდება ბინა</h3>
-                  <p class="price">$500 / თვე</p>
-                  <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  <div class="info-3 flex">
+                    <h3>ქირავდება ბინა</h3>
+                    <p class="property-price">
+                      500₾
+                      <span class="currency-switch">
+                        <button class="currency-btn active">₾</button>
+                        <button class="currency-btn">$</button>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="location flex">
+                    <img class="location-icon" src="images/map.svg" alt="" />
+                    <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  </div>
                   <a href="onepage.html" class="view-more">დეტალურად ›</a>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="card small-card">
-                <img src="images/flat1.avif" alt="ბინის ფოტო" />
+                <img
+                  class="small-card-img"
+                  src="images/slider3.jpg"
+                  alt="ბინის ფოტო"
+                />
                 <div class="info">
-                  <h3>ქირავდება ბინა</h3>
-                  <p class="price">$500 / თვე</p>
-                  <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  <div class="info-3 flex">
+                    <h3>ქირავდება ბინა</h3>
+                    <p class="property-price">
+                      500₾
+                      <span class="currency-switch">
+                        <button class="currency-btn active">₾</button>
+                        <button class="currency-btn">$</button>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="location flex">
+                    <img class="location-icon" src="images/map.svg" alt="" />
+                    <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  </div>
                   <a href="onepage.html" class="view-more">დეტალურად ›</a>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="card small-card">
-                <img src="images/slider2.webp" alt="ბინის ფოტო" />
+                <img
+                  class="small-card-img"
+                  src="images/slider3.jpg"
+                  alt="ბინის ფოტო"
+                />
                 <div class="info">
-                  <h3>ქირავდება ბინა</h3>
-                  <p class="price">$500 / თვე</p>
-                  <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  <div class="info-3 flex">
+                    <h3>ქირავდება ბინა</h3>
+                    <p class="property-price">
+                      500₾
+                      <span class="currency-switch">
+                        <button class="currency-btn active">₾</button>
+                        <button class="currency-btn">$</button>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="location flex">
+                    <img class="location-icon" src="images/map.svg" alt="" />
+                    <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  </div>
                   <a href="onepage.html" class="view-more">დეტალურად ›</a>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="card small-card">
-                <img src="images/slider3.jpg" alt="ბინის ფოტო" />
+                <img
+                  class="small-card-img"
+                  src="images/slider3.jpg"
+                  alt="ბინის ფოტო"
+                />
                 <div class="info">
-                  <h3>ქირავდება ბინა</h3>
-                  <p class="price">$500 / თვე</p>
-                  <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  <div class="info-3 flex">
+                    <h3>ქირავდება ბინა</h3>
+                    <p class="property-price">
+                      500₾
+                      <span class="currency-switch">
+                        <button class="currency-btn active">₾</button>
+                        <button class="currency-btn">$</button>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="location flex">
+                    <img class="location-icon" src="images/map.svg" alt="" />
+                    <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  </div>
                   <a href="onepage.html" class="view-more">დეტალურად ›</a>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="card small-card">
-                <img src="images/slider1.jpg" alt="ბინის ფოტო" />
+                <img
+                  class="small-card-img"
+                  src="images/slider3.jpg"
+                  alt="ბინის ფოტო"
+                />
                 <div class="info">
-                  <h3>ქირავდება ბინა</h3>
-                  <p class="price">$500 / თვე</p>
-                  <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  <div class="info-3 flex">
+                    <h3>ქირავდება ბინა</h3>
+                    <p class="property-price">
+                      500₾
+                      <span class="currency-switch">
+                        <button class="currency-btn active">₾</button>
+                        <button class="currency-btn">$</button>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="location flex">
+                    <img class="location-icon" src="images/map.svg" alt="" />
+                    <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  </div>
                   <a href="onepage.html" class="view-more">დეტალურად ›</a>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="card small-card">
-                <img src="images/slider1.jpg" alt="ბინის ფოტო" />
+                <img
+                  class="small-card-img"
+                  src="images/slider3.jpg"
+                  alt="ბინის ფოტო"
+                />
                 <div class="info">
-                  <h3>ქირავდება ბინა</h3>
-                  <p class="price">$500 / თვე</p>
-                  <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  <div class="info-3 flex">
+                    <h3>ქირავდება ბინა</h3>
+                    <p class="property-price">
+                      500₾
+                      <span class="currency-switch">
+                        <button class="currency-btn active">₾</button>
+                        <button class="currency-btn">$</button>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="location flex">
+                    <img class="location-icon" src="images/map.svg" alt="" />
+                    <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  </div>
+                  <a href="onepage.html" class="view-more">დეტალურად ›</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card small-card">
+                <img
+                  class="small-card-img"
+                  src="images/slider3.jpg"
+                  alt="ბინის ფოტო"
+                />
+                <div class="info">
+                  <div class="info-3 flex">
+                    <h3>ქირავდება ბინა</h3>
+                    <p class="property-price">
+                      500₾
+                      <span class="currency-switch">
+                        <button class="currency-btn active">₾</button>
+                        <button class="currency-btn">$</button>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="location flex">
+                    <img class="location-icon" src="images/map.svg" alt="" />
+                    <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  </div>
                   <a href="onepage.html" class="view-more">დეტალურად ›</a>
                 </div>
               </div>

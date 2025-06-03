@@ -88,8 +88,7 @@ li {
   align-items: center;
 }
 
-.search-box select,
-.search-box button {
+.select {
   padding: 10px;
   font-size: 14px;
   border: 1px solid #ccc;
@@ -105,6 +104,13 @@ li {
   border: none;
   cursor: pointer;
   transition: background 0.3s ease;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  border-radius: 30px;
+  cursor: pointer;
 }
 
 #main-search-button:hover {
@@ -121,14 +127,15 @@ li {
 
 .price-toggle,
 .area-toggle {
-  padding: 8px 14px;
+  padding: 10px;
   background-color: #ffffff;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 30px;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 6px;
+  font-size: 14px;
 }
 
 .price-toggle .arrow,
@@ -402,7 +409,7 @@ li {
   margin-bottom: 1rem;
 }
 
-.card button {
+.card-button {
   width: 100px;
   background: #3a76ff;
   border: none;
@@ -441,7 +448,6 @@ li {
   transition: transform 0.3s ease;
   padding: 12px;
   width: 300px;
-  height: 300px;
   margin: auto;
 }
 
@@ -449,7 +455,7 @@ li {
   transform: translateY(-5px);
 }
 
-.small-card img {
+.small-card-img {
   width: 100%;
   height: 180px;
   object-fit: cover;
@@ -476,22 +482,30 @@ li {
 .card.small-card .details {
   font-size: 14px;
   color: #666;
-  margin-bottom: 8px;
 }
 
-.card.small-card .view-more {
+.view-more {
   font-size: 14px;
   color: #007bff;
   text-decoration: none;
   font-weight: 500;
+  margin-top: 5px;
 }
 
 .card.small-card .view-more:hover {
   text-decoration: underline;
 }
-/* .swiper-wrapper {
-  transform: translate3d(0px, 0, 0) !important;
-} */
+.info-3 {
+  align-items: center;
+  gap: 5px;
+}
+.location {
+  gap: 5px;
+}
+.location-icon {
+  max-width: 15px;
+  max-height: 15px;
+}
 /* projects */
 .new {
   justify-content: flex-start;
@@ -701,9 +715,7 @@ h3 {
 .property-swiper:hover .swiper-button-next {
   transform: translateX(20px) translateY(0);
 }
-.location-icon {
-  max-width: 20px;
-}
+
 .loc-div {
   display: flex;
 }
@@ -716,7 +728,6 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 5px;
 }
 
 .currency-switch {
