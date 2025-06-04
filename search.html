@@ -46,84 +46,85 @@
         <button class="add-btn btn">+ ატვირთვა</button>
       </div>
     </header>
-    <section>
-      <div class="search-page-container">
-        <form class="search-box">
-          <select name="propertyType">
-            <option value="">ქონების ტიპი</option>
-            <option value="ბინა">ბინა</option>
-            <option value="სახლი">სახლი</option>
-            <option value="კომერციული ფართი">კომერციული ფართი</option>
-            <option value="სასტუმრო">სასტუმრო</option>
-            <option value="მიწა">მიწა</option>
-          </select>
+    <div class="content">
+      <section>
+        <div class="search-page-container">
+          <form class="search-box">
+            <select name="propertyType">
+              <option value="">ქონების ტიპი</option>
+              <option value="ბინა">ბინა</option>
+              <option value="სახლი">სახლი</option>
+              <option value="კომერციული ფართი">კომერციული ფართი</option>
+              <option value="სასტუმრო">სასტუმრო</option>
+              <option value="მიწა">მიწა</option>
+            </select>
 
-          <select name="dealType">
-            <option value="">გარიგების ტიპი</option>
-            <option value="ქირავდება">ქირავდება</option>
-            <option value="იყიდება">იყიდება</option>
-            <option value="გირავდება">გირავდება</option>
-            <option value="გირავდება">ქირავდება დღიურად</option>
-          </select>
+            <select name="dealType">
+              <option value="">გარიგების ტიპი</option>
+              <option value="ქირავდება">ქირავდება</option>
+              <option value="იყიდება">იყიდება</option>
+              <option value="გირავდება">გირავდება</option>
+              <option value="გირავდება">ქირავდება დღიურად</option>
+            </select>
 
-          <select name="status">
-            <option value="">სტატუსი</option>
-            <option value="მშენებარე">მშენებარე</option>
-            <option value="ახალი აშენებული">ახალი აშენებული</option>
-            <option value="ძველი აშენებული">ძველი აშენებული</option>
-          </select>
+            <select name="status">
+              <option value="">სტატუსი</option>
+              <option value="მშენებარე">მშენებარე</option>
+              <option value="ახალი აშენებული">ახალი აშენებული</option>
+              <option value="ძველი აშენებული">ძველი აშენებული</option>
+            </select>
 
-          <select name="city">
-            <option value="">ქალაქი</option>
-            <option value="თბილისი">თბილისი</option>
-            <option value="ქუთაისი">ქუთაისი</option>
-            <option value="ბათუმი">ბათუმი</option>
-            <option value="გორი">გორი</option>
-          </select>
+            <select name="city">
+              <option value="">ქალაქი</option>
+              <option value="თბილისი">თბილისი</option>
+              <option value="ქუთაისი">ქუთაისი</option>
+              <option value="ბათუმი">ბათუმი</option>
+              <option value="გორი">გორი</option>
+            </select>
 
-          <div class="custom-price-dropdown">
-            <button type="button" class="price-toggle">
-              ფასი
-              <span class="arrow">&#9662;</span>
-            </button>
-            <div class="price-popup hidden">
-              <label
-                >დან:
-                <input type="number" name="minPrice" placeholder="მინ." />
-              </label>
-              <label
-                >მდე:
-                <input type="number" name="maxPrice" placeholder="მაქს." />
-              </label>
-              <button type="button" class="price-apply">OK</button>
+            <div class="custom-price-dropdown">
+              <button type="button" class="price-toggle">
+                ფასი
+                <span class="arrow">&#9662;</span>
+              </button>
+              <div class="price-popup hidden">
+                <label
+                  >დან:
+                  <input type="number" name="minPrice" placeholder="მინ." />
+                </label>
+                <label
+                  >მდე:
+                  <input type="number" name="maxPrice" placeholder="მაქს." />
+                </label>
+                <button type="button" class="price-apply">OK</button>
+              </div>
             </div>
-          </div>
-          <div class="custom-area-dropdown">
-            <button type="button" class="area-toggle">
-              ფართი
-              <span class="arrow">&#9662;</span>
-            </button>
-            <div class="area-popup hidden">
-              <label
-                >დან:
-                <input type="number" name="minArea" placeholder="მინ. მ²" />
-              </label>
-              <label
-                >მდე:
-                <input type="number" name="maxArea" placeholder="მაქს. მ²" />
-              </label>
-              <button type="button" class="area-apply">OK</button>
+            <div class="custom-area-dropdown">
+              <button type="button" class="area-toggle">
+                ფართი
+                <span class="arrow">&#9662;</span>
+              </button>
+              <div class="area-popup hidden">
+                <label
+                  >დან:
+                  <input type="number" name="minArea" placeholder="მინ. მ²" />
+                </label>
+                <label
+                  >მდე:
+                  <input type="number" name="maxArea" placeholder="მაქს. მ²" />
+                </label>
+                <button type="button" class="area-apply">OK</button>
+              </div>
             </div>
-          </div>
-          <img class="filter" src="images/fil3.svg" alt="#" />
-          <button type="submit">ძებნა</button>
-        </form>
+            <img class="filter" src="images/fil3.svg" alt="#" />
+            <button type="submit">ძებნა</button>
+          </form>
 
-        <h2 id="resultsTitle">შედეგები:</h2>
-        <div id="results" class="results-container"></div>
-      </div>
-    </section>
-
+          <h2 id="resultsTitle">შედეგები:</h2>
+          <div id="results" class="results-container"></div>
+        </div>
+      </section>
+    </div>
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-column">

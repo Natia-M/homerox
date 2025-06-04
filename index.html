@@ -56,793 +56,810 @@
         <button class="add-btn btn">+ განცხადების განთავსება</button>
       </div>
     </header>
-    <section class="main">
-      <nav class="main-nav">
-        <ul class="main-ul">
-          <a href="index.html"><li class="main-li">სერვისები</li></a>
-          <a href="index.html"><li class="main-li">სამშენებლო კომპანიები</li></a
-          ><a href="index.html"><li class="main-li">საგენტოები</li></a
-          ><a href="index.html"><li class="main-li">სიტყვა</li></a>
-          <a href="index.html"><li class="main-li">საკადასტრო რუკა</li></a>
-          <a href="contact.html"><li class="main-li">კონტაქტი</li></a>
-        </ul>
-      </nav>
-      <div class="box-container">
-        <p class="heading">აქ იპოვე შენი სახლი</p>
-        <img class="main-image" src="images/building.jpeg" alt="building" />
-        <form action="search.html" method="GET" class="search-box">
-          <select class="select" name="propertyType">
-            <option value="">ქონების ტიპი</option>
-            <option value="ბინა">ბინა</option>
-            <option value="სახლი">სახლი</option>
-            <option value="კომერციული ფართი">კომერციული ფართი</option>
-            <option value="სასტუმრო">სასტუმრო</option>
-            <option value="მიწა">მიწა</option>
-          </select>
+    <div class="content-container">
+      <section class="main">
+        <nav class="main-nav">
+          <ul class="main-ul">
+            <a href="index.html"><li class="main-li">სერვისები</li></a>
+            <a href="index.html"
+              ><li class="main-li">სამშენებლო კომპანიები</li></a
+            ><a href="index.html"><li class="main-li">საგენტოები</li></a
+            ><a href="index.html"><li class="main-li">სიტყვა</li></a>
+            <a href="index.html"><li class="main-li">საკადასტრო რუკა</li></a>
+            <a href="contact.html"><li class="main-li">კონტაქტი</li></a>
+          </ul>
+        </nav>
+        <div class="box-container">
+          <p class="heading">აქ იპოვე შენი სახლი</p>
+          <img class="main-image" src="images/building.jpeg" alt="building" />
+          <form action="search.html" method="GET" class="search-box">
+            <select class="select" name="propertyType">
+              <option value="">ქონების ტიპი</option>
+              <option value="ბინა">ბინა</option>
+              <option value="სახლი">სახლი</option>
+              <option value="კომერციული ფართი">კომერციული ფართი</option>
+              <option value="სასტუმრო">სასტუმრო</option>
+              <option value="მიწა">მიწა</option>
+            </select>
 
-          <select class="select" name="dealType">
-            <option value="">გარიგების ტიპი</option>
-            <option value="ქირავდება">ქირავდება</option>
-            <option value="იყიდება">იყიდება</option>
-            <option value="გირავდება">გირავდება</option>
-            <option value="გირავდება">ქირავდება დღიურად</option>
-          </select>
+            <select class="select" name="dealType">
+              <option value="">გარიგების ტიპი</option>
+              <option value="ქირავდება">ქირავდება</option>
+              <option value="იყიდება">იყიდება</option>
+              <option value="გირავდება">გირავდება</option>
+              <option value="გირავდება">ქირავდება დღიურად</option>
+            </select>
 
-          <select class="select" name="city">
-            <option value="">ქალაქი</option>
-            <option value="თბილისი">თბილისი</option>
-            <option value="ქუთაისი">ქუთაისი</option>
-            <option value="ბათუმი">ბათუმი</option>
-            <option value="გორი">გორი</option>
-          </select>
+            <select class="select" name="city">
+              <option value="">ქალაქი</option>
+              <option value="თბილისი">თბილისი</option>
+              <option value="ქუთაისი">ქუთაისი</option>
+              <option value="ბათუმი">ბათუმი</option>
+              <option value="გორი">გორი</option>
+            </select>
 
-          <div class="custom-price-dropdown">
-            <button type="button" class="price-toggle">
-              ფასი
-              <span class="arrow">&#9662;</span>
-            </button>
-            <div class="price-popup hidden">
-              <label
-                >დან:
-                <input type="number" name="minPrice" placeholder="მინ." />
-              </label>
-              <label
-                >მდე:
-                <input type="number" name="maxPrice" placeholder="მაქს." />
-              </label>
-              <button type="button" class="price-apply">OK</button>
-            </div>
-          </div>
-          <div class="custom-area-dropdown">
-            <button type="button" class="area-toggle">
-              ფართი
-              <span class="arrow">&#9662;</span>
-            </button>
-            <div class="area-popup hidden">
-              <label
-                >დან:
-                <input type="number" name="minArea" placeholder="მინ. მ²" />
-              </label>
-              <label
-                >მდე:
-                <input type="number" name="maxArea" placeholder="მაქს. მ²" />
-              </label>
-              <button type="button" class="area-apply">OK</button>
-            </div>
-          </div>
-          <input
-            type="text"
-            name="searchQuery"
-            class="text-search"
-            placeholder="ტელეფონი, ID, სა.კოდ"
-          />
-          <img class="filter" src="images/fil3.svg" alt="#" />
-          <button id="main-search-button" type="submit">ძებნა</button>
-        </form>
-        <div id="filterModal" class="filter-modal hidden">
-          <div class="filter-modal-content">
-            <div class="fixed-modal">
-              <span class="close-filter">×</span>
-              <h3 class="modal-h">დეტალური ძიება</h3>
-            </div>
-            <div class="filter-group">
-              <h4 class="modal-h4">მდგომარება</h4>
-              <div class="filter-group-1">
-                <div class="modal-label selectable">ახალი რემონტი</div>
-                <div class="modal-label selectable">ძველი რემონტი</div>
-                <div class="modal-label selectable">მიმდინარე რემონტი</div>
-                <div class="modal-label selectable">შავი კარკასი</div>
-                <div class="modal-label selectable">თეთრი კარკასი</div>
-                <div class="modal-label selectable">მწვანე კარკასი</div>
+            <div class="custom-price-dropdown">
+              <button type="button" class="price-toggle">
+                ფასი
+                <span class="arrow">&#9662;</span>
+              </button>
+              <div class="price-popup hidden">
+                <label
+                  >დან:
+                  <input type="number" name="minPrice" placeholder="მინ." />
+                </label>
+                <label
+                  >მდე:
+                  <input type="number" name="maxPrice" placeholder="მაქს." />
+                </label>
+                <button type="button" class="price-apply">OK</button>
               </div>
             </div>
-            <div class="filter-group">
-              <h4 class="modal-h4">ოთახების რაოდენობა</h4>
-              <div class="filter-group-1">
-                <div class="modal-label selectable">1</div>
-                <div class="modal-label selectable">2</div>
-                <div class="modal-label selectable">3</div>
-                <div class="modal-label selectable">4</div>
-                <div class="modal-label selectable">5</div>
-                <div class="modal-label selectable">5-ზე მეტი</div>
+            <div class="custom-area-dropdown">
+              <button type="button" class="area-toggle">
+                ფართი
+                <span class="arrow">&#9662;</span>
+              </button>
+              <div class="area-popup hidden">
+                <label
+                  >დან:
+                  <input type="number" name="minArea" placeholder="მინ. მ²" />
+                </label>
+                <label
+                  >მდე:
+                  <input type="number" name="maxArea" placeholder="მაქს. მ²" />
+                </label>
+                <button type="button" class="area-apply">OK</button>
               </div>
             </div>
-            <div class="filter-group">
-              <h4 class="modal-h4">სველი წერტილი</h4>
-              <div class="filter-group-1">
-                <div class="modal-label selectable">1</div>
-                <div class="modal-label selectable">2</div>
-                <div class="modal-label selectable">3</div>
-                <div class="modal-label selectable">4</div>
-                <div class="modal-label selectable">4+</div>
+            <input
+              type="text"
+              name="searchQuery"
+              class="text-search"
+              placeholder="ტელეფონი, ID, სა.კოდ"
+            />
+            <img class="filter" src="images/fil3.svg" alt="#" />
+            <button id="main-search-button" type="submit">ძებნა</button>
+          </form>
+          <div id="filterModal" class="filter-modal hidden">
+            <div class="filter-modal-content">
+              <div class="fixed-modal">
+                <span class="close-filter">×</span>
+                <h3 class="modal-h">დეტალური ძიება</h3>
               </div>
-            </div>
+              <div class="filter-group">
+                <h4 class="modal-h4">მდგომარება</h4>
+                <div class="filter-group-1">
+                  <div class="modal-label selectable">ახალი რემონტი</div>
+                  <div class="modal-label selectable">ძველი რემონტი</div>
+                  <div class="modal-label selectable">მიმდინარე რემონტი</div>
+                  <div class="modal-label selectable">შავი კარკასი</div>
+                  <div class="modal-label selectable">თეთრი კარკასი</div>
+                  <div class="modal-label selectable">მწვანე კარკასი</div>
+                </div>
+              </div>
+              <div class="filter-group">
+                <h4 class="modal-h4">ოთახების რაოდენობა</h4>
+                <div class="filter-group-1">
+                  <div class="modal-label selectable">1</div>
+                  <div class="modal-label selectable">2</div>
+                  <div class="modal-label selectable">3</div>
+                  <div class="modal-label selectable">4</div>
+                  <div class="modal-label selectable">5</div>
+                  <div class="modal-label selectable">5-ზე მეტი</div>
+                </div>
+              </div>
+              <div class="filter-group">
+                <h4 class="modal-h4">სველი წერტილი</h4>
+                <div class="filter-group-1">
+                  <div class="modal-label selectable">1</div>
+                  <div class="modal-label selectable">2</div>
+                  <div class="modal-label selectable">3</div>
+                  <div class="modal-label selectable">4</div>
+                  <div class="modal-label selectable">4+</div>
+                </div>
+              </div>
 
-            <div class="filter-group">
-              <h4 class="modal-h4">გაყიდვის პირობები</h4>
-              <div class="filter-group-1">
-                <div class="modal-label selectable">სიტყვა</div>
-                <div class="modal-label selectable">სიტყვა</div>
-                <div class="modal-label selectable">სიტყვა</div>
-                <div class="modal-label selectable">სიტყვა</div>
-                <div class="modal-label selectable">სიტყვა</div>
+              <div class="filter-group">
+                <h4 class="modal-h4">გაყიდვის პირობები</h4>
+                <div class="filter-group-1">
+                  <div class="modal-label selectable">სიტყვა</div>
+                  <div class="modal-label selectable">სიტყვა</div>
+                  <div class="modal-label selectable">სიტყვა</div>
+                  <div class="modal-label selectable">სიტყვა</div>
+                  <div class="modal-label selectable">სიტყვა</div>
+                </div>
               </div>
-            </div>
-            <div class="bottom-buttons">
-              <div class="erase">გასუფთავება</div>
-              <button class="apply-filter" type="submit">ნახე შედეგი</button>
+              <div class="bottom-buttons">
+                <div class="erase">გასუფთავება</div>
+                <button class="apply-filter" type="submit">ნახე შედეგი</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="vips-header vipp">
-        <a href="supervip.html"
-          ><div class="vips-header">
-            <img class="icon" src="images/fire.png" alt="fire logo" />
-            <h2>Premium განცხადებები</h2>
-            <div class="number">(350+)</div>
-          </div></a
-        >
-        <a href="help.html"><button class="mini-but">+ ატვირთვა</button></a>
-      </div>
-      <div class="slider">
-        <div class="swiper mySwiper">
+      </section>
+      <section>
+        <div class="vips-header vipp">
+          <a href="supervip.html"
+            ><div class="vips-header">
+              <img class="icon" src="images/fire.png" alt="fire logo" />
+              <h2>Premium განცხადებები</h2>
+              <div class="number">(350+)</div>
+            </div></a
+          >
+          <a href="help.html"><button class="mini-but">+ ატვირთვა</button></a>
+        </div>
+        <div class="slider">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card small-card">
+                  <div class="save-btn-container">
+                    <button
+                      class="save-btn"
+                      onclick="toggleSave(this)"
+                      aria-label="შენახვა"
+                    >
+                      <svg
+                        class="bookmark-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke=" #3a76ff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div>
+                    <img class="fire-on-img" src="images/fire.png" alt="" />
+                  </div>
+                  <img
+                    class="small-card-img"
+                    src="images/slider1.jpg"
+                    alt="ბინის ფოტო"
+                  />
+                  <div class="info">
+                    <div class="info-3 flex">
+                      <h3>ქირავდება ბინა</h3>
+                      <p class="property-price">
+                        500₾
+                        <span class="currency-switch">
+                          <button class="currency-btn active">₾</button>
+                          <button class="currency-btn">$</button>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="location flex">
+                      <img class="location-icon" src="images/map.svg" alt="" />
+                      <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                    </div>
+                    <a href="onepage.html" class="view-more">დეტალურად ›</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card small-card">
+                  <div class="save-btn-container">
+                    <button
+                      class="save-btn"
+                      onclick="toggleSave(this)"
+                      aria-label="შენახვა"
+                    >
+                      <svg
+                        class="bookmark-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke=" #3a76ff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div>
+                    <img class="fire-on-img" src="images/fire.png" alt="" />
+                  </div>
+                  <img
+                    class="small-card-img"
+                    src="images/flat5.jpg"
+                    alt="ბინის ფოტო"
+                  />
+                  <div class="info">
+                    <div class="info-3 flex">
+                      <h3>ქირავდება ბინა</h3>
+                      <p class="property-price">
+                        500₾
+                        <span class="currency-switch">
+                          <button class="currency-btn active">₾</button>
+                          <button class="currency-btn">$</button>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="location flex">
+                      <img class="location-icon" src="images/map.svg" alt="" />
+                      <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                    </div>
+                    <a href="onepage.html" class="view-more">დეტალურად ›</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card small-card">
+                  <div class="save-btn-container">
+                    <button
+                      class="save-btn"
+                      onclick="toggleSave(this)"
+                      aria-label="შენახვა"
+                    >
+                      <svg
+                        class="bookmark-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke=" #3a76ff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div>
+                    <img class="fire-on-img" src="images/fire.png" alt="" />
+                  </div>
+                  <img
+                    class="small-card-img"
+                    src="images/flat3.jpg"
+                    alt="ბინის ფოტო"
+                  />
+                  <div class="info">
+                    <div class="info-3 flex">
+                      <h3>ქირავდება ბინა</h3>
+                      <p class="property-price">
+                        500₾
+                        <span class="currency-switch">
+                          <button class="currency-btn active">₾</button>
+                          <button class="currency-btn">$</button>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="location flex">
+                      <img class="location-icon" src="images/map.svg" alt="" />
+                      <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                    </div>
+                    <a href="onepage.html" class="view-more">დეტალურად ›</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card small-card">
+                  <div class="save-btn-container">
+                    <button
+                      class="save-btn"
+                      onclick="toggleSave(this)"
+                      aria-label="შენახვა"
+                    >
+                      <svg
+                        class="bookmark-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke=" #3a76ff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div>
+                    <img class="fire-on-img" src="images/fire.png" alt="" />
+                  </div>
+                  <img
+                    class="small-card-img"
+                    src="images/slider2.webp"
+                    alt="ბინის ფოტო"
+                  />
+                  <div class="info">
+                    <div class="info-3 flex">
+                      <h3>ქირავდება ბინა</h3>
+                      <p class="property-price">
+                        500₾
+                        <span class="currency-switch">
+                          <button class="currency-btn active">₾</button>
+                          <button class="currency-btn">$</button>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="location flex">
+                      <img class="location-icon" src="images/map.svg" alt="" />
+                      <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                    </div>
+                    <a href="onepage.html" class="view-more">დეტალურად ›</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card small-card">
+                  <div class="save-btn-container">
+                    <button
+                      class="save-btn"
+                      onclick="toggleSave(this)"
+                      aria-label="შენახვა"
+                    >
+                      <svg
+                        class="bookmark-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke=" #3a76ff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div>
+                    <img class="fire-on-img" src="images/fire.png" alt="" />
+                  </div>
+                  <img
+                    class="small-card-img"
+                    src="images/slider1.jpg"
+                    alt="ბინის ფოტო"
+                  />
+                  <div class="info">
+                    <div class="info-3 flex">
+                      <h3>ქირავდება ბინა</h3>
+                      <p class="property-price">
+                        500₾
+                        <span class="currency-switch">
+                          <button class="currency-btn active">₾</button>
+                          <button class="currency-btn">$</button>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="location flex">
+                      <img class="location-icon" src="images/map.svg" alt="" />
+                      <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                    </div>
+                    <a href="onepage.html" class="view-more">დეტალურად ›</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card small-card">
+                  <div class="save-btn-container">
+                    <button
+                      class="save-btn"
+                      onclick="toggleSave(this)"
+                      aria-label="შენახვა"
+                    >
+                      <svg
+                        class="bookmark-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke=" #3a76ff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div>
+                    <img class="fire-on-img" src="images/fire.png" alt="" />
+                  </div>
+                  <img
+                    class="small-card-img"
+                    src="images/flat3.jpg"
+                    alt="ბინის ფოტო"
+                  />
+                  <div class="info">
+                    <div class="info-3 flex">
+                      <h3>ქირავდება ბინა</h3>
+                      <p class="property-price">
+                        500₾
+                        <span class="currency-switch">
+                          <button class="currency-btn active">₾</button>
+                          <button class="currency-btn">$</button>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="location flex">
+                      <img class="location-icon" src="images/map.svg" alt="" />
+                      <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                    </div>
+                    <a href="onepage.html" class="view-more">დეტალურად ›</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card small-card">
+                  <div class="save-btn-container">
+                    <button
+                      class="save-btn"
+                      onclick="toggleSave(this)"
+                      aria-label="შენახვა"
+                    >
+                      <svg
+                        class="bookmark-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke=" #3a76ff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div>
+                    <img class="fire-on-img" src="images/fire.png" alt="" />
+                  </div>
+                  <img
+                    class="small-card-img"
+                    src="images/slider3.jpg"
+                    alt="ბინის ფოტო"
+                  />
+                  <div class="info">
+                    <div class="info-3 flex">
+                      <h3>ქირავდება ბინა</h3>
+                      <p class="property-price">
+                        500₾
+                        <span class="currency-switch">
+                          <button class="currency-btn active">₾</button>
+                          <button class="currency-btn">$</button>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="location flex">
+                      <img class="location-icon" src="images/map.svg" alt="" />
+                      <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                    </div>
+                    <a href="onepage.html" class="view-more">დეტალურად ›</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+      <section class="Project">
+        <div class="new flex">
+          <img class="new-logo" src="images/bilding.svg" alt="#" />
+          <h3>მიმდინარე პროექტები</h3>
+        </div>
+        <div class="projects-container">
+          <div class="box-1 box">
+            <img class="box-image" src="images/pro1.jpeg" alt="Project 1" />
+            <div class="overlay">პროექტი 1</div>
+          </div>
+
+          <div class="box-2 box">
+            <img class="box-image" src="images/pro2.jpg" alt="Project 2" />
+            <div class="overlay">პროექტი 2</div>
+          </div>
+
+          <div class="box-3 box">
+            <img class="box-image" src="images/pro3.jpg" alt="Project 3" />
+            <div class="overlay">პროექტი 3</div>
+          </div>
+
+          <div class="box-4 box">
+            <img class="box-image" src="images/pro4.jpeg" alt="Project 4" />
+            <div class="overlay">პროექტი 4</div>
+          </div>
+
+          <div class="box-5 box">
+            <img class="box-image" src="images/pro5.jpg" alt="Project 5" />
+            <div class="overlay">პროექტი 5</div>
+          </div>
+
+          <div class="box-6 box">
+            <img class="box-image" src="images/pro6.jpeg" alt="Project 6" />
+            <div class="overlay">პროექტი 6</div>
+          </div>
+        </div>
+      </section>
+      <section class="properties-slider">
+        <div class="swiper myPropertiesSwiper">
+          <div class="main-nav-wrapper">
+            <div class="neww flex">
+              <img class="new-logo" src="images/new.png" alt="#" />
+              <h2>ახალი განცხადებები</h2>
+            </div>
+            <div class="main-nav-wrapper">
+              <div
+                class="swiper-button-prev main-nav"
+                id="main-swiper-prev"
+              ></div>
+              <div
+                class="swiper-button-next main-nav"
+                id="main-swiper-next"
+              ></div>
+            </div>
+          </div>
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="card small-card">
-                <div class="save-btn-container">
-                  <button
-                    class="save-btn"
-                    onclick="toggleSave(this)"
-                    aria-label="შენახვა"
-                  >
-                    <svg
-                      class="bookmark-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke=" #3a76ff"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" />
-                    </svg>
-                  </button>
-                </div>
-                <div>
-                  <img class="fire-on-img" src="images/fire.png" alt="" />
-                </div>
-                <img
-                  class="small-card-img"
-                  src="images/slider1.jpg"
-                  alt="ბინის ფოტო"
-                />
-                <div class="info">
-                  <div class="info-3 flex">
-                    <h3>ქირავდება ბინა</h3>
-                    <p class="property-price">
-                      500₾
-                      <span class="currency-switch">
-                        <button class="currency-btn active">₾</button>
-                        <button class="currency-btn">$</button>
-                      </span>
-                    </p>
+              <div class="property-card">
+                <div class="swiper property-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="images/flat1.avif" alt="flat" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/flat2.jpeg" alt="flat" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/flat3.jpg" alt="flat" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/flat4.png" alt="flat" />
+                    </div>
                   </div>
-                  <div class="location flex">
-                    <img class="location-icon" src="images/map.svg" alt="" />
-                    <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  <div class="swiper-button-prev swiper-btn-small"></div>
+                  <div class="swiper-button-next swiper-btn-small"></div>
+                </div>
+                <div class="property-info">
+                  <p class="property-price">
+                    15 ₾
+                    <span class="currency-switch">
+                      <button class="currency-btn active">₾</button>
+                      <button class="currency-btn">$</button>
+                    </span>
+                  </p>
+                  <h4 class="property-header">
+                    ქირავდება დღიურად 2 ოთახიანი ბინა
+                  </h4>
+                  <div class="loc-div">
+                    <img
+                      class="location-icon"
+                      src="images/location.svg"
+                      alt="#"
+                    />
+                    <p class="property-p">გლდანი 58მ²</p>
                   </div>
-                  <a href="onepage.html" class="view-more">დეტალურად ›</a>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card small-card">
-                <div class="save-btn-container">
-                  <button
-                    class="save-btn"
-                    onclick="toggleSave(this)"
-                    aria-label="შენახვა"
-                  >
-                    <svg
-                      class="bookmark-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke=" #3a76ff"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" />
-                    </svg>
-                  </button>
-                </div>
-                <div>
-                  <img class="fire-on-img" src="images/fire.png" alt="" />
-                </div>
-                <img
-                  class="small-card-img"
-                  src="images/flat5.jpg"
-                  alt="ბინის ფოტო"
-                />
-                <div class="info">
-                  <div class="info-3 flex">
-                    <h3>ქირავდება ბინა</h3>
-                    <p class="property-price">
-                      500₾
-                      <span class="currency-switch">
-                        <button class="currency-btn active">₾</button>
-                        <button class="currency-btn">$</button>
-                      </span>
-                    </p>
+              <div class="property-card">
+                <div class="swiper property-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="images/flat1.avif" alt="flat" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/flat2.jpeg" alt="flat" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/flat3.jpg" alt="flat" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/flat4.png" alt="flat" />
+                    </div>
                   </div>
-                  <div class="location flex">
-                    <img class="location-icon" src="images/map.svg" alt="" />
-                    <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  <div class="swiper-button-prev swiper-btn-small"></div>
+                  <div class="swiper-button-next swiper-btn-small"></div>
+                </div>
+                <div class="property-info">
+                  <p class="property-price">
+                    15 ₾
+                    <span class="currency-switch">
+                      <button class="currency-btn active">₾</button>
+                      <button class="currency-btn">$</button>
+                    </span>
+                  </p>
+                  <h4 class="property-header">
+                    ქირავდება დღიურად 2 ოთახიანი ბინა
+                  </h4>
+                  <div class="loc-div">
+                    <img
+                      class="location-icon"
+                      src="images/location.svg"
+                      alt="#"
+                    />
+                    <p class="property-p">გლდანი 58მ²</p>
                   </div>
-                  <a href="onepage.html" class="view-more">დეტალურად ›</a>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card small-card">
-                <div class="save-btn-container">
-                  <button
-                    class="save-btn"
-                    onclick="toggleSave(this)"
-                    aria-label="შენახვა"
-                  >
-                    <svg
-                      class="bookmark-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke=" #3a76ff"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" />
-                    </svg>
-                  </button>
-                </div>
-                <div>
-                  <img class="fire-on-img" src="images/fire.png" alt="" />
-                </div>
-                <img
-                  class="small-card-img"
-                  src="images/flat3.jpg"
-                  alt="ბინის ფოტო"
-                />
-                <div class="info">
-                  <div class="info-3 flex">
-                    <h3>ქირავდება ბინა</h3>
-                    <p class="property-price">
-                      500₾
-                      <span class="currency-switch">
-                        <button class="currency-btn active">₾</button>
-                        <button class="currency-btn">$</button>
-                      </span>
-                    </p>
+              <div class="property-card">
+                <div class="swiper property-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="images/flat1.avif" alt="flat" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/flat2.jpeg" alt="flat" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/flat3.jpg" alt="flat" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/flat4.png" alt="flat" />
+                    </div>
                   </div>
-                  <div class="location flex">
-                    <img class="location-icon" src="images/map.svg" alt="" />
-                    <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  <div class="swiper-button-prev swiper-btn-small"></div>
+                  <div class="swiper-button-next swiper-btn-small"></div>
+                </div>
+                <div class="property-info">
+                  <p class="property-price">
+                    15 ₾
+                    <span class="currency-switch">
+                      <button class="currency-btn active">₾</button>
+                      <button class="currency-btn">$</button>
+                    </span>
+                  </p>
+                  <h4 class="property-header">
+                    ქირავდება დღიურად 2 ოთახიანი ბინა
+                  </h4>
+                  <div class="loc-div">
+                    <img
+                      class="location-icon"
+                      src="images/location.svg"
+                      alt="#"
+                    />
+                    <p class="property-p">გლდანი 58მ²</p>
                   </div>
-                  <a href="onepage.html" class="view-more">დეტალურად ›</a>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card small-card">
-                <div class="save-btn-container">
-                  <button
-                    class="save-btn"
-                    onclick="toggleSave(this)"
-                    aria-label="შენახვა"
-                  >
-                    <svg
-                      class="bookmark-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke=" #3a76ff"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" />
-                    </svg>
-                  </button>
-                </div>
-                <div>
-                  <img class="fire-on-img" src="images/fire.png" alt="" />
-                </div>
-                <img
-                  class="small-card-img"
-                  src="images/slider2.webp"
-                  alt="ბინის ფოტო"
-                />
-                <div class="info">
-                  <div class="info-3 flex">
-                    <h3>ქირავდება ბინა</h3>
-                    <p class="property-price">
-                      500₾
-                      <span class="currency-switch">
-                        <button class="currency-btn active">₾</button>
-                        <button class="currency-btn">$</button>
-                      </span>
-                    </p>
+              <div class="property-card">
+                <div class="swiper property-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="images/flat2.jpeg" alt="flat" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/flat1.avif" alt="flat" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/flat3.jpg" alt="flat" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/flat4.png" alt="flat" />
+                    </div>
                   </div>
-                  <div class="location flex">
-                    <img class="location-icon" src="images/map.svg" alt="" />
-                    <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
+                  <div class="swiper-button-prev swiper-btn-small"></div>
+                  <div class="swiper-button-next swiper-btn-small"></div>
+                </div>
+                <div class="property-info">
+                  <p class="property-price">
+                    15 ₾
+                    <span class="currency-switch">
+                      <button class="currency-btn active">₾</button>
+                      <button class="currency-btn">$</button>
+                    </span>
+                  </p>
+                  <h4 class="property-header">
+                    ქირავდება დღიურად 2 ოთახიანი ბინა
+                  </h4>
+                  <div class="loc-div">
+                    <img
+                      class="location-icon"
+                      src="images/location.svg"
+                      alt="#"
+                    />
+                    <p class="property-p">გლდანი 58მ²</p>
                   </div>
-                  <a href="onepage.html" class="view-more">დეტალურად ›</a>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card small-card">
-                <div class="save-btn-container">
-                  <button
-                    class="save-btn"
-                    onclick="toggleSave(this)"
-                    aria-label="შენახვა"
-                  >
-                    <svg
-                      class="bookmark-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke=" #3a76ff"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" />
-                    </svg>
-                  </button>
+              <div class="property-card">
+                <div class="swiper property-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="images/flat1.avif" alt="flat" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/flat2.jpeg" alt="flat" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/flat3.jpg" alt="flat" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/flat4.png" alt="flat" />
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev swiper-btn-small"></div>
+                  <div class="swiper-button-next swiper-btn-small"></div>
                 </div>
-                <div>
-                  <img class="fire-on-img" src="images/fire.png" alt="" />
-                </div>
-                <img
-                  class="small-card-img"
-                  src="images/slider1.jpg"
-                  alt="ბინის ფოტო"
-                />
-                <div class="info">
-                  <div class="info-3 flex">
-                    <h3>ქირავდება ბინა</h3>
-                    <p class="property-price">
-                      500₾
-                      <span class="currency-switch">
-                        <button class="currency-btn active">₾</button>
-                        <button class="currency-btn">$</button>
-                      </span>
-                    </p>
+                <div class="property-info">
+                  <p class="property-price">
+                    15 ₾
+                    <span class="currency-switch">
+                      <button class="currency-btn active">₾</button>
+                      <button class="currency-btn">$</button>
+                    </span>
+                  </p>
+                  <h4 class="property-header">
+                    ქირავდება დღიურად 2 ოთახიანი ბინა
+                  </h4>
+                  <div class="loc-div">
+                    <img
+                      class="location-icon"
+                      src="images/location.svg"
+                      alt="#"
+                    />
+                    <p class="property-p">გლდანი 58მ²</p>
                   </div>
-                  <div class="location flex">
-                    <img class="location-icon" src="images/map.svg" alt="" />
-                    <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
-                  </div>
-                  <a href="onepage.html" class="view-more">დეტალურად ›</a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card small-card">
-                <div class="save-btn-container">
-                  <button
-                    class="save-btn"
-                    onclick="toggleSave(this)"
-                    aria-label="შენახვა"
-                  >
-                    <svg
-                      class="bookmark-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke=" #3a76ff"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" />
-                    </svg>
-                  </button>
-                </div>
-                <div>
-                  <img class="fire-on-img" src="images/fire.png" alt="" />
-                </div>
-                <img
-                  class="small-card-img"
-                  src="images/flat3.jpg"
-                  alt="ბინის ფოტო"
-                />
-                <div class="info">
-                  <div class="info-3 flex">
-                    <h3>ქირავდება ბინა</h3>
-                    <p class="property-price">
-                      500₾
-                      <span class="currency-switch">
-                        <button class="currency-btn active">₾</button>
-                        <button class="currency-btn">$</button>
-                      </span>
-                    </p>
-                  </div>
-                  <div class="location flex">
-                    <img class="location-icon" src="images/map.svg" alt="" />
-                    <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
-                  </div>
-                  <a href="onepage.html" class="view-more">დეტალურად ›</a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card small-card">
-                <div class="save-btn-container">
-                  <button
-                    class="save-btn"
-                    onclick="toggleSave(this)"
-                    aria-label="შენახვა"
-                  >
-                    <svg
-                      class="bookmark-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke=" #3a76ff"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" />
-                    </svg>
-                  </button>
-                </div>
-                <div>
-                  <img class="fire-on-img" src="images/fire.png" alt="" />
-                </div>
-                <img
-                  class="small-card-img"
-                  src="images/slider3.jpg"
-                  alt="ბინის ფოტო"
-                />
-                <div class="info">
-                  <div class="info-3 flex">
-                    <h3>ქირავდება ბინა</h3>
-                    <p class="property-price">
-                      500₾
-                      <span class="currency-switch">
-                        <button class="currency-btn active">₾</button>
-                        <button class="currency-btn">$</button>
-                      </span>
-                    </p>
-                  </div>
-                  <div class="location flex">
-                    <img class="location-icon" src="images/map.svg" alt="" />
-                    <p class="details">თბილისი, ვაკე • 80 მ² • 2 ოთახი</p>
-                  </div>
-                  <a href="onepage.html" class="view-more">დეტალურად ›</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-      </div>
-    </section>
-    <section class="Project">
-      <div class="new flex">
-        <img class="new-logo" src="images/bilding.svg" alt="#" />
-        <h3>მიმდინარე პროექტები</h3>
-      </div>
-      <div class="projects-container">
-        <div class="box-1 box">
-          <img class="box-image" src="images/pro1.jpeg" alt="Project 1" />
-          <div class="overlay">პროექტი 1</div>
-        </div>
-
-        <div class="box-2 box">
-          <img class="box-image" src="images/pro2.jpg" alt="Project 2" />
-          <div class="overlay">პროექტი 2</div>
-        </div>
-
-        <div class="box-3 box">
-          <img class="box-image" src="images/pro3.jpg" alt="Project 3" />
-          <div class="overlay">პროექტი 3</div>
-        </div>
-
-        <div class="box-4 box">
-          <img class="box-image" src="images/pro4.jpeg" alt="Project 4" />
-          <div class="overlay">პროექტი 4</div>
-        </div>
-
-        <div class="box-5 box">
-          <img class="box-image" src="images/pro5.jpg" alt="Project 5" />
-          <div class="overlay">პროექტი 5</div>
-        </div>
-
-        <div class="box-6 box">
-          <img class="box-image" src="images/pro6.jpeg" alt="Project 6" />
-          <div class="overlay">პროექტი 6</div>
-        </div>
-      </div>
-    </section>
-    <section class="properties-slider">
-      <div class="swiper myPropertiesSwiper">
-        <div class="main-nav-wrapper">
-          <div class="neww flex">
-            <img class="new-logo" src="images/new.png" alt="#" />
-            <h2>ახალი განცხადებები</h2>
-          </div>
-          <div class="main-nav-wrapper">
-            <div
-              class="swiper-button-prev main-nav"
-              id="main-swiper-prev"
-            ></div>
-            <div
-              class="swiper-button-next main-nav"
-              id="main-swiper-next"
-            ></div>
-          </div>
-        </div>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="property-card">
-              <div class="swiper property-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="images/flat1.avif" alt="flat" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/flat2.jpeg" alt="flat" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/flat3.jpg" alt="flat" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/flat4.png" alt="flat" />
-                  </div>
-                </div>
-                <div class="swiper-button-prev swiper-btn-small"></div>
-                <div class="swiper-button-next swiper-btn-small"></div>
-              </div>
-              <div class="property-info">
-                <p class="property-price">
-                  15 ₾
-                  <span class="currency-switch">
-                    <button class="currency-btn active">₾</button>
-                    <button class="currency-btn">$</button>
-                  </span>
-                </p>
-                <h4 class="property-header">
-                  ქირავდება დღიურად 2 ოთახიანი ბინა
-                </h4>
-                <div class="loc-div">
-                  <img
-                    class="location-icon"
-                    src="images/location.svg"
-                    alt="#"
-                  />
-                  <p class="property-p">გლდანი 58მ²</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="property-card">
-              <div class="swiper property-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="images/flat1.avif" alt="flat" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/flat2.jpeg" alt="flat" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/flat3.jpg" alt="flat" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/flat4.png" alt="flat" />
-                  </div>
-                </div>
-                <div class="swiper-button-prev swiper-btn-small"></div>
-                <div class="swiper-button-next swiper-btn-small"></div>
-              </div>
-              <div class="property-info">
-                <p class="property-price">
-                  15 ₾
-                  <span class="currency-switch">
-                    <button class="currency-btn active">₾</button>
-                    <button class="currency-btn">$</button>
-                  </span>
-                </p>
-                <h4 class="property-header">
-                  ქირავდება დღიურად 2 ოთახიანი ბინა
-                </h4>
-                <div class="loc-div">
-                  <img
-                    class="location-icon"
-                    src="images/location.svg"
-                    alt="#"
-                  />
-                  <p class="property-p">გლდანი 58მ²</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="property-card">
-              <div class="swiper property-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="images/flat1.avif" alt="flat" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/flat2.jpeg" alt="flat" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/flat3.jpg" alt="flat" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/flat4.png" alt="flat" />
-                  </div>
-                </div>
-                <div class="swiper-button-prev swiper-btn-small"></div>
-                <div class="swiper-button-next swiper-btn-small"></div>
-              </div>
-              <div class="property-info">
-                <p class="property-price">
-                  15 ₾
-                  <span class="currency-switch">
-                    <button class="currency-btn active">₾</button>
-                    <button class="currency-btn">$</button>
-                  </span>
-                </p>
-                <h4 class="property-header">
-                  ქირავდება დღიურად 2 ოთახიანი ბინა
-                </h4>
-                <div class="loc-div">
-                  <img
-                    class="location-icon"
-                    src="images/location.svg"
-                    alt="#"
-                  />
-                  <p class="property-p">გლდანი 58მ²</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="property-card">
-              <div class="swiper property-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="images/flat2.jpeg" alt="flat" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/flat1.avif" alt="flat" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/flat3.jpg" alt="flat" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/flat4.png" alt="flat" />
-                  </div>
-                </div>
-                <div class="swiper-button-prev swiper-btn-small"></div>
-                <div class="swiper-button-next swiper-btn-small"></div>
-              </div>
-              <div class="property-info">
-                <p class="property-price">
-                  15 ₾
-                  <span class="currency-switch">
-                    <button class="currency-btn active">₾</button>
-                    <button class="currency-btn">$</button>
-                  </span>
-                </p>
-                <h4 class="property-header">
-                  ქირავდება დღიურად 2 ოთახიანი ბინა
-                </h4>
-                <div class="loc-div">
-                  <img
-                    class="location-icon"
-                    src="images/location.svg"
-                    alt="#"
-                  />
-                  <p class="property-p">გლდანი 58მ²</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="property-card">
-              <div class="swiper property-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="images/flat1.avif" alt="flat" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/flat2.jpeg" alt="flat" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/flat3.jpg" alt="flat" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/flat4.png" alt="flat" />
-                  </div>
-                </div>
-                <div class="swiper-button-prev swiper-btn-small"></div>
-                <div class="swiper-button-next swiper-btn-small"></div>
-              </div>
-              <div class="property-info">
-                <p class="property-price">
-                  15 ₾
-                  <span class="currency-switch">
-                    <button class="currency-btn active">₾</button>
-                    <button class="currency-btn">$</button>
-                  </span>
-                </p>
-                <h4 class="property-header">
-                  ქირავდება დღიურად 2 ოთახიანი ბინა
-                </h4>
-                <div class="loc-div">
-                  <img
-                    class="location-icon"
-                    src="images/location.svg"
-                    alt="#"
-                  />
-                  <p class="property-p">გლდანი 58მ²</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <button class="all">ყველა ატვირთული განცხადება</button>
-    </section>
+        <button class="all">ყველა ატვირთული განცხადება</button>
+      </section>
+    </div>
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-column">

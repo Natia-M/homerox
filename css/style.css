@@ -450,6 +450,7 @@ li {
   padding: 12px;
   width: 300px;
   margin: auto;
+  transform: translateY(0px);
 }
 
 .card.small-card:hover {
