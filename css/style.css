@@ -363,6 +363,7 @@ li {
   border: none;
   border-radius: 20px;
   padding: 10px;
+  cursor: pointer;
 }
 .mini-but:hover {
   color: white;
@@ -452,7 +453,7 @@ li {
 }
 
 .card.small-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
 }
 
 .small-card-img {
@@ -461,7 +462,16 @@ li {
   object-fit: cover;
   border-radius: 12px;
 }
-
+.fire-on-img {
+  position: absolute;
+  max-width: 30px;
+  max-height: 30px;
+  margin-top: 5px;
+  margin-left: -130px;
+  padding: 5px;
+  border-radius: 50px;
+  background-color: white;
+}
 .card.small-card .info {
   text-align: center;
   margin-top: 10px;
@@ -483,7 +493,33 @@ li {
   font-size: 14px;
   color: #666;
 }
+.save-btn-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  z-index: 10;
+}
 
+.save-btn {
+  background-color: #ffffff;
+  stroke: #0d4abb;
+  border: none;
+  border-radius: 0 0 0 8px;
+  cursor: pointer;
+  padding: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.bookmark-icon {
+  transition: all 0.3s ease;
+}
+
+/* შენახული მდგომარეობა */
+.save-btn.active .bookmark-icon {
+  fill: #0040c1;
+  stroke: #0d4abb;
+}
 .view-more {
   font-size: 14px;
   color: #007bff;

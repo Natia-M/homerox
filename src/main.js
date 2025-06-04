@@ -189,3 +189,15 @@ document.querySelectorAll(".language-option").forEach((option) => {
     modal.classList.add("hidden");
   });
 });
+//შენახვის ბუქმარქი//
+function toggleSave(button) {
+  button.classList.toggle("active");
+
+  const isSaved = button.classList.contains("active");
+
+  if (isSaved) {
+    alert("შენახულია!");
+  } else {
+    alert("ამოღებულია შენახვებიდან");
+  }
+}
