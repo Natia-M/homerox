@@ -350,6 +350,7 @@ li {
   margin-left: 15px;
   align-items: center;
   justify-content: space-between;
+  gap: 5px;
 }
 .vipp {
   margin-top: 80px;

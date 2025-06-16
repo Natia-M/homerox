@@ -170,25 +170,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-//ენის მოდული//
-const toggle = document.getElementById("languageToggle");
-const modal = document.getElementById("languageModal");
+// ენის მოდული//
+// const toggle = document.getElementById("languageToggle");
+// const modal = document.getElementById("languageModal");
 
-toggle.addEventListener("click", () => {
-  modal.classList.toggle("hidden");
-});
+// toggle.addEventListener("click", () => {
+//   modal.classList.toggle("hidden");
+// });
 
-document.querySelectorAll(".language-option").forEach((option) => {
-  option.addEventListener("click", () => {
-    document
-      .querySelectorAll(".custom-radio")
-      .forEach((r) => r.classList.remove("active"));
-    option.querySelector(".custom-radio").classList.add("active");
-    const selectedText = option.querySelector(".language-label").textContent;
-    toggle.querySelector("div").textContent = selectedText;
-    modal.classList.add("hidden");
-  });
-});
+// document.querySelectorAll(".language-option").forEach((option) => {
+//   option.addEventListener("click", () => {
+//     document
+//       .querySelectorAll(".custom-radio")
+//       .forEach((r) => r.classList.remove("active"));
+//     option.querySelector(".custom-radio").classList.add("active");
+//     const selectedText = option.querySelector(".language-label").textContent;
+//     toggle.querySelector("div").textContent = selectedText;
+//     modal.classList.add("hidden");
+//   });
+// });
 //შენახვის ბუქმარქი//
 function toggleSave(button) {
   button.classList.toggle("active");
@@ -201,3 +201,30 @@ function toggleSave(button) {
     alert("ამოღებულია შენახვებიდან");
   }
 }
+
+const toggle = document.getElementById("languageToggle");
+const options = document.getElementById("languageOptions");
+
+toggle.addEventListener("click", () => {
+  options.classList.toggle("hidden");
+});
+
+document.querySelectorAll(".language-option").forEach((option) => {
+  option.addEventListener("click", () => {
+    const img = option.querySelector("img").src;
+    const text = option.querySelector("span").innerText;
+
+    toggle.querySelector("img").src = img;
+    toggle.querySelector("span").innerText = text;
+
+    options.classList.add("hidden");
+    // აქ შეგიძლია ენის ცვლაც გაუკეთო, მაგალითად localStorage.setItem("lang", ...), ან redirect
+  });
+});
+
+// დახუროს სხვაგან დაჭერისას
+document.addEventListener("click", (e) => {
+  if (!document.querySelector(".language-dropdown").contains(e.target)) {
+    options.classList.add("hidden");
+  }
+});
