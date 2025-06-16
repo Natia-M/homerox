@@ -35,7 +35,7 @@ new Swiper(".myPropertiesSwiper", {
   slidesPerView: 1,
   autoplay: {
     delay: 3000,
-    disableOnInteraction: false,
+    disableOnInteraction: true,
   },
   breakpoints: {
     768: {
@@ -170,25 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-// ენის მოდული//
-// const toggle = document.getElementById("languageToggle");
-// const modal = document.getElementById("languageModal");
 
-// toggle.addEventListener("click", () => {
-//   modal.classList.toggle("hidden");
-// });
-
-// document.querySelectorAll(".language-option").forEach((option) => {
-//   option.addEventListener("click", () => {
-//     document
-//       .querySelectorAll(".custom-radio")
-//       .forEach((r) => r.classList.remove("active"));
-//     option.querySelector(".custom-radio").classList.add("active");
-//     const selectedText = option.querySelector(".language-label").textContent;
-//     toggle.querySelector("div").textContent = selectedText;
-//     modal.classList.add("hidden");
-//   });
-// });
 //შენახვის ბუქმარქი//
 function toggleSave(button) {
   button.classList.toggle("active");
@@ -208,7 +190,7 @@ const options = document.getElementById("languageOptions");
 toggle.addEventListener("click", () => {
   options.classList.toggle("hidden");
 });
-
+//language//
 document.querySelectorAll(".language-option").forEach((option) => {
   option.addEventListener("click", () => {
     const img = option.querySelector("img").src;
@@ -218,13 +200,24 @@ document.querySelectorAll(".language-option").forEach((option) => {
     toggle.querySelector("span").innerText = text;
 
     options.classList.add("hidden");
-    // აქ შეგიძლია ენის ცვლაც გაუკეთო, მაგალითად localStorage.setItem("lang", ...), ან redirect
   });
 });
 
-// დახუროს სხვაგან დაჭერისას
 document.addEventListener("click", (e) => {
   if (!document.querySelector(".language-dropdown").contains(e.target)) {
     options.classList.add("hidden");
   }
+});
+//ads slider//
+new Swiper(".adSwiper", {
+  loop: true,
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  speed: 600,
 });

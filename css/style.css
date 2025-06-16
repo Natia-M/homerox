@@ -343,6 +343,22 @@ li {
   margin-right: 4%;
   margin-bottom: 8px;
 }
+/* ad slider */
+.ad-slider-container {
+  padding: 1rem 0;
+  background-color: #f8f8f8;
+  min-height: 200px;
+}
+
+.adSwiper .swiper-slide img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.ad-4 {
+  max-height: 160px;
+  margin: 30px;
+}
 
 /* slider */
 .vips-header {
@@ -350,7 +366,6 @@ li {
   margin-left: 15px;
   align-items: center;
   justify-content: space-between;
-  gap: 5px;
 }
 .vipp {
   margin-top: 80px;
