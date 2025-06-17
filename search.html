@@ -49,8 +49,8 @@
     <div class="content-container">
       <section>
         <div class="search-page-container">
-          <form class="search-box">
-            <select name="propertyType">
+          <form action="search.html" method="GET" class="search-box">
+            <select class="select" name="propertyType">
               <option value="">ქონების ტიპი</option>
               <option value="ბინა">ბინა</option>
               <option value="სახლი">სახლი</option>
@@ -59,7 +59,7 @@
               <option value="მიწა">მიწა</option>
             </select>
 
-            <select name="dealType">
+            <select class="select" name="dealType">
               <option value="">გარიგების ტიპი</option>
               <option value="ქირავდება">ქირავდება</option>
               <option value="იყიდება">იყიდება</option>
@@ -67,14 +67,7 @@
               <option value="გირავდება">ქირავდება დღიურად</option>
             </select>
 
-            <select name="status">
-              <option value="">სტატუსი</option>
-              <option value="მშენებარე">მშენებარე</option>
-              <option value="ახალი აშენებული">ახალი აშენებული</option>
-              <option value="ძველი აშენებული">ძველი აშენებული</option>
-            </select>
-
-            <select name="city">
+            <select class="select" name="city">
               <option value="">ქალაქი</option>
               <option value="თბილისი">თბილისი</option>
               <option value="ქუთაისი">ქუთაისი</option>
@@ -116,14 +109,23 @@
                 <button type="button" class="area-apply">OK</button>
               </div>
             </div>
+            <input
+              type="text"
+              name="searchQuery"
+              class="text-search"
+              placeholder="ტელეფონი, ID, სა.კოდ"
+            />
             <img class="filter" src="images/fil3.svg" alt="#" />
-            <button type="submit">ძებნა</button>
+            <button id="main-search-button" type="submit">ძებნა</button>
           </form>
-
-          <h2 id="resultsTitle">შედეგები:</h2>
-          <div id="results" class="results-container"></div>
         </div>
       </section>
+    </div>
+    <div id="results-container">
+      <h2 id="resultsTitle">შედეგები:</h2>
+      <div id="results"></div>
+      <h2 id="resultsTitle"></h2>
+      <div id="results"></div>
     </div>
     <footer class="footer">
       <div class="footer-container">

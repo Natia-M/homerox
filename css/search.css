@@ -52,8 +52,8 @@ body {
 
 .search-box select,
 .search-box button {
-  padding: 5px;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 8px;
   min-width: 120px;
@@ -62,17 +62,22 @@ body {
   border-radius: 30px;
   color: #333;
 }
-
-.search-box button {
+#main-search-button {
   background-color: #3a76ff;
   color: white;
-  font-weight: bold;
+  border: none;
+  cursor: pointer;
   transition: background 0.3s ease;
   padding: 10px;
-}
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 
+  border-radius: 30px;
+  cursor: pointer;
+}
 .search-box button:hover {
-  background-color: #2c3aa3;
+  background-color: #3a76ff;
 }
 .custom-price-dropdown,
 .custom-area-dropdown {
@@ -137,11 +142,14 @@ body {
   cursor: pointer;
   width: 100%;
 }
-/* შედეგების ბლოკი */
-#results-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+.text-search {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  width: 210px;
+  border-radius: 30px;
 }
 
 /* ერთი ბარათი */
@@ -203,4 +211,45 @@ body {
 }
 .filter {
   max-width: 40px;
+}
+/* შედეგების ბლოკი */
+.result-image {
+  max-width: 300px;
+  border-radius: 15px;
+}
+.results-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.results {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#resultsTitle {
+  background-color: white;
+  max-width: 1250px;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 400px;
+}
+#results-container {
+  margin-left: 15px;
+}
+.result-box {
+  max-width: 800px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+.result-description {
+  margin-top: 20px;
 }

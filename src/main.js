@@ -81,96 +81,108 @@ document.querySelectorAll(".currency-btn").forEach((btn) => {
   });
 });
 
-//ფორმის ჯს//
-// ძებნის ფორმის გადაგზავნა search.html-ზე
-document.querySelector("#main-search-button").addEventListener("click", () => {
-  const propertyType = document.querySelector(
-    'select[name="propertyType"]'
-  ).value;
-  const dealType = document.querySelector('select[name="dealType"]').value;
-  const city = document.querySelector('select[name="city"]').value;
-  const price = document.querySelector('select[name="price"]').value;
-  const area = document.querySelector('select[name="area"]').value;
-
-  const queryParams = new URLSearchParams({
-    propertyType,
-    dealType,
-    city,
-    price,
-    area,
-  });
-
-  // გადააქვს ძებნის გვერდზე არჩეული პარამეტრებით
-  window.location.href = `search.html?${queryParams.toString()}`;
-});
-//ფასის ფანჯარა//
+// DOM ჩატვირთვის შემდეგ
 document.addEventListener("DOMContentLoaded", function () {
-  // ფასი
-  const toggleBtn = document.querySelector(".price-toggle");
-  const popup = document.querySelector(".price-popup");
-  const applyBtn = document.querySelector(".price-apply");
+  // ======= ძებნის ფორმის გადაგზავნა search.html-ზე =======
+  document
+    .querySelector("#main-search-button")
+    .addEventListener("click", (e) => {
+      e.preventDefault(); // თავიდან აიცილე ფორმის სტანდარტული გაგზავნა
 
-  toggleBtn.addEventListener("click", () => {
-    popup.classList.toggle("hidden");
+      const propertyType = document.querySelector(
+        'select[name="propertyType"]'
+      ).value;
+      const dealType = document.querySelector('select[name="dealType"]').value;
+      const city = document.querySelector('select[name="city"]').value;
+      const minPrice = document.querySelector('input[name="minPrice"]').value;
+      const maxPrice = document.querySelector('input[name="maxPrice"]').value;
+      const minArea = document.querySelector('input[name="minArea"]').value;
+      const maxArea = document.querySelector('input[name="maxArea"]').value;
+      const searchQuery = document.querySelector(
+        'input[name="searchQuery"]'
+      ).value;
+
+      const queryParams = new URLSearchParams({
+        propertyType,
+        dealType,
+        city,
+        minPrice,
+        maxPrice,
+        minArea,
+        maxArea,
+        searchQuery,
+      });
+
+      // გადაამისამართე search.html-ზე პარამეტრებით
+      window.location.href = `search.html?${queryParams.toString()}`;
+    });
+
+  // ======= ფასის popup =======
+  const priceToggleBtn = document.querySelector(".price-toggle");
+  const pricePopup = document.querySelector(".price-popup");
+  const priceApplyBtn = document.querySelector(".price-apply");
+
+  priceToggleBtn?.addEventListener("click", () => {
+    pricePopup.classList.toggle("hidden");
   });
 
-  applyBtn.addEventListener("click", () => {
-    popup.classList.add("hidden");
+  priceApplyBtn?.addEventListener("click", () => {
+    pricePopup.classList.add("hidden");
   });
 
-  // ფართი
-  const areaToggle = document.querySelector(".area-toggle");
+  // ======= ფართობის popup =======
+  const areaToggleBtn = document.querySelector(".area-toggle");
   const areaPopup = document.querySelector(".area-popup");
-  const areaApply = document.querySelector(".area-apply");
+  const areaApplyBtn = document.querySelector(".area-apply");
 
-  areaToggle.addEventListener("click", () => {
+  areaToggleBtn?.addEventListener("click", () => {
     areaPopup.classList.toggle("hidden");
   });
 
-  areaApply.addEventListener("click", () => {
+  areaApplyBtn?.addEventListener("click", () => {
     areaPopup.classList.add("hidden");
   });
 
-  // გარეთ კლიკით ორივეს დახურვა
+  // ======= გარე კლიკით დახურვა ორივეს =======
   document.addEventListener("click", (e) => {
-    if (!document.querySelector(".custom-price-dropdown").contains(e.target)) {
-      popup.classList.add("hidden");
+    if (!document.querySelector(".custom-price-dropdown")?.contains(e.target)) {
+      pricePopup.classList.add("hidden");
     }
-    if (!document.querySelector(".custom-area-dropdown").contains(e.target)) {
+    if (!document.querySelector(".custom-area-dropdown")?.contains(e.target)) {
       areaPopup.classList.add("hidden");
     }
   });
-});
-document.addEventListener("DOMContentLoaded", function () {
+
+  // ======= დეტალური ფილტრის მოდალი =======
   const filterIcon = document.querySelector(".filter");
   const modal = document.getElementById("filterModal");
   const closeBtn = document.querySelector(".close-filter");
-  const selectableItems = document.querySelectorAll(".selectable");
+  const selectableItems = document.querySelectorAll(".modal-label.selectable");
 
-  // მოდალის გახსნა
   filterIcon?.addEventListener("click", () => {
     modal.classList.remove("hidden");
   });
 
-  // მოდალის დახურვა
   closeBtn?.addEventListener("click", () => {
     modal.classList.add("hidden");
   });
 
-  // მონიშვნა (active კლასის დამატება/ამოღება)
+  // მონიშვნის მექანიკა (active კლასის ტოგლი)
   selectableItems.forEach((item) => {
     item.addEventListener("click", () => {
       item.classList.toggle("active");
     });
-    document.querySelector(".erase").addEventListener("click", () => {
-      const selectedFilters = document.querySelectorAll(
-        ".modal-label.selectable.selected"
-      );
-      selectedFilters.forEach((el) => el.classList.remove("selected"));
-    });
+  });
+
+  // გასუფთავება
+  const eraseBtn = document.querySelector(".erase");
+  eraseBtn?.addEventListener("click", () => {
+    const activeItems = document.querySelectorAll(
+      ".modal-label.selectable.active"
+    );
+    activeItems.forEach((el) => el.classList.remove("active"));
   });
 });
-
 //შენახვის ბუქმარქი//
 function toggleSave(button) {
   button.classList.toggle("active");
