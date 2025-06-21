@@ -505,14 +505,21 @@ li {
 
 .card.small-card h3 {
   font-size: 16px;
-  color: #222;
+  color: #343434;
   margin: 6px 0;
+  text-align: left;
+  height: 2.5em;
+  font-weight: 400;
 }
 
 .card.small-card .price {
   font-weight: bold;
   color: #007bff;
   margin: 4px 0;
+}
+.location {
+  display: flex;
+  gap: 5px;
 }
 
 .card.small-card .details {
@@ -562,7 +569,7 @@ li {
   gap: 5px;
 }
 .location {
-  gap: 5px;
+  gap: 8px;
 }
 .location-icon {
   max-width: 15px;
