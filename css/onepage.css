@@ -5,9 +5,10 @@
 }
 /* ფოტოების სექცია */
 .apartment-listing {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
+  max-width: 1280px;
+  margin: 0px 15;
+  margin-top: 60px;
+  padding: 10px;
   font-family: sans-serif;
   color: #333;
   background: #fff;
@@ -158,6 +159,71 @@
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 20px;
+  width: 70%;
+}
+.gallery-wrapper {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+}
+
+.main-swiper {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.main-swiper .swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.thumb-swiper {
+  margin-top: 12px;
+}
+
+.thumb-swiper .swiper-slide {
+  width: 80px !important;
+  height: 60px;
+  opacity: 0.5;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.thumb-swiper .swiper-slide-thumb-active {
+  opacity: 1;
+  border: 2px solid #1d4ed8;
+}
+
+.thumb-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev {
+  left: -16px;
+}
+
+.swiper-button-next {
+  right: -16px;
 }
 /* აღწერა */
 .details-section {
@@ -251,4 +317,19 @@
   height: 200px;
   border-radius: 20px;
   margin-left: 20px;
+}
+/* გვერდითი სლაიდერი */
+.ad-slider-container {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  height: 450px;
+}
+
+.side-ad-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  max-height: 450px;
 }

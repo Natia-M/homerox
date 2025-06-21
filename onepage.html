@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>განცხადების გვერდი</title>
+    <title>HomeRox</title>
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/onepage.css" />
     <link
@@ -17,6 +17,7 @@
     />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="src/onepage.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header class="flex">
@@ -58,12 +59,6 @@
     </header>
     <div class="content-container">
       <section class="apartment-listing">
-        <div class="listing-topbar">
-          <div class="breadcrumbs">
-            ბინა > ქირავდება დღიურად > თბილისი > გლდანი > შერმადინის ქ.
-          </div>
-        </div>
-
         <h1 class="title">ქირავდება დღიურად 2 ოთახიანი ბინა გლდანში</h1>
 
         <div class="gallery-and-sidebar">
@@ -76,14 +71,50 @@
                 <span class="listing-id">ID - 31517668</span>
               </div>
             </div>
-            <div class="image-gallery">
-              <img class="img1" src="images/l1.jpg" alt="საძინებელი" />
-              <img class="img2" src="images/l2.jpg" alt="სააბაზანო 1" />
-              <img class="img3" src="images/l3.jpg" alt="სააბაზანო 2" />
-              <img class="img4" src="images/l4.jpg" alt="სამზარეულო 1" />
-              <img class="img5" src="images/l5.jpg" alt="სამზარეულო 2" />
+            <div class="gallery-wrapper">
+              <div class="swiper main-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="images/l1.jpg" alt="საძინებელი" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/l2.jpg" alt="სააბაზანო 1" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/l3.jpg" alt="სააბაზანო 2" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/l4.jpg" alt="სამზარეულო 1" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/l5.jpg" alt="სამზარეულო 2" />
+                  </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+
+              <div class="swiper thumb-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="images/l1.jpg" alt="thumb" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/l2.jpg" alt="thumb" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/l3.jpg" alt="thumb" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/l4.jpg" alt="thumb" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/l5.jpg" alt="thumb" />
+                  </div>
+                </div>
+              </div>
             </div>
-            <button>ყველა ფოტო</button>
           </div>
           <div class="sidebar">
             <div class="price-box">
@@ -93,10 +124,24 @@
               </div>
               <button class="call-btn">📞 557 93 34 ** ნომრის ნახვა</button>
             </div>
-
             <div class="owner-box">
               <p class="owner-name">👤 გიორგი</p>
               <p class="owner-link">ყველა განცხადება (6)</p>
+            </div>
+            <div class="ad-slider-container">
+              <div class="swiper sideAdSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img class="side-ad-img" src="images/ad1.jpeg" alt="Ad 1" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="side-ad-img" src="images/ad2.jpg" alt="Ad 2" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="side-ad-img" src="images/ad3.jpeg" alt="Ad 3" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
