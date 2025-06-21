@@ -36,6 +36,7 @@ new Swiper(".myPropertiesSwiper", {
   autoplay: {
     delay: 3000,
     disableOnInteraction: true,
+    pauseOnMouseEnter: true,
   },
   breakpoints: {
     768: {

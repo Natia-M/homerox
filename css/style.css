@@ -503,7 +503,8 @@ li {
   margin-top: 10px;
 }
 
-.card.small-card h3 {
+.card.small-card h3,
+.property-header {
   font-size: 16px;
   color: #343434;
   margin: 6px 0;
@@ -572,8 +573,8 @@ li {
   gap: 8px;
 }
 .location-icon {
-  max-width: 15px;
-  max-height: 15px;
+  max-width: 20px;
+  max-height: 20px;
 }
 /* projects */
 .new {
@@ -787,6 +788,7 @@ h3 {
 
 .loc-div {
   display: flex;
+  margin-top: 8px;
 }
 .property-info {
   padding: 10px;
@@ -797,6 +799,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-bottom: 5px;
 }
 
 .currency-switch {
