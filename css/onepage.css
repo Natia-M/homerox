@@ -41,15 +41,30 @@
 
 .address {
   font-size: 14px;
-  color: #666;
-  margin-bottom: 20px;
+  color: #1d4ed8;
   cursor: pointer;
 }
 .gallery-and-sidebar {
   display: flex;
   gap: 20px;
+  height: 590px;
 }
-
+.meta-info,
+.save,
+.report,
+.share {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.save img,
+.report img,
+.share img {
+  width: 25px;
+}
+.meta-info {
+  gap: 35px;
+}
 .image-gallery {
   display: grid;
   gap: 10px;
@@ -154,11 +169,12 @@
 .desc {
   display: flex;
   justify-content: space-between;
+  padding: 20px;
 }
 .gallery-description {
-  padding: 20px;
+  padding: 0px 20px;
   border: 1px solid #ddd;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 70%;
 }
 .gallery-wrapper {
@@ -172,14 +188,17 @@
   border-radius: 10px;
   overflow: hidden;
 }
-
+.lo-icon {
+  max-width: 20px;
+  margin-right: 8px;
+}
 .main-swiper .swiper-slide img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 10px;
   max-height: 500px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .thumb-swiper {
@@ -228,9 +247,8 @@
 /* აღწერა */
 .details-section {
   background-color: #fff;
-  border-radius: 12px;
-  padding: 24px;
-  margin-top: 32px;
+
+  padding: 20px 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
   font-family: sans-serif;
 }
@@ -242,6 +260,7 @@
   margin-bottom: 24px;
   border: 1px solid #eee;
   padding: 25px 15px;
+  border-radius: 20px;
 }
 .feature-item {
   display: flex;

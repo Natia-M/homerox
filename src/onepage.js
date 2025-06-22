@@ -31,15 +31,3 @@ L.marker([41.7949, 44.8361])
   .openPopup();
 
 //სლაიდერი//
-new Swiper(".sideAdSwiper", {
-  loop: true,
-  effect: "fade",
-  fadeEffect: {
-    crossFade: true,
-  },
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  speed: 600,
-});
