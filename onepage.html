@@ -15,8 +15,13 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.css"
+    />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="src/onepage.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </head>
   <body>
@@ -83,45 +88,61 @@
         <div class="gallery-and-sidebar">
           <div class="gallery-description">
             <div class="gallery-wrapper">
+              <div class="blurred-background">
+                <img
+                  src="images/l1.jpg"
+                  class="blurred-image"
+                  id="blur-image"
+                />
+              </div>
+
               <div class="swiper main-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img src="images/l1.jpg" alt="საძინებელი" />
+                    <a data-fancybox="gallery" href="images/l1.jpg">
+                      <img src="images/l1.jpg" alt="საძინებელი" />
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <img src="images/l2.jpg" alt="სააბაზანო 1" />
+                    <a data-fancybox="gallery" href="images/l2.jpg"
+                      ><img src="images/l2.jpg" alt="სააბაზანო 1"
+                    /></a>
                   </div>
                   <div class="swiper-slide">
-                    <img src="images/l3.jpg" alt="სააბაზანო 2" />
+                    <a data-fancybox="gallery" href="images/l3.jpg">
+                      <img src="images/l3.jpg" alt="სააბაზანო 2"
+                    /></a>
                   </div>
                   <div class="swiper-slide">
-                    <img src="images/l4.jpg" alt="სამზარეულო 1" />
+                    <a data-fancybox="gallery" href="images/l4.jpg">
+                      <img src="images/l4.jpg" alt="სამზარეულო 1"
+                    /></a>
                   </div>
                   <div class="swiper-slide">
-                    <img src="images/l5.jpg" alt="სამზარეულო 2" />
+                    <a data-fancybox="gallery" href="images/l5.jpg">
+                      <img src="images/l5.jpg" alt="სამზარეულო 2"
+                    /></a>
                   </div>
                 </div>
-
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-              </div>
-
-              <div class="swiper thumb-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="images/l1.jpg" alt="thumb" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/l2.jpg" alt="thumb" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/l3.jpg" alt="thumb" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/l4.jpg" alt="thumb" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="images/l5.jpg" alt="thumb" />
+                <div class="swiper thumb-swiper id=thumb-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="images/l1.jpg" alt="thumb" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/l2.jpg" alt="thumb" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/l3.jpg" alt="thumb" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/l4.jpg" alt="thumb" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/l5.jpg" alt="thumb" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -136,8 +157,12 @@
               <button class="call-btn">📞 557 93 34 ** ნომრის ნახვა</button>
             </div>
             <div class="owner-box">
-              <p class="owner-name">👤 გიორგი</p>
-              <p class="owner-link">ყველა განცხადება (6)</p>
+              <img class="head-2" src="images/head2.jpg" alt="" />
+              <div class="owner-des">
+                <div class="namee">სახელი</div>
+                <div class="status">სტატუსი</div>
+                <p class="owner-link">ყველა განცხადება (6)</p>
+              </div>
             </div>
             <div class="ad-slider-container">
               <div class="swiper sideAdSwiper">

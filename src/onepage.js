@@ -31,3 +31,12 @@ L.marker([41.7949, 44.8361])
   .openPopup();
 
 //სლაიდერი//
+const swiper = new Swiper(".main-swiper", {
+  on: {
+    slideChange: function () {
+      const activeSlide = this.slides[this.activeIndex];
+      const imgSrc = activeSlide.querySelector("img").getAttribute("src");
+      document.getElementById("blur-image").setAttribute("src", imgSrc);
+    },
+  },
+});

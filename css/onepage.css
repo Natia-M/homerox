@@ -47,7 +47,7 @@
 .gallery-and-sidebar {
   display: flex;
   gap: 20px;
-  height: 590px;
+  height: 572px;
 }
 .meta-info,
 .save,
@@ -117,7 +117,7 @@
 .price-box {
   border: 1px solid #ddd;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 20px;
   text-align: center;
   position: relative;
 }
@@ -149,14 +149,26 @@
   margin-top: 10px;
   display: inline-block;
 }
-
 .owner-box {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
   border: 1px solid #ddd;
-  padding: 15px;
-  border-radius: 8px;
-  font-size: 14px;
 }
-
+.owner-des {
+  display: flex;
+  flex-direction: column;
+}
+.namee {
+  font-weight: bold;
+}
+.status {
+  padding: 5px;
+  background-color: #006eff2e;
+  border-radius: 5px;
+  margin: 5px 0;
+}
 .owner-name {
   font-weight: bold;
   margin-bottom: 5px;
@@ -166,27 +178,35 @@
   color: #1a73e8;
   cursor: pointer;
 }
+.head-2 {
+  max-width: 70px;
+}
 .desc {
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
 .gallery-description {
-  padding: 0px 20px;
   border: 1px solid #ddd;
-  border-radius: 10px;
-  width: 70%;
+  border-radius: 20px;
+  max-height: 500px;
 }
 .gallery-wrapper {
+  position: relative;
   width: 100%;
   max-width: 900px;
-  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+  max-height: 500px;
 }
 
 .main-swiper {
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 .lo-icon {
   max-width: 20px;
@@ -244,6 +264,54 @@
 .swiper-button-next {
   right: -16px;
 }
+.gallery-wrapper {
+  position: relative;
+}
+
+.blurred-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.blurred-background img.blurred-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(20px) brightness(0.8);
+  transform: scale(1.1);
+}
+
+.thumb-swiper {
+  position: absolute;
+  bottom: 100px;
+  left: 45%;
+  transform: translateX(-50%);
+  width: 90%;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 6px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+.thumb-swiper .swiper-slide img {
+  border-radius: 6px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.blurred-background img.blurred-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(20px) brightness(0.8);
+  transform: scale(1.1);
+}
+
 /* აღწერა */
 .details-section {
   background-color: #fff;
