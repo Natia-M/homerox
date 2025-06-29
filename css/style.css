@@ -489,6 +489,7 @@ li {
   height: 180px;
   object-fit: cover;
   border-radius: 12px;
+  min-width: 280px;
 }
 .fire-on-img {
   position: absolute;
