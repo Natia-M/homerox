@@ -27,30 +27,6 @@ er = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
-// vip slider//
-// მთავარი swiper ბოქსებისთვის
-new Swiper(".myPropertiesSwiper", {
-  loop: true,
-  spaceBetween: 20,
-  slidesPerView: 1,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: true,
-    pauseOnMouseEnter: true,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 4,
-    },
-  },
-  navigation: {
-    nextEl: ".properties-slider .main-nav.swiper-button-next",
-    prevEl: ".properties-slider .main-nav.swiper-button-prev",
-  },
-});
 
 // შიდა swiper-ები სურათებისთვის
 document.querySelectorAll(".property-swiper").forEach((swiperEl) => {

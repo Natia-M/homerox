@@ -500,6 +500,7 @@ li {
   padding: 5px;
   border-radius: 50px;
   background-color: white;
+  z-index: 5;
 }
 .card.small-card .info {
   text-align: center;
@@ -648,8 +649,7 @@ h3 {
   font-size: 25px;
 }
 
-/* "new" slider */
-
+/* "new" slider  */
 .myPropertiesSwiper {
   margin: 70px 30px;
   display: flex;
@@ -671,12 +671,6 @@ h3 {
 }
 .card-2 {
   max-height: 320px;
-}
-.property-swiper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .swiper-btn-small {
@@ -753,7 +747,9 @@ h3 {
 }
 .property-swiper {
   position: relative;
-  height: 200px;
+  height: 180px;
+  min-height: 180px;
+  min-width: 280px;
   overflow: visible;
   padding-bottom: 60px; /* ქვედა სივრცე ისრებისთვის */
 }
