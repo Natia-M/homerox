@@ -370,7 +370,7 @@ li {
 }
 /* section styles(services) */
 .services {
-  margin: auto;
+  margin: auto 30px;
   max-width: 1278px;
   padding: 30px 20px;
   background-color: #e5e5e569;
