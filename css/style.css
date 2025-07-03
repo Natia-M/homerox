@@ -374,8 +374,8 @@ li {
   max-width: 1278px;
   padding: 30px 20px;
   background-color: #e5e5e569;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 90px;
+  border-bottom-right-radius: 90px;
 }
 .service-container {
   margin-left: auto;
