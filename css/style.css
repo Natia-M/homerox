@@ -1,3 +1,25 @@
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../fonts/HelveticaNeue.ttc") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeueGeoCaps";
+  src: url("../fonts/helvetica-neue-lt-geo-55-roman-caps.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font {
+  font-family: "HelveticaNeue";
+}
+
+.font-up {
+  font-family: "HelveticaNeueGeoCaps";
+}
 * {
   margin: 0;
   padding: 0;
@@ -369,8 +391,14 @@ li {
   border-radius: 20px;
 }
 /* section styles(services) */
+.services-container {
+  margin-top: 90px;
+}
+.h2-serv {
+  text-align: center;
+}
 .services {
-  margin: 100px auto;
+  margin: 40px 30px auto;
   max-width: 1278px;
   padding: 30px 20px;
   background-color: #e5e5e569;
