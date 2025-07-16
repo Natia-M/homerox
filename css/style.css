@@ -333,7 +333,7 @@ li {
   border-radius: 8px;
   margin: 4px 0;
   background-color: #ffffff;
-  transition: 0.4;
+  transition: 0.4s;
   max-width: max-content;
   border: 1px solid white;
   text-wrap: nowrap;
