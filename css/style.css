@@ -404,6 +404,7 @@ li {
   background-color: #e5e5e569;
   border-top-left-radius: 90px;
   border-bottom-right-radius: 90px;
+  margin-bottom: 70px;
 }
 .service-container {
   margin-left: auto;
@@ -439,8 +440,7 @@ li {
 }
 
 .boxx-back {
-  color: #ffffff;
-  background: #51689ccf;
+  color: rgb(37, 37, 37);
   transform: rotateY(180deg);
 }
 .boxx {

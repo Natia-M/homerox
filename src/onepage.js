@@ -40,3 +40,6 @@ const swiper = new Swiper(".main-swiper", {
     },
   },
 });
+Fancybox.bind("[data-fancybox='gallery']", {
+  // დამატებითი პარამეტრების გარეშე, რადგან V5-ში ისრები ჩაშენებულია
+});

@@ -16,10 +16,10 @@ er = new Swiper(".mySwiper", {
       slidesPerView: 1,
     },
     1024: {
-      slidesPerView: 3.8,
+      slidesPerView: 4,
     },
     1400: {
-      slidesPerView: 4,
+      slidesPerView: 3.8,
     },
   },
   navigation: {
