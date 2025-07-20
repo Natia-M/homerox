@@ -255,9 +255,6 @@ body {
   margin-top: 20px;
   border-radius: 15px;
 }
-.result-description {
-  margin-top: 20px;
-}
 #results {
   display: grid;
   gap: 20px;
@@ -285,6 +282,7 @@ body {
 
 #results.grid4-view .result-description {
   text-align: left;
+  font-size: 13px;
 }
 #results.grid2-view .result-box,
 #results.list1-view .result-box {
