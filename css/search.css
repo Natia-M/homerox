@@ -213,6 +213,11 @@ body {
   max-width: 40px;
 }
 /* შედეგების ბლოკი */
+.result-head {
+}
+.list-image {
+  max-width: 30px;
+}
 .result-image {
   max-width: 300px;
   border-radius: 15px;
@@ -252,4 +257,55 @@ body {
 }
 .result-description {
   margin-top: 20px;
+}
+#results {
+  display: grid;
+  gap: 20px;
+}
+
+#results.grid4-view {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#results.grid2-view {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#results.list1-view {
+  grid-template-columns: 1fr;
+}
+#results.grid4-view .result-box {
+  flex-direction: column;
+}
+
+#results.grid4-view .result-image {
+  width: 100%;
+  height: auto;
+}
+
+#results.grid4-view .result-description {
+  text-align: left;
+}
+#results.grid2-view .result-box,
+#results.list1-view .result-box {
+  flex-direction: row;
+  align-items: center;
+}
+
+#results.grid2-view .result-image,
+#results.list1-view .result-image {
+  width: 200px;
+  height: auto;
+}
+
+#results.grid2-view .result-description,
+#results.list1-view .result-description {
+  text-align: left;
+}
+.result-box {
+  display: flex;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #fff;
+  gap: 15px;
 }

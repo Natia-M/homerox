@@ -63,11 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultsDiv = document.getElementById("results");
   const resultsTitle = document.getElementById("resultsTitle");
 
-  // სათაურის გაწერა
-  resultsTitle.textContent = `"${
-    filters.city || "ყველა ადგილი"
-  }" - ძიების შედეგები`;
-
   // ფილტრაცია
   const filteredResults = demoResults.filter((item) => {
     const matchProperty =
@@ -114,10 +109,25 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>მდებარეობა: ${item.location}</p>
           <p>ფასი: ₾${item.price}</p>
           <p>ფართი: ${item.area} მ²</p>
-          <hr>
           </div>
         </div>
           `;
     resultsDiv.appendChild(card);
+  });
+});
+document.querySelectorAll(".list-image").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const view = e.target.dataset.view;
+    const results = document.getElementById("results");
+
+    results.classList.remove("grid4-view", "grid2-view", "list1-view");
+
+    if (view === "grid4") {
+      results.classList.add("grid4-view");
+    } else if (view === "grid2") {
+      results.classList.add("grid2-view");
+    } else if (view === "list1") {
+      results.classList.add("list1-view");
+    }
   });
 });
