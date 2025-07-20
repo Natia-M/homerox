@@ -47,7 +47,6 @@
 .gallery-and-sidebar {
   display: flex;
   gap: 20px;
-  height: 572px;
 }
 .meta-info,
 .save,
@@ -112,6 +111,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-height: 400px;
 }
 
 .price-box {
@@ -408,7 +408,7 @@
 /* გვერდითი სლაიდერი */
 .ad-slider-container {
   width: 100%;
-  max-width: 350px;
+  max-width: 330px;
   margin: 0 auto;
   height: 450px;
 }
@@ -418,5 +418,11 @@
   height: auto;
   border-radius: 8px;
   display: block;
-  max-height: 450px;
+  max-height: 230px;
+  min-height: 230px;
+  object-fit: cover;
+}
+#swiper-wrapper-711fbb11cdef7e5d {
+  width: 100%;
+  max-width: 330px;
 }

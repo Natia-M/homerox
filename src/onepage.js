@@ -31,15 +31,41 @@ L.marker([41.7949, 44.8361])
   .openPopup();
 
 //სლაიდერი//
-const swiper = new Swiper(".main-swiper", {
-  on: {
-    slideChange: function () {
-      const activeSlide = this.slides[this.activeIndex];
-      const imgSrc = activeSlide.querySelector("img").getAttribute("src");
-      document.getElementById("blur-image").setAttribute("src", imgSrc);
-    },
+const sideSwiper = new Swiper(".sideAdSwiper", {
+  loop: true,
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+  speed: 1000,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
   },
 });
-Fancybox.bind("[data-fancybox='gallery']", {
-  // დამატებითი პარამეტრების გარეშე, რადგან V5-ში ისრები ჩაშენებულია
+//ვალუტის ცვლის ჯს//
+const switcherBtn = document.querySelector(".currency-switcher button");
+const priceEl = document.querySelector(".price");
+
+let currentCurrency = "gel";
+
+switcherBtn.addEventListener("click", () => {
+  let priceText = priceEl.textContent.trim();
+  let priceValue = parseFloat(priceText.replace(/[^\d.]/g, ""));
+
+  if (currentCurrency === "gel") {
+    let usd = (priceValue / 2.5).toFixed(2);
+    priceEl.textContent = `$${usd}`;
+    currentCurrency = "usd";
+  } else {
+    let gel = (priceValue * 2.5).toFixed(0);
+    priceEl.textContent = `${gel} ₾`;
+    currentCurrency = "gel";
+  }
+});
+//დარეკვა და ნომრის ჩვენება//
+const callBtn = document.querySelector(".call-btn");
+
+callBtn.addEventListener("click", () => {
+  callBtn.textContent = "📞 557 93 34 88";
 });
