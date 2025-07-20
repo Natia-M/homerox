@@ -1053,3 +1053,36 @@ h3 {
 .send-btn:hover {
   background: #357acc;
 }
+/* error */
+.error {
+  background-color: #ffffff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 12px;
+  margin: auto;
+}
+.img-404 {
+  max-width: 360px;
+  max-height: 360px;
+  margin: 20px;
+  border-radius: 15px;
+}
+.button-404 {
+  background-color: #2365ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 50px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: white;
+  margin-top: 15px;
+}
+.button-404:hover {
+  background-color: #4477ef;
+}
