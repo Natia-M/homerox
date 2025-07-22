@@ -6,6 +6,7 @@
     <title>HomeRox</title>
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/onepage.css" />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -60,29 +61,36 @@
     </header>
     <div class="content-container">
       <section class="apartment-listing">
-        <h1 class="title">ქირავდება დღიურად 2 ოთახიანი ბინა გლდანში</h1>
-        <div class="desc">
-          <div class="flex">
-            <img class="lo-icon" src="images/map.svg" alt="" />
-            <p class="address">შერმადინის ქ. 124</p>
+        <h1 class="title font-up">ქირავდება დღიურად 2 ოთახიანი ბინა გლდანში</h1>
+        <div class="desc flex">
+          <div class="small-desc flex">
+            <span class="flex">
+              <img class="icon" src="images/fb.svg" alt="" />
+              დღეს 12:43-ზე
+            </span>
+            <span class="flex">
+              <img class="icon" src="images/fb.svg" alt="" />
+              322
+            </span>
+            <span class="flex"> ID:3443023 </span>
           </div>
           <div class="meta-info">
             <div class="save">
               <img src="images/saving.svg" />
-              <div>შენახვა</div>
+              <div class="font-up">შენახვა</div>
             </div>
             <div class="share">
               <img src="images/share.svg" alt="" />
-              <div>გაზიარება</div>
+              <div class="font-up">გაზიარება</div>
             </div>
             <div class="report">
               <img src="images/report.svg" alt="" />
-              <div>გასაჩივრება</div>
+              <div class="font-up">გასაჩივრება</div>
             </div>
           </div>
         </div>
-        <div class="gallery-and-sidebar">
-          <div class="gallery-description">
+        <div class="gallery-and-sidebar grid-12">
+          <div class="gallery-description col-span-9">
             <div class="gallery-wrapper">
               <div class="blurred-background">
                 <img
@@ -143,7 +151,7 @@
               </div>
             </div>
           </div>
-          <div class="sidebar">
+          <div class="sidebar col-span-3">
             <div class="price-box">
               <p class="price">50 ₾</p>
               <div class="currency-switcher">
@@ -177,8 +185,8 @@
           </div>
         </div>
       </section>
-      <section class="details-section">
-        <div class="property-features">
+      <section class="details-section grid-12">
+        <div class="property-features col-span-9">
           <div class="feature-item">
             <img src="images/area.svg" alt="ფართი" />
             <div>
@@ -215,29 +223,53 @@
             </div>
           </div>
         </div>
-        <section class="map-section">
-          <div id="map"></div>
-        </section>
-        <div class="comment-section">
-          <h3>კომენტარი</h3>
-          <div class="comment-box">
-            ჩაწერე აქ, ამ კომენტარს დაინახავენ მხოლოდ მომხმარებლები...
-          </div>
-        </div>
-        <div class="description-section">
+        <div class="description-section col-span-9 border">
           <div class="owner-description">
             <img class="icon" src="images/description.svg" alt="#" />
-            <h3>აღწერა</h3>
+            <h3 class="font-up">აღწერა</h3>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-            voluptatem velit porro dolor debitis explicabo possimus maxime ullam
-            nobis numquam perspiciatis quas, ad iure voluptatum deserunt! Nam,
-            distinctio eaque? Reprehenderit?
+            ქირავდება ახალი გარემონტებული საოფისე ფართი 16 სართულიანი კორპუსის
+            პირველ სართულზე. არის იდეალური ადგილი სხვადა სხვა ბიზნესისთვის მაგ:
+            როგორიცაა სალონი, მაღაზია, სტომატოლოგიური კლინიკა, ნოტარიუსი ან
+            კიდევ სხვა უამრავი საქმიანობა. ფართს აქვს შშმ პირებისთვის
+            შესასვლელი. აქვს სველი წერტილი ფანჯრებს აქვს გისოსები იხილეთ
+            ფოტოებში.
           </p>
         </div>
+        <div class="col-span-9 border">
+          <h3>დეტალური ინფორმაცია</h3>
+          <div class="apartment-info">
+            <div class="param">
+              <span class="label">სტატუსი:</span>
+              <span class="value">ახალი აშენებული</span>
+            </div>
+            <div class="param">
+              <span class="label">ფართი:</span>
+              <span class="value">82 მ²</span>
+            </div>
+            <div class="param">
+              <span class="label">სართული:</span>
+              <span class="value">4/9</span>
+            </div>
+            <div class="param">
+              <span class="label">ოთახი:</span>
+              <span class="value">3</span>
+            </div>
+            <div class="param">
+              <span class="label">სველი წერტილი:</span>
+              <span class="value">1</span>
+            </div>
+            <div class="param">
+              <span class="label">ლიფტი:</span>
+              <span class="value">კი</span>
+            </div>
+          </div>
+        </div>
+        <section class="map-section col-span-9">
+          <div id="map"></div>
+        </section>
       </section>
-      <section class="extra-info"></section>
     </div>
     <footer class="footer">
       <div class="footer-container">
