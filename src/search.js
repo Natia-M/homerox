@@ -131,3 +131,14 @@ document.querySelectorAll(".list-image").forEach((button) => {
     }
   });
 });
+setTimeout(() => {
+  document.querySelectorAll(".property-swiper").forEach((swiperEl) => {
+    new Swiper(swiperEl, {
+      navigation: {
+        nextEl: swiperEl.querySelector(".swiper-button-next"),
+        prevEl: swiperEl.querySelector(".swiper-button-prev"),
+      },
+      loop: true,
+    });
+  });
+}, 100);

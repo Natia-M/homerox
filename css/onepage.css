@@ -20,12 +20,23 @@
 .font-up {
   font-family: "HelveticaNeueGeoCaps";
 }
+.content-container {
+  padding: 20px;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 /* ფოტოების სექცია */
+.icon-sm-2 {
+  gap: 0.2rem;
+}
+.icon-sm {
+  max-width: 25px;
+  padding: 3px;
+}
 .grid-12 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -72,7 +83,6 @@
   max-width: 1280px;
   margin: 0px 15;
   margin-top: 60px;
-  padding: 10px;
   font-family: sans-serif;
   color: #333;
   background: #fff;
@@ -376,19 +386,25 @@
 }
 
 /* აღწერა */
+.details-h {
+  margin: 15px 10px 0;
+}
 .details-section {
   background-color: #fff;
-
-  padding: 20px 10px;
+  padding: 20px 0px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
   font-family: sans-serif;
 }
-
+.location-2 {
+  justify-content: flex-start;
+  align-items: center;
+  color: #5169ab;
+  margin: 10px 0px 15px 0;
+}
 .property-features,
 .comment-section {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 24px;
   border: 1px solid #eee;
   padding: 25px 15px;
   border-radius: 20px;
@@ -458,10 +474,22 @@
 }
 .owner-description {
   display: flex;
+  margin-top: 15px;
+}
+.label-1 {
+  max-width: 50px;
+  padding: 10px;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.value {
+  font-size: 14px;
+  color: grey;
 }
 /* რუკა */
-.map-section {
-}
 #map {
   max-width: 1250px;
   height: 200px;
@@ -494,19 +522,50 @@
   gap: 1rem;
   font-size: 14px;
   color: #333;
+  padding: 20px 10px;
 }
 
 .param {
   display: flex;
   gap: 0.3rem;
+  align-items: center;
 }
 
 .label {
+  font-size: 16px;
   font-weight: bold;
   white-space: nowrap;
 }
 .border {
   border-radius: 20px;
   border: 1px solid #eee;
-  padding: 25px 15px;
+  padding: 0px 15px;
+}
+/* კარუსელი */
+.carousel-prev:after {
+  content: "prev";
+  font-family: "swiper-icons";
+}
+.carousel-next:after {
+  content: "next";
+  font-family: "swiper-icons";
+}
+.carousel-container {
+  gap: 20px;
+  margin-right: 20px;
+}
+.carousel-track-start {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+.card-start {
+  flex: 0 0 auto;
+  width: 300px;
+}
+.otheroptions {
+  margin: 70px auto;
 }
