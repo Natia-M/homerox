@@ -88,6 +88,19 @@ header nav {
   background-color: unset;
   color: rgb(0, 0, 0);
   border: 1px solid rgb(66 66 66 / 48%);
+  transition: 0.4s;
+}
+.manshead {
+  transition: 0.4s;
+}
+.profile-btn:hover,
+.selected-language:hover {
+  border: 1px solid #3a76ff;
+  color: #3a76ff;
+  .manshead {
+    filter: brightness(0) saturate(100%) invert(32%) sepia(85%) saturate(1450%)
+      hue-rotate(205deg) brightness(95%) contrast(90%);
+  }
 }
 
 .icon {
@@ -124,6 +137,7 @@ a:hover {
   border-radius: 30px;
   font-size: 13px;
   color: #0a1930;
+  transition: 0.4s;
 }
 
 .selected-language img {
