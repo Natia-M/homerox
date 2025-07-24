@@ -21,7 +21,15 @@ a {
 img {
   width: 100%;
 }
-
+.font-16 {
+  font-size: 16px;
+}
+.dark-grey {
+  color: #393939;
+}
+.pointer {
+  cursor: pointer;
+}
 /* search page */
 /* ძირითადი სტრუქტურა */
 body {
@@ -212,11 +220,55 @@ body {
 .filter {
   max-width: 40px;
 }
-/* შედეგების ბლოკი */
-.result-head {
-}
+
 .list-image {
-  max-width: 30px;
+  width: 25px;
+  height: 25px;
+  z-index: 1;
+  cursor: pointer;
+  transition: transform 0.3s;
+  filter: brightness(0) saturate(100%) invert(65%) sepia(27%) saturate(22%)
+    hue-rotate(194deg) brightness(95%) contrast(97%);
+  opacity: 0.7;
+  transition: filter 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.list-image:hover,
+.list-image.active {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(77%) saturate(432%)
+    hue-rotate(193deg) brightness(102%) contrast(101%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+.list-3 {
+  width: 28px;
+  height: 28px;
+}
+
+.viewSwitch {
+  border-radius: 20px;
+  background: white;
+  padding: 10px 15px;
+  gap: 12px;
+  margin-right: 10px;
+}
+
+.switch-indicator {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 36px;
+  height: 36px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+.sorting {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #80808033;
 }
 .result-image {
   max-width: 300px;
@@ -243,7 +295,6 @@ body {
   font-weight: 400px;
 }
 #results-container {
-  margin-left: 15px;
 }
 .result-box {
   max-width: 800px;

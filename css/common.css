@@ -5,13 +5,12 @@
 }
 /* general styles */
 body {
-  max-width: 1278px;
   background-color: #ffffff96;
-  margin: auto;
 }
 a {
   text-decoration: none;
   color: inherit;
+  text-decoration-color: unset;
 }
 .flex {
   display: flex;
@@ -22,16 +21,25 @@ a {
 img {
   width: 100%;
 }
+.content-container {
+  padding: 15px;
+  max-width: 1278px;
+  margin: auto;
+}
+.wrapper {
+  max-width: 1278px;
+  margin: auto;
+}
 /* header */
 header {
+  background-color: white;
   position: fixed;
-  top: 0;
   width: 100%;
+  top: 0;
+  left: 0;
   z-index: 999;
-  background-color: #ffffff;
-  padding: 5px 30px;
+  padding: 5px 0px;
   box-shadow: 0 2px 20px #0000001a;
-  max-width: 1278px;
 }
 header nav {
   margin-right: 100px;
@@ -67,7 +75,6 @@ header nav {
 
 .add-btn {
   color: #ffffff;
-  margin-right: 10px;
   margin-left: 30px;
   font-weight: bold;
   background-color: #3a76ff;

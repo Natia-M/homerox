@@ -142,3 +142,19 @@ setTimeout(() => {
     });
   });
 }, 100);
+const buttons = document.querySelectorAll(".list-image");
+const results = document.getElementById("results");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const view = e.target.dataset.view;
+
+    // Remove old view classes
+    results.classList.remove("grid4-view", "grid2-view", "list1-view");
+    results.classList.add(`${view}-view`);
+
+    // Remove active from all, add to clicked one
+    buttons.forEach((btn) => btn.classList.remove("active"));
+    e.target.classList.add("active");
+  });
+});

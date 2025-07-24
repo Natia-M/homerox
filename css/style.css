@@ -26,11 +26,7 @@
   box-sizing: border-box;
 }
 /* general styles */
-body {
-  max-width: 1278px;
-  background-color: #ffffff96;
-  margin: auto;
-}
+
 a {
   text-decoration: none;
 }
@@ -60,12 +56,12 @@ li {
   color: #535353;
 }
 .main-ul {
-  padding-top: 65px;
+  padding-top: 55px;
   padding-bottom: 10px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #ffffff96;
-  text-decoration-color: none;
+  text-decoration-color: unset;
 }
 .main-li {
   list-style: none;
@@ -87,7 +83,6 @@ li {
 .main-image {
   max-width: 1400px;
   max-height: 350px;
-  width: 95%;
   margin: auto;
   border-radius: 20px;
 }
@@ -367,7 +362,7 @@ li {
 }
 /* ad slider */
 .ads {
-  margin: 30px;
+  margin: 30px auto;
 }
 .ad-slider-container {
   background-color: #f8f8f8;
@@ -398,7 +393,7 @@ li {
   text-align: center;
 }
 .services {
-  margin: 40px 30px auto;
+  margin: 40px 0px;
   max-width: 1278px;
   padding: 30px 20px;
   background-color: #e5e5e569;
@@ -462,7 +457,6 @@ li {
 /* slider */
 .vips-header {
   display: flex;
-  margin-left: 15px;
   align-items: center;
   justify-content: space-between;
   gap: 5px;
@@ -474,8 +468,6 @@ li {
   font-size: smaller;
   text-decoration: none;
   color: #ffffff;
-  margin-right: 40px;
-  margin-bottom: 30px;
   background-color: #3a76ff;
   border: none;
   border-radius: 20px;
@@ -491,7 +483,7 @@ li {
   color: #626161;
 }
 .slider {
-  margin: 20px 30px;
+  margin: 30px 0px;
   padding: unset;
   margin-bottom: 80px;
 }
