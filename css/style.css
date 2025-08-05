@@ -26,7 +26,25 @@
   box-sizing: border-box;
 }
 /* general styles */
+.main-nav a,
+.main-nav li {
+  background-color: transparent;
+}
 
+.main-nav a:hover,
+.main-nav a:focus,
+.main-nav a:active,
+.main-nav li:hover {
+  background-color: transparent !important;
+  outline: none;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover {
+  background-color: transparent !important;
+}
 a {
   text-decoration: none;
 }
@@ -60,7 +78,7 @@ li {
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
-  background-color: #ffffff96;
+  background-color: #f2f2f2;
   text-decoration-color: unset;
 }
 .main-li {
@@ -396,7 +414,7 @@ li {
   margin: 40px 0px;
   max-width: 1278px;
   padding: 30px 20px;
-  background-color: #e5e5e569;
+  background-color: white;
   border-top-left-radius: 90px;
   border-bottom-right-radius: 90px;
   margin-bottom: 70px;
@@ -554,7 +572,7 @@ li {
   align-items: center;
   background-color: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: transform 0.3s ease;
   padding: 12px;
@@ -668,13 +686,12 @@ li {
 /* projects */
 .new {
   justify-content: flex-start;
-  margin-left: 30px;
 }
 .new-logo {
   max-width: 30px;
 }
 .projects-container {
-  padding: 40px 30px;
+  padding: 40px 0px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -794,7 +811,7 @@ h3 {
   gap: 15px;
 }
 .properties-slider {
-  margin: 0 15px;
+  margin: 0px;
 }
 .all {
   color: white;

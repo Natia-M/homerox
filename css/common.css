@@ -4,11 +4,17 @@
   box-sizing: border-box;
 }
 /* general styles */
+html {
+  height: 100%;
+}
 body {
-  background-color: #ffffff96;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 a {
-  text-decoration: none;
+  text-decoration: unset;
   color: inherit;
   text-decoration-color: unset;
 }
@@ -22,14 +28,26 @@ img {
   width: 100%;
 }
 .content-container {
-  padding: 15px;
+  padding: 10px;
   max-width: 1278px;
   margin: auto;
+  flex: 1;
+  width: 100%;
+  background-color: #70809000;
 }
 .wrapper {
   max-width: 1278px;
   margin: auto;
 }
+.center {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.border {
+  border: 1px solid #7080904a;
+}
+
 /* header */
 header {
   background-color: white;
@@ -38,8 +56,8 @@ header {
   top: 0;
   left: 0;
   z-index: 999;
-  padding: 5px 0px;
-  box-shadow: 0 2px 20px #0000001a;
+  padding: 10px;
+  border-bottom: 1px solid #70809021;
 }
 header nav {
   margin-right: 100px;
@@ -94,7 +112,7 @@ header nav {
   align-items: center;
   background-color: unset;
   color: rgb(0, 0, 0);
-  border: 1px solid rgb(66 66 66 / 48%);
+  border: 1px solid #7080904a;
   transition: 0.4s;
 }
 .manshead {
@@ -139,8 +157,8 @@ a:hover {
   align-items: center;
   gap: 6px;
   cursor: pointer;
-  padding: 4px 10px;
-  border: 1px solid rgb(66 66 66 / 48%);
+  padding: 6px 10px;
+  border: 1px solid #7080904a;
   border-radius: 30px;
   font-size: 13px;
   color: #0a1930;
@@ -148,11 +166,10 @@ a:hover {
 }
 
 .selected-language img {
-  width: 31px;
-  height: 30px;
-  padding: 3px;
-  border: 0.5px solid #00000091;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
+  border: 0.2px solid #7080904a;
 }
 
 .language-modal {
@@ -229,7 +246,6 @@ a:hover {
 }
 
 .selected-language .arrow {
-  font-size: 12px;
   margin-left: 4px;
 }
 
@@ -276,8 +292,8 @@ a:hover {
 /* footer */
 
 .footer {
-  background: #8998b921;
-  border-top: 1px solid rgba(105, 101, 101, 0.057);
+  background: #ffffff;
+  border-top: 1px solid rgb(113 113 113 / 20%);
   padding: 40px 20px;
   font-family: "BPG Glaho", sans-serif;
   color: #fff;
@@ -378,5 +394,4 @@ li {
 }
 .new {
   justify-content: flex-start;
-  margin-left: 30px;
 }

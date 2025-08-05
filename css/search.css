@@ -1,3 +1,25 @@
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../fonts/HelveticaNeue.ttc") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeueGeoCaps";
+  src: url("../fonts/helvetica-neue-lt-geo-55-roman-caps.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font {
+  font-family: "HelveticaNeue";
+}
+
+.font-up {
+  font-family: "HelveticaNeueGeoCaps";
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +27,6 @@
 }
 /* general styles */
 body {
-  max-width: 1278px;
   background-color: #ffffff96;
   margin: auto;
 }
@@ -34,16 +55,13 @@ img {
 /* ძირითადი სტრუქტურა */
 body {
   font-family: "Arial", sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f2f2f2;
 }
 
 .search-page-container {
-  max-width: 1200px;
   margin: 0 auto;
   margin-top: 70px;
-  max-width: 1250px;
+  max-width: 1278px;
 }
 
 /* საძიებო ყუთი */
@@ -53,9 +71,9 @@ body {
   gap: 10px;
   margin-bottom: 30px;
   background: #fff;
-  padding: 15px;
+  padding: 15px 10px;
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  justify-content: space-between;
 }
 
 .search-box select,
@@ -269,6 +287,44 @@ body {
   padding: 10px;
   border-radius: 20px;
   border: 1px solid #80808033;
+}
+
+input.custom-checkbox {
+  display: none;
+}
+
+input .custom-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+input .custom-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #999;
+  border-radius: 4px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 12px;
+  transition: 0.2s ease-in-out;
+}
+.checks {
+  gap: 15px;
+}
+input.custom-checkbox:checked + label::before {
+  background-color: #2f80ed;
+  border-color: #2f80ed;
+  background-image: url("images/check.svg");
 }
 .result-image {
   max-width: 300px;
