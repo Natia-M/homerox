@@ -81,11 +81,9 @@
 }
 .apartment-listing {
   max-width: 1280px;
-  margin: 0px 15;
   margin-top: 60px;
   font-family: sans-serif;
   color: #333;
-  background: #fff;
 }
 
 .listing-topbar {
@@ -251,6 +249,8 @@
 }
 .head-2 {
   max-width: 70px;
+  border-radius: 15px;
+  margin-right: 10px;
 }
 .desc {
   display: flex;
@@ -390,10 +390,7 @@
   margin: 15px 10px 0;
 }
 .details-section {
-  background-color: #fff;
   padding: 20px 0px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-  font-family: sans-serif;
 }
 .location-2 {
   justify-content: flex-start;
@@ -405,7 +402,7 @@
 .comment-section {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #eee;
+  border: 1px solid #e5e3e3;
   padding: 25px 15px;
   border-radius: 20px;
 }
@@ -538,7 +535,7 @@
 }
 .border {
   border-radius: 20px;
-  border: 1px solid #eee;
+  border: 1px solid #e5e3e3;
   padding: 0px 15px;
 }
 /* კარუსელი */

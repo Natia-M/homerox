@@ -1,0 +1,136 @@
+.searching {
+  margin-top: 70px;
+}
+.agency-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.search-3 {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.search-3 input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+}
+
+.search-3 button {
+  color: white;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  background-color: #3a76ff;
+}
+.white {
+  color: white;
+}
+.search-3 button:hover {
+}
+
+#sortSelect {
+  padding: 12px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-left: 15px;
+  border: 1px solid #ccc;
+}
+.loop {
+  max-width: 20px;
+  max-height: 20px;
+  margin-right: 10px;
+}
+/* სექცია 2 (სააგენტოები) */
+.ag-h {
+  text-align: center;
+  margin: 20px auto;
+}
+.agency-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.agency-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.agency-info {
+  display: flex;
+  align-items: center;
+}
+
+.agency-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  margin-right: 16px;
+  object-fit: contain;
+}
+
+.agency-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.agency-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.agency-type {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.agency-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.badge {
+  background-color: #f0f5ff;
+  color: #1d4ed8;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-weight: 500;
+}
+
+.details-btn {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.details-btn:hover {
+  background-color: #333;
+}
