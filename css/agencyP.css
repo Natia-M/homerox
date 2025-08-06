@@ -89,3 +89,18 @@
   margin-left: 30px;
   margin-top: 30px;
 }
+/* breadcrumb */
+.breadcrumb {
+  font-size: 16px;
+  color: #444;
+  padding-top: 80px;
+  font-family: "HelveticaNeue";
+  margin-bottom: 20px;
+}
+.return {
+  text-decoration: none;
+  color: #000000;
+}
+.separator {
+  margin: 0 10px;
+}
