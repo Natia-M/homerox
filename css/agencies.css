@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../fonts/HelveticaNeue.ttc") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeueGeoCaps";
+  src: url("../fonts/helvetica-neue-lt-geo-55-roman-caps.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font {
+  font-family: "HelveticaNeue";
+}
+
+.font-up {
+  font-family: "HelveticaNeueGeoCaps";
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .searching {
   margin-top: 70px;
 }

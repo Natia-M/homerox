@@ -4,19 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomeRox</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/userprofle.css" />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/agencies.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="shortcut icon" href="images/mini3.svg" type="img/icon" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-      defer
-    ></script>
-    <script src="src/agencies.js" defer></script>
   </head>
   <body>
     <header>
@@ -32,7 +26,7 @@
             <div class="icon">
               <img class="manshead" src="images/black.png" alt="#" />
             </div>
-            შესვლა
+            <a href="login.html " target="_blank">შესვლა</a>
           </button>
           <div class="language-selector">
             <div class="selected-language font-up" id="languageToggle">
@@ -68,57 +62,10 @@
       </div>
     </header>
     <div class="content-container">
-      <section class="searching flex">
-        <form
-          id="searchForm"
-          class="search-3"
-          onsubmit="event.preventDefault(); filterAndSort()"
-        >
-          <input
-            type="text"
-            id="searchInput"
-            placeholder=""
-            aria-label="მოძებნე სააგენტო..."
-          />
-          <button type="submit" aria-label="ძებნა">
-            <div class="flex">
-              <img class="loop" src="images/loop.svg" alt="loop icon" />
-              <div class="white">ძებნა</div>
-            </div>
-          </button>
-        </form>
-        <select id="sortSelect">
-          <option value="default">სოტირება</option>
-          <option value="asc">განც.რაოოდენობით</option>
-          <option value="desc">თარიღით</option>
-          <option value="desc">ანბანით</option>
-        </select>
-      </section>
-      <section class="agencies-sec">
-        <h1 class="ag-h font-up">სააგენტოები</h1>
-        <div class="agency-card">
-          <div class="agency-info">
-            <img src="images/lk.svg" alt="M Team Logo" class="agency-logo" />
-
-            <div class="agency-details">
-              <h3 class="agency-name font-up">M Team</h3>
-              <p class="agency-type">უძრავი ქონების კომპანია</p>
-
-              <div class="agency-meta">
-                <span class="badge">21006 განცხადება</span>
-                <span class="phone">📞 511131***</span>
-                <span class="location">📍 თ. ერისთავის 13</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="agency-actions">
-            <button class="details-btn">
-              <a href="agency.html">დეტალურად →</a>
-            </button>
-          </div>
-        </div>
-      </section>
+      <div class="main">
+        <div class="pro-3"></div>
+        <div class="data-3"></div>
+      </div>
     </div>
     <footer class="footer">
       <div class="footer-container">

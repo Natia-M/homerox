@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../fonts/HelveticaNeue.ttc") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeueGeoCaps";
+  src: url("../fonts/helvetica-neue-lt-geo-55-roman-caps.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font {
+  font-family: "HelveticaNeue";
+}
+
+.font-up {
+  font-family: "HelveticaNeueGeoCaps";
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*  */
+.breadcump {
+  margin-top: 70px;
+}
+.cover-image {
+  object-position: center;
+  position: relative;
+  border-radius: 20px;
+  max-height: 400px;
+  object-fit: cover;
+}
+.visual-img {
+  background-color: white;
+  max-width: 130px;
+  border-radius: 20px;
+  max-height: 130px;
+  padding: 10px;
+  width: 100%;
+  object-fit: contain;
+  border: 1px solid #7080903b;
+}
+.content-div {
+  position: relative;
+  margin-top: -70px;
+}
+.agency-card {
+  min-height: 110px;
+  display: flex;
+  gap: 25px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 15px;
+  width: 65%;
+}
+.agency-pro {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  margin: auto;
+}
+.agency-data {
+  background-color: white;
+  border: 1px solid #e8e6e6;
+  border-radius: 15px;
+  width: 30%;
+}
+.boxes {
+  justify-content: flex-start;
+  margin-top: 30px;
+  margin-left: 30px;
+  gap: 15px;
+}
+.box-1,
+.box-2 {
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #7080903b;
+}
+/*  ads section */
+.ads-h {
+  margin-left: 30px;
+  margin-top: 30px;
+}

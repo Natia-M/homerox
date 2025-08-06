@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomeRox</title>
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/agencies.css" />
+    <link rel="stylesheet" href="css/agencyP.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -68,56 +67,36 @@
       </div>
     </header>
     <div class="content-container">
-      <section class="searching flex">
-        <form
-          id="searchForm"
-          class="search-3"
-          onsubmit="event.preventDefault(); filterAndSort()"
-        >
-          <input
-            type="text"
-            id="searchInput"
-            placeholder=""
-            aria-label="მოძებნე სააგენტო..."
-          />
-          <button type="submit" aria-label="ძებნა">
-            <div class="flex">
-              <img class="loop" src="images/loop.svg" alt="loop icon" />
-              <div class="white">ძებნა</div>
-            </div>
-          </button>
-        </form>
-        <select id="sortSelect">
-          <option value="default">სოტირება</option>
-          <option value="asc">განც.რაოოდენობით</option>
-          <option value="desc">თარიღით</option>
-          <option value="desc">ანბანით</option>
-        </select>
-      </section>
-      <section class="agencies-sec">
-        <h1 class="ag-h font-up">სააგენტოები</h1>
-        <div class="agency-card">
-          <div class="agency-info">
-            <img src="images/lk.svg" alt="M Team Logo" class="agency-logo" />
-
-            <div class="agency-details">
-              <h3 class="agency-name font-up">M Team</h3>
-              <p class="agency-type">უძრავი ქონების კომპანია</p>
-
-              <div class="agency-meta">
-                <span class="badge">21006 განცხადება</span>
-                <span class="phone">📞 511131***</span>
-                <span class="location">📍 თ. ერისთავის 13</span>
+      <nav class="breadcrumb">
+        <a class="return" href="index.html">მთავარი</a>
+        <span class="separator">›</span>
+        <a class="return" href="agencies.html">სააგენტოები</a>
+        <span class="separator">›</span>
+        <a class="current"> ORBI GROUP </a>
+      </nav>
+      <section class="agency-profile">
+        <div class="cover">
+          <img src="images/orbicover.jpg" class="cover-image" alt="" />
+          <div class="content-div">
+            <div class="agency-pro">
+              <div class="agency-card">
+                <img class="visual-img" src="images/orbi.jpg" alt="#" />
+                <div>
+                  <h3>ORBI GROUP</h3>
+                  <div>Lorem ipsum dolor sit, amet</div>
+                </div>
               </div>
+              <div class="agency-data"></div>
             </div>
-          </div>
-
-          <div class="agency-actions">
-            <button class="details-btn">
-              <a href="agency.html">დეტალურად →</a>
-            </button>
+            <div class="boxes flex">
+              <div class="box-1">განცხადებები</div>
+              <div class="box-2">აგენტები</div>
+            </div>
           </div>
         </div>
+      </section>
+      <section class="ads">
+        <h2 class="ads-h font-up">განცხადებები</h2>
       </section>
     </div>
     <footer class="footer">

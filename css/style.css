@@ -1064,7 +1064,6 @@ h3 {
 }
 /* error */
 .error {
-  background-color: #ffffff;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -1072,7 +1071,7 @@ h3 {
   justify-content: center;
   gap: 10px;
   border-radius: 12px;
-  margin: auto;
+  margin: 70px auto;
 }
 .img-404 {
   max-width: 360px;
