@@ -62,9 +62,62 @@
       </div>
     </header>
     <div class="content-container">
-      <div class="main">
-        <div class="pro-3"></div>
-        <div class="data-3"></div>
+      <div class="layout">
+        <aside class="sidebar">
+          <div class="profile">
+            <div class="avatar"></div>
+            <p class="name">Naat</p>
+            <p class="id">ID: 4484353</p>
+            <div class="balance">
+              <span>ბალანსი</span>
+              <strong>0.12 ₾</strong>
+              <button class="add-btn">შევსება</button>
+            </div>
+          </div>
+          <nav class="menu">
+            <ul>
+              <li class="active">ჩემი განცხადებები</li>
+              <li>ბარათები / ტრანზაქციები</li>
+              <li>რჩეულები</li>
+              <li>მიმოწერა</li>
+              <li>შეტყობინებები</li>
+              <li>ჩემი სია</li>
+              <li>ჩემი კომპანია</li>
+              <li>ანგარიშის რედაქტირება</li>
+              <li>პაროლის შეცვლა</li>
+              <li>ანგარიშის სტატუსი</li>
+            </ul>
+          </nav>
+        </aside>
+        <main class="main-content">
+          <div class="top-header">
+            <h2>ჩემი განცხადებები</h2>
+            <div class="search-bar">
+              <input type="text" placeholder="ID, ტერმინი, მისამართი..." />
+              <button>ძებნა</button>
+            </div>
+          </div>
+
+          <div class="status-tabs">
+            <button class="active">მოქმედი</button>
+            <button>დრაფტი</button>
+            <button>გადასული</button>
+            <button>გათიშული</button>
+            <button>დაბლოკილი</button>
+            <button>ვადაგასული</button>
+          </div>
+
+          <div class="empty-state">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/620/620851.png"
+              alt="No data"
+            />
+            <p>თქვენ არ გაქვთ განცხადება დამატებული</p>
+            <button class="add-listing-btn">
+              <a href="addAD.html">განცხადების დამატება</a>
+            </button>
+          </div>
+        </main>
       </div>
     </div>
     <footer class="footer">
@@ -139,4 +192,14 @@
       </div>
     </footer>
   </body>
+  <script>
+    const statusButtons = document.querySelectorAll(".status-tabs button");
+
+    statusButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        statusButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+      });
+    });
+  </script>
 </html>
