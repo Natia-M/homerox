@@ -71,137 +71,136 @@
       <section class="main">
         <nav class="main-nav">
           <ul class="main-ul font-up">
-            <a href="services.html"><li class="main-li">სერვისები</li></a>
-            <a href="index.html"><li class="main-li">კომპანიები</li></a
-            ><a href="agencies.html"><li class="main-li">საგენტოები</li></a
-            ><a href="index.html"><li class="main-li">აგენტები</li></a>
-            <a href="index.html"><li class="main-li">საკადასტრო რუკა</li></a>
-            <a href="contact.html"><li class="main-li">კონტაქტი</li></a>
+            <li class="main-li"><a href="services.html">სერვისები</a></li>
+            <li class="main-li"><a href="services.html">დეველოპერები</a></li>
+            <li class="main-li"><a href="services.html">სააგენტოები</a></li>
+            <li class="main-li"><a href="services.html">საკადასტრო რუკა</a></li>
+            <li class="main-li"><a href="services.html">კონტაქტი</a></li>
+            <li class="main-li"><a href="services.html">ბლოგი</a></li>
           </ul>
         </nav>
-          <img class="main-image" src="images/building.jpeg" alt="building" />
-          <form action="search.html" method="GET" class="search-box">
-            <select class="select" name="propertyType">
-              <option value="">ქონების ტიპი</option>
-              <option value="ბინა">ბინა</option>
-              <option value="სახლი">სახლი</option>
-              <option value="კომერციული ფართი">კომერციული ფართი</option>
-              <option value="სასტუმრო">სასტუმრო</option>
-              <option value="მიწა">მიწა</option>
-            </select>
+        <img class="main-image" src="images/building.jpeg" alt="building" />
+        <form action="search.html" method="GET" class="search-box">
+          <select class="select" name="propertyType">
+            <option value="">ქონების ტიპი</option>
+            <option value="ბინა">ბინა</option>
+            <option value="სახლი">სახლი</option>
+            <option value="კომერციული ფართი">კომერციული ფართი</option>
+            <option value="სასტუმრო">სასტუმრო</option>
+            <option value="მიწა">მიწა</option>
+          </select>
 
-            <select class="select" name="dealType">
-              <option value="">გარიგების ტიპი</option>
-              <option value="ქირავდება">ქირავდება</option>
-              <option value="იყიდება">იყიდება</option>
-              <option value="გირავდება">გირავდება</option>
-              <option value="გირავდება">ქირავდება დღიურად</option>
-            </select>
+          <select class="select" name="dealType">
+            <option value="">გარიგების ტიპი</option>
+            <option value="ქირავდება">ქირავდება</option>
+            <option value="იყიდება">იყიდება</option>
+            <option value="გირავდება">გირავდება</option>
+            <option value="გირავდება">ქირავდება დღიურად</option>
+          </select>
 
-            <select class="select" name="city">
-              <option value="">ქალაქი</option>
-              <option value="თბილისი">თბილისი</option>
-              <option value="ქუთაისი">ქუთაისი</option>
-              <option value="ბათუმი">ბათუმი</option>
-              <option value="გორი">გორი</option>
-            </select>
+          <select class="select" name="city">
+            <option value="">ქალაქი</option>
+            <option value="თბილისი">თბილისი</option>
+            <option value="ქუთაისი">ქუთაისი</option>
+            <option value="ბათუმი">ბათუმი</option>
+            <option value="გორი">გორი</option>
+          </select>
 
-            <div class="custom-price-dropdown">
-              <button type="button" class="price-toggle">
-                ფასი
-                <span class="arrow">&#9662;</span>
-              </button>
-              <div class="price-popup hidden">
-                <label
-                  >დან:
-                  <input type="number" name="minPrice" placeholder="მინ." />
-                </label>
-                <label
-                  >მდე:
-                  <input type="number" name="maxPrice" placeholder="მაქს." />
-                </label>
-                <button type="button" class="price-apply">OK</button>
+          <div class="custom-price-dropdown">
+            <button type="button" class="price-toggle">
+              ფასი
+              <span class="arrow">&#9662;</span>
+            </button>
+            <div class="price-popup hidden">
+              <label
+                >დან:
+                <input type="number" name="minPrice" placeholder="მინ." />
+              </label>
+              <label
+                >მდე:
+                <input type="number" name="maxPrice" placeholder="მაქს." />
+              </label>
+              <button type="button" class="price-apply">OK</button>
+            </div>
+          </div>
+          <div class="custom-area-dropdown">
+            <button type="button" class="area-toggle">
+              ფართი
+              <span class="arrow">&#9662;</span>
+            </button>
+            <div class="area-popup hidden">
+              <label
+                >დან:
+                <input type="number" name="minArea" placeholder="მინ. მ²" />
+              </label>
+              <label
+                >მდე:
+                <input type="number" name="maxArea" placeholder="მაქს. მ²" />
+              </label>
+              <button type="button" class="area-apply">OK</button>
+            </div>
+          </div>
+          <input
+            type="text"
+            name="searchQuery"
+            class="text-search"
+            placeholder="ტელეფონი, ID, სა.კოდ"
+          />
+          <img class="filter" src="images/fil3.svg" alt="#" />
+          <button id="main-search-button" type="submit">ძებნა</button>
+        </form>
+        <div id="filterModal" class="filter-modal hidden">
+          <div class="filter-modal-content">
+            <div class="fixed-modal">
+              <span class="close-filter">×</span>
+              <h3 class="modal-h">დეტალური ძიება</h3>
+            </div>
+            <div class="filter-group">
+              <h4 class="modal-h4">მდგომარება</h4>
+              <div class="filter-group-1">
+                <div class="modal-label selectable">ახალი რემონტი</div>
+                <div class="modal-label selectable">ძველი რემონტი</div>
+                <div class="modal-label selectable">მიმდინარე რემონტი</div>
+                <div class="modal-label selectable">შავი კარკასი</div>
+                <div class="modal-label selectable">თეთრი კარკასი</div>
+                <div class="modal-label selectable">მწვანე კარკასი</div>
               </div>
             </div>
-            <div class="custom-area-dropdown">
-              <button type="button" class="area-toggle">
-                ფართი
-                <span class="arrow">&#9662;</span>
-              </button>
-              <div class="area-popup hidden">
-                <label
-                  >დან:
-                  <input type="number" name="minArea" placeholder="მინ. მ²" />
-                </label>
-                <label
-                  >მდე:
-                  <input type="number" name="maxArea" placeholder="მაქს. მ²" />
-                </label>
-                <button type="button" class="area-apply">OK</button>
+            <div class="filter-group">
+              <h4 class="modal-h4">ოთახების რაოდენობა</h4>
+              <div class="filter-group-1">
+                <div class="modal-label selectable">1</div>
+                <div class="modal-label selectable">2</div>
+                <div class="modal-label selectable">3</div>
+                <div class="modal-label selectable">4</div>
+                <div class="modal-label selectable">5</div>
+                <div class="modal-label selectable">5-ზე მეტი</div>
               </div>
             </div>
-            <input
-              type="text"
-              name="searchQuery"
-              class="text-search"
-              placeholder="ტელეფონი, ID, სა.კოდ"
-            />
-            <img class="filter" src="images/fil3.svg" alt="#" />
-            <button id="main-search-button" type="submit">ძებნა</button>
-          </form>
-          <div id="filterModal" class="filter-modal hidden">
-            <div class="filter-modal-content">
-              <div class="fixed-modal">
-                <span class="close-filter">×</span>
-                <h3 class="modal-h">დეტალური ძიება</h3>
+            <div class="filter-group">
+              <h4 class="modal-h4">სველი წერტილი</h4>
+              <div class="filter-group-1">
+                <div class="modal-label selectable">1</div>
+                <div class="modal-label selectable">2</div>
+                <div class="modal-label selectable">3</div>
+                <div class="modal-label selectable">4</div>
+                <div class="modal-label selectable">4+</div>
               </div>
-              <div class="filter-group">
-                <h4 class="modal-h4">მდგომარება</h4>
-                <div class="filter-group-1">
-                  <div class="modal-label selectable">ახალი რემონტი</div>
-                  <div class="modal-label selectable">ძველი რემონტი</div>
-                  <div class="modal-label selectable">მიმდინარე რემონტი</div>
-                  <div class="modal-label selectable">შავი კარკასი</div>
-                  <div class="modal-label selectable">თეთრი კარკასი</div>
-                  <div class="modal-label selectable">მწვანე კარკასი</div>
-                </div>
-              </div>
-              <div class="filter-group">
-                <h4 class="modal-h4">ოთახების რაოდენობა</h4>
-                <div class="filter-group-1">
-                  <div class="modal-label selectable">1</div>
-                  <div class="modal-label selectable">2</div>
-                  <div class="modal-label selectable">3</div>
-                  <div class="modal-label selectable">4</div>
-                  <div class="modal-label selectable">5</div>
-                  <div class="modal-label selectable">5-ზე მეტი</div>
-                </div>
-              </div>
-              <div class="filter-group">
-                <h4 class="modal-h4">სველი წერტილი</h4>
-                <div class="filter-group-1">
-                  <div class="modal-label selectable">1</div>
-                  <div class="modal-label selectable">2</div>
-                  <div class="modal-label selectable">3</div>
-                  <div class="modal-label selectable">4</div>
-                  <div class="modal-label selectable">4+</div>
-                </div>
-              </div>
+            </div>
 
-              <div class="filter-group">
-                <h4 class="modal-h4">გაყიდვის პირობები</h4>
-                <div class="filter-group-1">
-                  <div class="modal-label selectable">სიტყვა</div>
-                  <div class="modal-label selectable">სიტყვა</div>
-                  <div class="modal-label selectable">სიტყვა</div>
-                  <div class="modal-label selectable">სიტყვა</div>
-                  <div class="modal-label selectable">სიტყვა</div>
-                </div>
+            <div class="filter-group">
+              <h4 class="modal-h4">გაყიდვის პირობები</h4>
+              <div class="filter-group-1">
+                <div class="modal-label selectable">სიტყვა</div>
+                <div class="modal-label selectable">სიტყვა</div>
+                <div class="modal-label selectable">სიტყვა</div>
+                <div class="modal-label selectable">სიტყვა</div>
+                <div class="modal-label selectable">სიტყვა</div>
               </div>
-              <div class="bottom-buttons">
-                <div class="erase">გასუფთავება</div>
-                <button class="apply-filter" type="submit">ნახე შედეგი</button>
-              </div>
+            </div>
+            <div class="bottom-buttons">
+              <div class="erase">გასუფთავება</div>
+              <button class="apply-filter" type="submit">ნახე შედეგი</button>
             </div>
           </div>
         </div>

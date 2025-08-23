@@ -14,50 +14,67 @@
 }
 
 .font {
-  font-family: "HelveticaNeue";
+  font-family: "HelveticaNeue", sans-serif;
 }
 
 .font-up {
-  font-family: "HelveticaNeueGeoCaps";
+  font-family: "HelveticaNeueGeoCaps", sans-serif;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: #f9fafb;
+  font-family: "HelveticaNeue", sans-serif;
+  color: #111827;
+}
+
+/* Layout */
 .layout {
-  margin-top: 60px;
+  margin-top: 50px;
   display: flex;
   min-height: 100vh;
+  background-color: #8080801c;
 }
 
+/* Sidebar */
 .sidebar {
-  width: 240px;
-  background-color: white;
-  padding: 20px;
-  border-right: 1px solid #ddd;
+  width: 250px;
+  background: #ffffff;
+  padding: 25px;
+  border-right: 1px solid #eee;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  margin: 25px 20px 10px 10px;
 }
 
+/* Profile Card */
 .profile {
   text-align: center;
   margin-bottom: 30px;
 }
 
 .avatar {
-  width: 60px;
-  height: 60px;
-  background-color: #ccc;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #d1d5db, #9ca3af);
   border-radius: 50%;
   margin: 0 auto 10px;
 }
 
 .name {
   font-weight: bold;
+  font-size: 16px;
+  color: #111827;
 }
 
 .id {
   font-size: 12px;
-  color: gray;
+  color: #6b7280;
 }
 
 .balance {
@@ -67,68 +84,94 @@
 .balance strong {
   display: block;
   margin: 5px 0;
+  font-size: 15px;
+  color: #2563eb;
 }
 
-.add-btn {
-  background-color: #00c896;
+.add-btnn {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
   color: white;
   border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 8px 16px;
+  border-radius: 12px;
   cursor: pointer;
   font-size: 14px;
+  transition: 0.3s;
+}
+.add-btnn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
 }
 
+/* Menu */
 .menu ul {
   list-style: none;
   margin-top: 20px;
 }
 
 .menu li {
-  padding: 10px 5px;
+  padding: 12px 10px;
   cursor: pointer;
-  border-radius: 6px;
-  color: #333;
+  border-radius: 12px;
+  color: #374151;
+  transition: 0.3s;
+  font-size: 14px;
+  margin: 8px;
 }
 
 .menu li.active,
 .menu li:hover {
-  background-color: #e0f7f3;
+  background: #facc15;
   font-weight: bold;
+  color: #111827;
 }
 
+/* Main Content */
 .main-content {
   flex: 1;
   padding: 30px;
 }
 
+/* Top Header */
 .top-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 25px;
 }
 
+/* Search */
 .search-bar {
   display: flex;
   gap: 10px;
 }
 
 .search-bar input {
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  min-width: 250px;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  min-width: 260px;
+  outline: none;
+  transition: 0.3s;
+}
+.search-bar input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
 }
 
 .search-bar button {
-  padding: 8px 16px;
-  background-color: #0a1930;
+  padding: 10px 18px;
+  background: #0a1930;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 12px;
   cursor: pointer;
+  transition: 0.3s;
+}
+.search-bar button:hover {
+  background: #111827;
 }
 
+/* Tabs */
 .status-tabs {
   display: flex;
   gap: 12px;
@@ -137,36 +180,48 @@
 }
 
 .status-tabs button {
-  padding: 6px 14px;
+  padding: 8px 18px;
   border: none;
   border-radius: 20px;
-  background-color: #f0f0f0;
+  background: #f3f4f6;
   cursor: pointer;
   font-size: 14px;
+  transition: 0.3s;
 }
-
+.status-tabs button:hover {
+  background: #e5e7eb;
+}
 .status-tabs button.active {
-  background-color: royalblue;
+  background: #2563eb;
   color: white;
 }
 
+/* Empty State */
 .empty-state {
   margin-top: 60px;
   text-align: center;
-  color: #555;
+  color: #6b7280;
 }
 
 .empty-state img {
   width: 120px;
   margin-bottom: 20px;
+  opacity: 0.7;
 }
 
 .add-listing-btn {
-  background-color: #333;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
+  padding: 12px 22px;
+  border-radius: 12px;
   margin-top: 10px;
   cursor: pointer;
+  transition: 0.3s;
+}
+.add-listing-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+}
+.content-container {
+  padding: 0px;
 }
