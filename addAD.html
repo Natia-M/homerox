@@ -63,50 +63,53 @@
       </div>
     </header>
     <div class="content-container">
-      <section class="step step-1">
-        <h2>აირჩიე უძრავი ქონების ტიპი</h2>
-        <div class="category-grid">
-          <button class="category-btn" data-value="residential">ბინა</button>
-          <button class="category-btn" data-value="commercial">
-            კერძო სახლი
-          </button>
-          <button class="category-btn" data-value="land">აგარაკი</button>
-          <button class="category-btn" data-value="garage">
-            მიწის ნაკვეთი
-          </button>
-          <button class="category-btn" data-value="office">
-            კომერციული ფართი
-          </button>
-        </div>
-      </section>
-      <section class="step step-2">
-        <h2>აირჩიე გარიგების ტიპი</h2>
-        <div class="category-grid">
-          <button class="category-btn" data-value="residential">
-            ქირავდება დღუირად
-          </button>
-          <button class="category-btn" data-value="commercial">
-            ქირავდება
-          </button>
-          <button class="category-btn" data-value="land">გირავდება</button>
-          <button class="category-btn" data-value="garage">იყიდება</button>
-        </div>
-      </section>
-      <!-- ნაბიჯი 2 -->
-      <section class="step step-2 hidden">
-        <h2>განცხადების დეტალები</h2>
-        <div class="form-fields">
-          <input type="text" placeholder="სათაური" />
-          <input type="text" placeholder="მისამართი" />
-          <input type="number" placeholder="ფასი ₾" />
-          <select>
-            <option disabled selected>აირჩიე ქალაქი</option>
-            <option>თბილისი</option>
-            <option>ბათუმი</option>
-            <option>ქუთაისი</option>
-          </select>
-        </div>
-      </section>
+      <div class="formm">
+        <section class="step step-1">
+          <h2>აირჩიე უძრავი ქონების ტიპი</h2>
+          <div class="category-grid">
+            <button class="category-btn" data-value="residential">ბინა</button>
+            <button class="category-btn" data-value="house">კერძო სახლი</button>
+            <button class="category-btn" data-value="cottage">აგარაკი</button>
+            <button class="category-btn" data-value="land">
+              მიწის ნაკვეთი
+            </button>
+            <button class="category-btn" data-value="office">
+              კომერციული ფართი
+            </button>
+          </div>
+        </section>
+
+        <!-- ნაბიჯი 2 -->
+        <section class="step step-2 hidden">
+          <h2>აირჩიე გარიგების ტიპი</h2>
+          <div class="category-grid">
+            <button class="category-btn" data-value="daily">
+              ქირავდება დღიურად
+            </button>
+            <button class="category-btn" data-value="rent">ქირავდება</button>
+            <button class="category-btn" data-value="mortgage">
+              გირავდება
+            </button>
+            <button class="category-btn" data-value="sale">იყიდება</button>
+          </div>
+        </section>
+
+        <!-- ნაბიჯი 3 -->
+        <section class="step step-3 hidden">
+          <h2>განცხადების დეტალები</h2>
+          <div class="form-fields">
+            <input type="text" placeholder="სათაური" />
+            <input type="text" placeholder="მისამართი" />
+            <input type="number" placeholder="ფასი ₾" />
+            <select>
+              <option disabled selected>აირჩიე ქალაქი</option>
+              <option>თბილისი</option>
+              <option>ბათუმი</option>
+              <option>ქუთაისი</option>
+            </select>
+          </div>
+        </section>
+      </div>
     </div>
   </body>
 </html>

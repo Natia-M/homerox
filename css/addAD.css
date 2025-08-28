@@ -2,9 +2,10 @@ h2 {
   margin-bottom: 20px;
   color: #333;
 }
-
-.step {
+.step-1 {
   margin-top: 60px;
+}
+.step {
   margin-bottom: 40px;
   background: white;
   padding: 20px;
@@ -14,18 +15,18 @@ h2 {
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 16px;
 }
 
 .category-btn {
   background-color: #f1f1f1;
   border: none;
-  padding: 16px;
+  padding: 12px;
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.2s ease;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .category-btn:hover {
@@ -49,9 +50,14 @@ h2 {
   margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .form-fields {
   margin-top: 20px;
+}
+.formm {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
 }
