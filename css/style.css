@@ -1095,3 +1095,32 @@ h3 {
 .button-404:hover {
   background-color: #4477ef;
 }
+/*გაიცანი საქართველო*/
+.sakartvelo-boxes {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1278px;
+  margin: 50px auto 100px auto;
+  grid-template-areas:
+    "sakartvelo-1 sakartvelo-2 sakartvelo-2"
+    "sakartvelo-1 sakartvelo-2 sakartvelo-2"
+    "sakartvelo-1 sakartvelo-3 sakartvelo-4"
+    "sakartvelo-1 sakartvelo-3 sakartvelo-4";
+}
+.sak {
+  width: 100%;
+  background-color: red;
+}
+.sakartvelo-1 {
+  grid-area: sakartvelo-1;
+}
+.sakartvelo-2 {
+  grid-area: sakartvelo-2;
+}
+.sakartvelo-3 {
+  grid-area: sakartvelo-3;
+}
+.sakartvelo-4 {
+  grid-area: sakartvelo-4;
+}
