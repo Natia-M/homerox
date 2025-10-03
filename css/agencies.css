@@ -25,6 +25,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+.head-options {
+     max-width: 50%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 30px auto;
+}
+.head-options :hover{
+  color: #3a76ff;
+}
+.option-1,  .option-2,  .option-3 {
+  text-align: center;
+  display: flex;
+}
 
 .searching {
   margin-top: 70px;
