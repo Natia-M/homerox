@@ -13,7 +13,7 @@ er = new Swiper(".mySwiper", {
   slidesPerView: 1,
   breakpoints: {
     768: {
-      slidesPerView: 1,
+      slidesPerView: 1.2,
     },
     1024: {
       slidesPerView: 4,
