@@ -2,7 +2,11 @@
 
 /* main */
 @media (max-width: 450px) and (min-width: 320px) {
+  .content-container {
+    margin-top: 60px;
+  }
   .main-ul {
+    display: none;
     max-width: 430px;
     font-size: 10px;
   }
@@ -14,7 +18,23 @@
     display: block;
     position: unset;
   }
-
+  .search-box {
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: none;
+    max-width: 1278px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .select {
+    width: 48%;
+    margin: 10px 0px;
+  }
+  #main-search-button {
+    margin-top: 20px;
+  }
   .vips-header {
     font-size: 10px;
   }
