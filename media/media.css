@@ -1,35 +1,5 @@
 /* general */
 
-/* headerr */
-@media (max-width: 450px) and (min-width: 320px) {
-  header {
-    max-width: 430px;
-  }
-
-  .language-selector {
-    display: none;
-  }
-  .profile-btn a {
-    display: none;
-  }
-  .add-btn a::before {
-    content: "";
-  }
-
-  .add-btn a {
-    font-size: 0;
-  }
-  .add-btn a::after {
-    content: "+ განთავსება";
-    font-size: 10px;
-    font-weight: bold;
-    color: #fff;
-  }
-  .add-btn {
-    margin-right: 0;
-  }
-}
-
 /* main */
 @media (max-width: 450px) and (min-width: 320px) {
   .main-ul {
@@ -45,8 +15,6 @@
     position: unset;
   }
 
-  /* premium max 450 px */
-
   .vips-header {
     font-size: 10px;
   }
@@ -60,7 +28,48 @@
     color: #fff;
   }
   .swiper-slide-active {
-    max-width: 210px;
+    max-width: 410px;
     margin-right: 20px;
   }
+  .adSwiper,
+  .adSwiper .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+  .ads {
+    margin: 30px auto;
+  }
+
+  .ad-slider-container {
+    background-color: #f8f8f8;
+    max-height: 160px;
+    border-radius: 30px;
+    overflow: hidden; /* ძალიან მნიშვნელოვანია fade-სთვის */
+    position: relative; /* საჭირო fade overlay-ისთვის */
+  }
+
+  .adSwiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .adSwiper .swiper-slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .adSwiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+  }
+
+  .swiper-slide {
+    object-fit: contain;
+    position: center;
+  }
+  /* პრემიუმების სლაიდი */
 }

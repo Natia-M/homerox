@@ -12,6 +12,9 @@ er = new Swiper(".mySwiper", {
   spaceBetween: 20,
   slidesPerView: 1,
   breakpoints: {
+    400: {
+      slidesPerView: 1.4,
+    },
     768: {
       slidesPerView: 1.2,
     },
@@ -200,7 +203,7 @@ document.addEventListener("click", (e) => {
 //ads slider//
 new Swiper(".adSwiper", {
   loop: true,
-  effect: "fade",
+  effect: "slide",
   fadeEffect: {
     crossFade: true,
   },

@@ -1,0 +1,29 @@
+/* headerr */
+@media (max-width: 450px) and (min-width: 320px) {
+  header {
+    max-width: 430px;
+  }
+
+  .language-selector {
+    display: none;
+  }
+  .profile-btn a {
+    display: none;
+  }
+  .add-btn a::before {
+    content: "";
+  }
+
+  .add-btn a {
+    font-size: 0;
+  }
+  .add-btn a::after {
+    content: "+ განთავსება";
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .add-btn {
+    margin-right: 0;
+  }
+}
