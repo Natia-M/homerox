@@ -92,4 +92,15 @@
     position: center;
   }
   /* პრემიუმების სლაიდი */
+  /* პროექტების სლაიდი */
+
+  .box {
+    min-width: 180px;
+    max-height: 180px;
+  }
+  .projects-container {
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
 }
