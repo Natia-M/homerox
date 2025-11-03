@@ -1,0 +1,10 @@
+@media (min-width: 320px) and (max-width: 450px) {
+  .team {
+    display: none;
+  }
+  .contact-form-container {
+    margin: 10px;
+    max-width: 400px;
+    max-height: 500px;
+  }
+}
