@@ -35,7 +35,7 @@
   }
   .search-box {
     background: none;
-    padding: 10px;
+    padding: 0px;
     border-radius: 10px;
     box-shadow: none;
     max-width: 1278px;
@@ -48,6 +48,9 @@
     margin: 10px 0px;
     border: none;
     border-radius: 5px;
+  }
+  .text-search {
+    max-width: 180px;
   }
   #main-search-button {
     margin-top: 20px;
@@ -65,8 +68,8 @@
     color: #fff;
   }
   .swiper-slide-active {
-    max-width: 410px;
-    margin-right: 20px;
+    max-width: 450px;
+    margin-right: 10px;
   }
   .adSwiper,
   .adSwiper .swiper-slide {
