@@ -696,6 +696,57 @@ li {
   max-height: 20px;
 }
 /* projects */
+.projects-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* მნიშვნელოვნად ეხმარება სწორი პოზიციას */
+}
+
+.projects-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-right: 40px; /* რომ ისარი არ დაეფაროს ბოქსებს */
+}
+
+.scroll-hint-9 {
+  position: absolute;
+  margin-top: 150px;
+  right: 30px;
+  transform: translateY(-50%);
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.arrow-9 {
+  width: 24px;
+  height: 24px;
+  border-right: 3px solid #333;
+  border-bottom: 3px solid #333;
+  transform: rotate(-45deg);
+  animation: arrowMove9 1.4s infinite;
+}
+
+@keyframes arrowMove9 {
+  0% {
+    transform: translateX(0) rotate(-45deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(-8px) rotate(-45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) rotate(-45deg);
+    opacity: 0.3;
+  }
+}
+
+.scroll-hint-9.hide {
+  opacity: 0;
+}
 .new {
   justify-content: flex-start;
 }

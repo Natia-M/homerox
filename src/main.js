@@ -213,3 +213,17 @@ new Swiper(".adSwiper", {
   },
   speed: 600,
 });
+//header scroll//
+const container = document.querySelector(".projects-container");
+const hint9 = document.querySelector(".scroll-hint-9");
+
+container.addEventListener("scroll", () => {
+  const atEnd =
+    container.scrollLeft + container.clientWidth >= container.scrollWidth - 5;
+
+  if (atEnd) {
+    hint9.classList.add("hide");
+  } else {
+    hint9.classList.remove("hide");
+  }
+});
